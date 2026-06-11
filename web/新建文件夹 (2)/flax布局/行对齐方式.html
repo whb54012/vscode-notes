@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center; /*和align-items的区别为行对齐是将行与行之间间隔消除居中，
+            而侧轴对齐方法会在换行时保持行与行之间的间距*/
+            align-content:flex-start;
+            align-content:space-around;  /*侧轴对齐不存在space形式 */
+        }
+        .box div{
+            height: 20px;
+            width: 60px;
+            background-color: red;
+        }
+        /*行对齐align-conten只有在换行的模式下才生效，也就是对单行无效*/
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

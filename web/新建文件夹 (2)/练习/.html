@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.right{
+    width: 250px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+.right1{
+    height: 400px;
+    width: 250px;
+    position: absolute;
+    transform: translateZ(125px);
+    background-image: url(../新建文件夹/2025-08-08_16.13.32.png);
+    background-size: contain;
+}
+.right2{
+    height: 400px;
+    width: 250px;
+    position: absolute;
+    transform: translateX(-125px) rotateY(-90deg);
+    background-size: contain;
+    background-image: url(../新建文件夹/2025-08-08_16.13.32.png);
+}
+.right:hover{
+    transform: rotateY(90deg);
+}
+</style>
+</head>
+<body>
+    <div class="Right" style="overflow: hidden; display: inline-block;">
+        <div class="right">
+            <div class="right1"></div>
+            <div class="right2"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

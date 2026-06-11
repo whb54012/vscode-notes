@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-image: linear-gradient(
+            /*渐变方向，不填默认线性从上到下*/
+            red,/*颜色一终点位置*/
+            green/*颜色二终点位置*/
+            );/*每个属性之间用逗号隔开*/
+            background-image: linear-gradient(
+            to right,/*方法二，用to加方向表示渐变方向*/
+            red,
+            green/*最后一个后面不用加逗号*/
+            );
+            background-image: linear-gradient(
+            0deg,/*方法三，用倾斜角渐变方向，0度为从下到上，和默认方向相反*/
+            red 80%,/*默认各颜色占据百分之五十*/
+            rgb(0, 128, 0)/*不可以加多个颜色*/
+            );
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

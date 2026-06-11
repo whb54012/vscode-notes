@@ -1,0 +1,4 @@
+默认user/share/wordlists中的rockyou.txt文件中;
+cd user/share/wordlists 转换盘符/目录;
+ls 查看盘符文件;
+cat rockyou.txt 打开rockyou文件的所有密码;

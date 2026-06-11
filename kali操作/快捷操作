@@ -1,0 +1,40 @@
+#####Linux 路径解析的核心规则，不加完整路径（绝对路径）时，会以当前工作目录为基准，操作指定名称的内容#####
+ctrl+alt+t打开控制台
+控制台内ctrl+shift+(+/-)调整字体大小
+更改root密码sudo passwd root(sudo为提权)
+汉化sudo dpkg-reconfigure locales
+#文件操作
+apt-get 软件包管理工具
+apt-get update 更新软件包信息,但不会将软件包升级
+apt-get install 软件名 安装指定的软件包名
+apt-get upgrade 通过获取的最新软件包信息,将可升级软件包升级
+touch 文件名.格式后缀 创建文件
+ls 显示所处目录的文件
+cd 目录 选择切换当前目录文件
+cat 文件名.后缀 查看文件内内容(${IFS},<,可以替换空格)
+echo 内容>\>> 文件名.后缀(>新内容覆盖原写入内容，>>新内容换行追加原内容，不会覆盖)
+rm -f 文件完整格式（文件名加后缀）删除当前目录文件/文件夹
+rm -rf /* /为根目录 *为全部文件
+bzip2 文件 压缩文件
+gzip 文件 压缩文件
+bunzip2 文件 解压文件
+gunzip 文件 解压文件
+//看文件后缀名来选择解压缩类型
+#文件夹操作
+mkdir 文件夹名称 创建文件夹
+//压缩文件夹用rar格式
+//使用rar格式压缩需要先下载rar格式
+下载rar代码 apt-get install rar
+rar a 文件夹 压缩文件夹
+rar x 压缩文件夹 解压文件夹
+//文件夹压缩后不会消失，会保留一份
+rmdir 文件夹 删除文件夹
+tar -jcvf 文件.tar.bz2 文件 打包创建一个tar或bz2压缩文件,并将后面的文件打包进入此文件
+tar -txvf 文件 将tar或rar文件中的文件拿出来
+tar -zcvf 文件.tar.gz 文件1 创建gz类型文件,将文件1打包进去
+tar -zxvf 文件.gz 将文件.gz中的文件提取出来
+ping 域名/ip;向指定的网址发送请求，用于测试网络连接，可初步判断ttl在128附近默认Windows，ttl在1-64或接近255默认Linux系统
+reboot; 立即重启系统
+shutdown -h now;立刻关机，如数据运行中用此方法会导致数据丢失，属于紧急关机
+uname -a;显示系统完整信息
+top;进入top命令界面，实时查看系统中各个进程

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 500px auto;
+            height: 300px;
+            width: 300px;
+             /*动画名称，动画时长，速度，延迟时间，重复次数，动画结束后方向，执行完毕时状态顺序可随意*/
+            animation: change 1s linear/*匀速*/1s 0s;
+           /*分布执行*/
+            animation: change 1s steps(3)/*分布执行steps(次数)*/1s 0s;/*两个时间时，第一个为速度*/
+            /*次数设置*/
+            animation: change 1s linear 0s 3/*不带单位为次数*/;
+            /*无限次数*/
+            animation: change 1s linear  1s infinite;
+            /*动画方向；动画运行完一次后继续运行的方向*/
+            /* infinite无限循环 */
+            animation: change 1s linear  1s infinite alternate/*反向*/;
+            /* 动画结束后状态 */
+            /*forward 停在结束位置 */
+            /* backward停在开始位置，默认值 */
+            animation: change 1s linear  1s forwards;
+            background-color: pink;
+        }
+        @keyframes change{
+            from{transform: rotate(0deg) translate(300px,0);}
+            to{transform: rotate(360deg) translate(300px,0);}
+        }/*第一种方法，只能设置两个值*/
+        @keyframes change{
+            0%{transform: rotate(0deg) translate(300px,0);}
+            100%{transform: rotate(360deg) translate(300px,0);}
+        }/*第二种方法，可设置多个值*/
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

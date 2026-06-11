@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            perspective: 1000px;/*视距，想要使z轴效果就必须在其父级容器中添加视距，
+            否则将没有效果，视距建议800-1200，过大就像是物体离你太远，z轴靠近或离远不明显*/
+        }
+        .son{
+            height: 300px;
+            width: 300px;
+            margin: 0 auto;
+            background-color: pink;
+            transition: all 1s;
+        }
+        .father .son:hover{
+            transform: translate3d(100px,100px,300px);/*分别为x，y，z轴，必须填三个*/
+        }/*z轴就如近大远小，它为正时就越靠近你，看着就像体积变大一样*/
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

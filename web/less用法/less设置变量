@@ -1,0 +1,5 @@
+定义变量@mycolor:pink;
+使用变量
+div{
+    background:@mycolor;
+}

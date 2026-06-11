@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title><!--内部样式表：css写在title的下面，head的上面，且写在style内部-->
+    <link rel="stylesheet" href="./01.css">
+    <style>
+        h1{
+            color: red;/*属性颜色*/
+            font-size: 30px;/*属性字体大小*/
+            font-weight: 400;/*粗细*/
+            font-style: italic;/*倾斜，normal为正常，italic为倾斜*/
+            line-height: 30px;/*行高，当为数字时，代表当前font-size的倍数*/
+        }
+        p{
+            color: aquamarine!important/*最高级*/
+        }
+        .red{
+              color: violet;  
+        }
+        .size{
+            font-size: 30px;
+        }
+        #my{
+            color: red;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;/*id属性*/
+        }
+        *{
+            color: turquoise;/*通配符作用于全局，如果内部没有自定义属性就会按照通配符所作用，优先级最低*/ 
+        }
+        div{
+            font-family: 隶书,sans-serif;/*字体类型,后面表示为无衬体*/
+        }
+        h2{
+            font: italic 700 30px/100px 隶书;/*文字倾斜 粗细 大小/行高 字型*/
+        }
+        h3{
+            text-indent: 2em;/*，文字缩进单位可用px和em，em会以当前文字大小自动缩进相应的大小*/
+        }
+        h4{
+            text-align: center;/*center为中心对齐，left为左，right为右*/
+        }
+    </style>
+</head>
+<body>
+    <h1>你好</h1>
+    <p class="red">你好</p>
+    <p class="red size">class属性</p><!--calss为类属性选择器，在冒号内可添加多个属性，用于区分同标签不同类，也可用于不同标签同类-->
+    <p id="my">id选择器</p><!--id选择器和class类似，但每个页面只能使用一次-->
+    <p>通配影响效果</p>
+    <em>倾斜标签</em>
+    <div>文字格式</div>
+    <h2>复合文字</h2>
+    <h3>文字缩进</h3>
+    <h4>文字对齐</h4>
+</body>
+</html>
+<!--important>行内>id>类>标签>通配-->
+<!--复合文字字型和字体大小必须写，其他可以省略-->
+<!--text-decoration为文字划线，none为无，underline为下，line-through为删除线，overline为顶划线-->

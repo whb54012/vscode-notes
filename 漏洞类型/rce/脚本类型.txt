@@ -1,0 +1,37 @@
+可控变量，漏洞函数两大原理
+php类型:
+eval():
+将字符串或者变量当作php代码去执行,字符串内容必须是有分号结尾的完整php代码
+$code=phpinfo(); eval($code);
+eval("$phpinfo();")eval接受的必须是字符串
+
+system():
+将字符串或者变量当作系统命令去执行(它会自动把数据打印出来,无需用到echo)
+$code=ipconfig; system($code);
+system('ipconfig');同eval一样
+或者用eval去执行system函数:
+$code=system('ipconfig'); eval($code);
+这类调用系统指令函数可以直接将源码读取出来不会被解析
+
+shell_exec():
+和system()类似,但不会自动返回结果,需要手动echo或者变量接收后打印结果
+echo shell_exec('ls -l');
+$code = shell_exec('ls -l');
+echo $code;
+
+`命令`:(反引号函数,linux系统独有)
+将变量当作系统命令去执行(它不会把数据打印出来,需要用到echo)
+$code = `ls`;
+echo = $code;
+通过eval执行linux系统命令
+$code=echo `ifconfig`; eval($code);
+eval("echo `ifconfig`;");
+
+$():和反引号功能相同,linux命令执行替换符
+(linux单引号为字符串定界符,能够将包裹的参数当成单个参数,这样即使内部写了
+分割符也无法执行多条命令)
+        ping '127.0.0.1'
+        # 等价于
+        ping 127.0.0.1
+绕过方法:输入引号进行闭合后写入命令,再将后面的部分通过#闭合
+        ping '127.0.0.1';ls#'

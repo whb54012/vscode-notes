@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垫江文旅图片交互板块</title>
+    <style>
+        /* 1. 容器样式：Flex 布局，横向排列，居中对齐 */
+        .image-container {
+            display: flex; /* 横向排列图片 */
+            gap: 16px; /* 图片之间的间距 */
+            width: 90%; /* 容器宽度（可自定义） */
+            max-width: 1200px; /* 最大宽度，防止过大 */
+            margin: 50px auto; /* 上下间距 + 水平居中 */
+            overflow: hidden; /* 隐藏超出容器的部分（可选） */
+        }
+
+        /* 2. 图片基础样式：统一尺寸，保持比例，添加过渡 */
+        .image-item {
+            width: 100%; /* 初始宽度均分容器 */
+            height: 300px; /* 固定高度（可自定义） /* 保持图片比例，裁剪多余部分 */
+            border-radius: 8px; /* 圆角（可选，增加美观度） */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 阴影（可选） */
+            transition: all 0.5s ease; /* 过渡动画：0.5秒平滑变化 */
+            cursor: pointer; /* 鼠标悬浮变指针，提示可交互 */
+        }
+
+        /* 3. hover 交互逻辑：当前图片放大，其他图片缩小 */
+        .image-item:hover {
+            width: 200%; /* 触碰后放大（占容器1.5倍宽度） */
+            transform: scale(1.05); /* 轻微缩放，增强视觉冲击（可选） */
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2); /*  hover 时加深阴影 */
+        }
+
+        /* 兄弟选择器：当前图片 hover 时，所有同级图片缩小 */
+        .image-item:hover ~ .image-item {
+            width: 80%; /* 其他图片缩小到原来的80% */
+            opacity: 0.7; /* 降低透明度，突出当前图片（可选） */
+        }
+    </style>
+</head>
+<body>
+    <!-- 图片容器 -->
+    <div class="image-container">
+        <img src="../新建文件夹/2025-08-08_16.13.32.png" alt="垫江山水风景" class="image-item">
+        <img src="https://picsum.ph0" alt="垫江石磨豆花" class="image-item">
+        <img src="https:csum.photos/id/225/800/600" alt="垫江非遗竹编" class="image-item">
+    </div>
+</body>
+</html>

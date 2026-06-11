@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="h">你好</div><!--添加id属性-->
+    <div id="a">你好</div>
+    <script>
+        var demo = document.getElementById("h");//通过id属性获取目标
+        demo.innerHTML = "这是一个标题";//通过innerHTML改变获取目标的内容和html属性
+//innerHTML 是 DOM 元素的属性,用于读取或设置元素内部的 HTML 内容
+        var demo1=document.getElementById("a");
+        demo1.innerHTML="<h1>再见</h>";
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(
+            transparent,
+            rgb(0, 0, 0)
+            );
+            transition: all 1s;
+        }
+        .box1{
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            bottom: 0px;
+            background-image: linear-gradient(transparent, rgba(188, 132, 190, 0));/*浏览器无法出现渐变，因为谷歌浏览器不支持*/
+            transition: background-image 1s ease;
+        }
+        .box:hover .box1{
+          background-image: linear-gradient(
+            transparent,
+            rgba(188, 132, 190, 0.365) );
+        }
+        .box:hover img{
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+<div class="box"><img src="../新建文件夹/2025-08-08_16.13.32.png" alt="">
+<div class="box1">你好</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* 逐帧动画核心容器 */
+    .frame-anime {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      font-size: 40px;
+      text-align: center;
+      line-height: 100px;
+      background: #4299e1;
+      color: #fff;
+      /* 逐帧动画核心：steps(4) 表示分成4帧，无过渡 */
+      animation: move 4s steps(4) infinite,
+      run 4s linear infinite;
+    }/*对一个盒子进行多个动画设置*/
+
+    /* 定义4个关键帧（逐帧切换内容/样式） */
+    @keyframes move {
+      0% {  background: #4299e1; }   /* 第1帧 */
+      25% {background: #9f7aea; }  /* 第2帧 */
+      50% { background: #38b2ac; }  /* 第3帧 */
+      75% {  background: #ed8936; }  /* 第4帧 */
+    }
+    @keyframes run{
+        from{transform: translate(0px);}
+        to{transform: translate(800px);}
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-anime"></div>
+</body>
+</html>

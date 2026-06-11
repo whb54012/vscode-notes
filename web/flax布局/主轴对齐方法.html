@@ -1,0 +1,47 @@
+---------------------主轴对齐方法
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{display: flex;
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            justify-content: flex-start;/*默认值，从开头开始排序*/
+             justify-content: flex-end;/*从水平结尾开始排序*/
+             justify-content: center;/*从水平中间开始排列*/
+        }
+        .box2{
+            display: flex;
+            width: 300px;
+            height: 100px;
+             border: 1px solid black;
+            justify-content: space-between;/*空白间距在盒子之间相等*/
+            justify-content: space-around;/*空白间距在盒子两边相等*/
+            justify-content: space-evenly; /*盒子与容器各个间距相等*/
+        }
+        .box1 div, .box2 div{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
+<!------------------------------------------------------------------->

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const isConfirmed = confirm("你确定要删除这条数据吗？");//弹出一个模态确认对话框，显示你传入的提示文本
+if (isConfirmed) {
+  console.log("用户确认删除");
+} else {
+  console.log("用户取消删除");
+}//点击「确定」→ 返回 true,点击「取消」→ 返回 false
+    </script>
+</body>
+</html>

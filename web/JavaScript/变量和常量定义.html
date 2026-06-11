@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    document.write(name);
+       var name="whb";/*var变量声明在执行中会被提升到最顶部,出现先调用
+在声明的情况也能正确执行,对于var来说JavaScript里面只有全局变量和和函数变量
+,所以即使在if和for之类的大括号(块级定义域)里面定义变量，在外面也能正常使用*/
+    let love="rap";/*let解决了var的问题，在块级定义域的变量将无法在外界
+进行使用并且声明将不会提升到最顶部,另外，他在同一定义域不可被多次定义,多次
+定义将会报错*/
+    const pi=3.14;//常量定义，不可修改，类似宏定义
+    </script>
+</body>
+</html>

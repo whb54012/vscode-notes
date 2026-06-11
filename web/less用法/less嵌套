@@ -1,0 +1,18 @@
+嵌套,快速生成后代选择器
+.father{
+    css属性;
+    .son{css属性;
+    }
+}
+生成结果为
+.father{
+    css属性;
+}
+.father .son{
+    css属性;
+}
+在镶嵌子代元素前加&表示当代选择器,配合hover使用
+列如
+.father{
+    &:hover{css属性}
+}==.father:hover{}

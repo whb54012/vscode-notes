@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+        }
+        .box1{
+            height: 100px;
+            width: 100px;
+            background-color: pink ;
+           transition: all 1s;
+        }
+        .box1:hover{
+             transform: translate(50%,-50%);
+            /*x轴和y轴移动距离，百分比为移动他们自身的比值*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>6</span>
+        <div class="box1"></div>
+    </div>
+</body>
+</html>

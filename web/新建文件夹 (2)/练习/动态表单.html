@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        .box .box1{
+            width: 200px;
+            height: 50px;background-color: red;
+            position: absolute;
+            transition: all 1s;
+            bottom: -50px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        .box:hover .box1{
+            bottom: 0;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../新建文件夹/2025-08-08_16.13.32.png" alt="">
+        <div class="box1">
+            <span>中心</span>
+        </div>
+    </div>
+</body>
+</html>

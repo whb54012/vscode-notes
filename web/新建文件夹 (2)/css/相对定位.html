@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/*1改变的位置以起点原位置移动
+        2改变位置后元素类型不变
+        3位置变后会从变的位置开始重新向后占据相同的位置
+        如块级元素长度为300，将其往右移100后那一排位置占据300+100像素
+        4不脱标，即保持标签原本样式*/
+        .whb{
+            position: relative;/*相对定位*/
+            top: 100px;
+            background-color: pink;
+        }
+        img{
+            position: relative;
+            bottom: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="whb">nihao</div>
+    <img src="../新建文件夹/2025-08-08_16.13.32.png" alt="">
+    <div style="background-color: red;">1</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>流动画面页面</title>
+  <style>
+    /* 1. 基础设置：全局平滑滚动 + 重置样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth; /* 页面内滚动平滑，核心流动基础 */
+    }
+    body {
+      font-family: "微软雅黑", sans-serif;
+      color: #fff;
+    }
+
+    /* 2. 导航栏：固定顶部 + 平滑过渡 */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 0;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(5px);
+      z-index: 100;
+      transition: background 0.5s ease; /* 背景流动过渡 */
+    }
+    .nav:hover {
+      background: rgba(0,0,0,0.7);
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease; /* 文字颜色流动过渡 */
+    }
+    .nav a:hover {
+      color: #4fc3f7;
+    }
+
+    /* 3. 背景流动动画：渐变背景循环移动 */
+    .section {
+      height: 100vh; /* 占满一屏 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      /* 渐变背景 + 流动动画 */
+      background: linear-gradient(45deg, #4fc3f7, #bbdefb, #81d4fa);
+      background-size: 200% 200%; /* 放大背景尺寸，为流动留空间 */
+      animation: flow-bg 10s ease infinite; /* 背景流动动画 */
+    }
+    /* 不同区块的背景渐变区分 */
+    .section:nth-child(2) {
+      background: linear-gradient(45deg, #ffccbc, #ffab91, #ff8a65);
+    }
+    .section:nth-child(3) {
+      background: linear-gradient(45deg, #c8e6c9, #a5d6a7, #81c784);
+    }
+
+    /* 背景流动的关键帧：让渐变位置循环移动 */
+    @keyframes flow-bg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 4. 元素流动动画：滚动时滑入（初始隐藏） */
+    .flow-item {
+      opacity: 0; /* 初始透明 */
+      transform: translateY(50px); /* 初始向下偏移 */
+      transition: all 0.8s ease; /* 流动过渡时间 */
+      text-align: center;
+    }
+    /* 滚动后显示（通过JS添加active类） */
+    .flow-item.active {
+      opacity: 1;
+      transform: translateY(0); /* 回到原位，完成滑入 */
+    }
+    /* 不同元素的入场方向区分，增加流动层次 */
+    .flow-item.left {
+      transform: translateX(-50px);
+    }
+    .flow-item.right {
+      transform: translateX(50px);
+    }
+
+    /* 标题样式 */
+    .flow-item h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .flow-item p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏（平滑跳转） -->
+  <div class="nav">
+    <a href="#section1">区块1</a>
+    <a href="#section2">区块2</a>
+    <a href="#section3">区块3</a>
+  </div>
+
+  <!-- 流动区块1 -->
+  <section class="section" id="section1">
+    <div class="flow-item">
+      <h2>流动画面页面</h2>
+      <p>滚动页面，体验元素的平滑滑入 & 背景的渐变流动效果</p>
+    </div>
+  </section>
+
+  <!-- 流动区块2 -->
+  <section class="section" id="section2">
+    <div class="flow-item left">
+      <h2>左侧滑入效果</h2>
+      <p>滚动到这里时，元素会从左侧平滑滑入，搭配背景的流动渐变，视觉更流畅</p>
+    </div>
+  </section>
+
+  <!-- 流动区块3 -->
+  <section class="section" id="section3">
+    <div class="flow-item right">
+      <h2>右侧滑入效果</h2>
+      <p>不同方向的滑入动画，让页面滚动更有“流动感”，避免单调</p>
+    </div>
+  </section>
+
+  <script>
+    // 滚动触发元素流动动画：当元素进入视口时，添加active类
+    const flowItems = document.querySelectorAll('.flow-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active'); // 进入视口时触发滑入
+        }
+      });
+    }, { threshold: 0.2 }); // 元素进入20%视口时触发
+
+    flowItems.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
