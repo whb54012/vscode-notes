@@ -8,7 +8,7 @@ function two(){
 }
 $num=100;//全局变量
 function three(string $name,int $age){
-//函数值形参必须给定类型
+//函数值形参可以给定类型,更规范
 echo $name,$age."\n";
 return $name;
 }
