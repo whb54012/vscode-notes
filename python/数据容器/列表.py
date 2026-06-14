@@ -13,12 +13,13 @@ sz[3]='whb'
 # 修改元素可直接赋值
 print(sz)
 
-# 删除元素:
+# 删除元素:(del,pop,remove)
 del sz[2]
 sz.pop(3)
 # 删除指定索引的值
 print(sz)
 sz.remove('whb')
+# 删除数组中内容匹配的值
 print(sz)
 
 # 添加元素:
