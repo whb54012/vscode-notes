@@ -9,6 +9,9 @@ $data=[
     'name'=>'whb',
     'age'=>18
 ];
+// 键   值
+//name  whb
+//age   18
 foreach ($data as $value){
     echo $value."\n";
 }
