@@ -4,5 +4,10 @@ $arr1=array('a','b','c');
 echo $arr1[1];
 // 键   值
 // 1    a
+// 自定义键值对
+$data=[
+    'name'=>'whb',
+    'age'=>18
+];
 foreach
 ?>
