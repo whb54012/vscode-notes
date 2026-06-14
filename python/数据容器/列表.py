@@ -17,6 +17,7 @@ print(sz)
 del sz[2]
 sz.pop(3)
 # 删除指定索引的值
+sz.remove(1)
 print(sz)
 
 # 添加元素:
