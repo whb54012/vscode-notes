@@ -9,5 +9,7 @@ $data=[
     'name'=>'whb',
     'age'=>18
 ];
-foreach
+foreach ($data as $value){
+    echo $value;
+}
 ?>
