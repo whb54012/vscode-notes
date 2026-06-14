@@ -1,0 +1,111 @@
+{
+  "name": "php-test-runner",
+  "displayName": "PHP测试浏览器",
+  "description": "在VS Code中嵌入浏览器，一键运行PHP代码",
+  "version": "0.1.0",
+  "publisher": "php-test-runner",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Testing"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:phpBrowser.openCurrent",
+    "onCommand:phpBrowser.showPanel",
+    "onCommand:phpBrowser.startServer",
+    "onCommand:phpBrowser.stopServer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "phpBrowser.openCurrent",
+        "title": "PHP测试浏览器: 在嵌入式浏览器中打开当前PHP文件"
+      },
+      {
+        "command": "phpBrowser.showPanel",
+        "title": "PHP测试浏览器: 显示浏览器面板"
+      },
+      {
+        "command": "phpBrowser.startServer",
+        "title": "PHP测试浏览器: 启动PHP服务器"
+      },
+      {
+        "command": "phpBrowser.stopServer",
+        "title": "PHP测试浏览器: 停止PHP服务器"
+      },
+      {
+        "command": "phpBrowser.refresh",
+        "title": "PHP测试浏览器: 刷新页面"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "phpBrowser.openCurrent",
+        "key": "ctrl+alt+p",
+        "when": "editorLangId == php"
+      },
+      {
+        "command": "phpBrowser.refresh",
+        "key": "ctrl+alt+r",
+        "when": "phpBrowserPanelVisible"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceLangId == php",
+          "command": "phpBrowser.openCurrent",
+          "group": "navigation@1"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceLangId == php",
+          "command": "phpBrowser.openCurrent",
+          "group": "navigation@1"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "resourceLangId == php",
+          "command": "phpBrowser.openCurrent",
+          "group": "navigation@1"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "PHP测试浏览器",
+      "properties": {
+        "phpBrowser.phpPath": {
+          "type": "string",
+          "default": "D:/php/php-8.5.1-Win32-vs17-x64/php",
+          "description": "PHP可执行文件路径"
+        },
+        "phpBrowser.port": {
+          "type": "number",
+          "default": 8765,
+          "description": "PHP内置服务器端口号（若被占用则自动递增）"
+        },
+        "phpBrowser.host": {
+          "type": "string",
+          "default": "127.0.0.1",
+          "description": "PHP服务器监听地址"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  }
+}
