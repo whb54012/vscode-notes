@@ -12,14 +12,20 @@ print(zf1[-1])#从右到左
 #字符串替换方法：新字符串 = 字符串.replace(被替换的字符,替换的新字符)
 #替换后原字符串不会变化，新字符串拥有替换后的结构
 new_a = zf.replace('hello','你好')
-#zf = zf.replace('hello','你好')
+zf = zf.replace('hello','你好')
 #或者将字符串修改后指向原字符串变量，原字符串就会被销毁回收并赋予新值
 #注意,如果有多个相同'hello',所有'hello'都会被替换
 print(zf)
 print(new_a)
+
 #如何决定替换的次数和个数
 #1.count替换次数设置
 new_b = zf.replace('l','i',1)
 print(new_b)#只会替换一次
 #指定位置替换
 print(new_a+new_b+"ni")#字符串可以直接拼接
+
+# 切片
+zf[0:5:2]
+print(zf[0:5:2])
+# 用法和拓展跟列表切片如一
