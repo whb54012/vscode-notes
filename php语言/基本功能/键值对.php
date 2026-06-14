@@ -12,4 +12,9 @@ $data=[
 foreach ($data as $value){
     echo $value;
 }
+// 取值
+foreach ($data as $key=>$value){
+    echo $key;
+    echo $value;
+}
 ?>
