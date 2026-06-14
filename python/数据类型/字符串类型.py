@@ -38,8 +38,8 @@ zf.split("指定字符")# 将字符串按照指定字符切割成列表
 zf.strip()# 
 
 """判断开头结尾"""
-zf.startswith('')
-zf.endswith('')
+zf.startswith('指定字符串')#判断是否一指定字符串开头
+zf.endswith('指定字符串')#判断是否一指定字符串结尾
 
 """切片"""
 zf[0:5:2]
