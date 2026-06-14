@@ -15,6 +15,7 @@ print(sz)
 
 # 删除元素:
 del sz[2]
+sz.pop(3)
 print(sz)
 
 # 添加元素:
