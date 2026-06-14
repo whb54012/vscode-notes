@@ -33,6 +33,6 @@ with open("C:\\Users\\whb\\Desktop\\常见网址.txt","r",encoding="utf-8") as f
             s.connect(a)
             print(wen,"访问成功")
         except:
-            print(a,"连接超时")
+            print(wen,"连接超时")
         s.close()
 
