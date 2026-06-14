@@ -19,7 +19,7 @@ jia(100)#b不传参，用默认值使用
 def zfc(c,d="nihao"):
     print(c+"和"+d)#字符串拼接用+号，汉字用字符串表示
     print(f"{c}和{d}")
-zfc("whb")#字符串传参记住格式
+zfc('whb')#字符串传参记住格式
 #有返回值记得加return
 def a():
     pass
