@@ -29,6 +29,10 @@ zf.find('he')
 zf.count('he')
 # 统计字串出现的次数
 
+"""转换(upper,lower)"""
+zf.upper()#将字串的字母转换为大写写
+zf.lower()#将字串的字母转换为小写
+
 
 # 切片
 zf[0:5:2]
