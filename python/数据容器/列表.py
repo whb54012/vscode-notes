@@ -19,7 +19,7 @@ del sz[2]
 sz.pop(3)
 # 删除指定索引的值
 sz.remove('whb')
-# 删除数组中内容匹配的值
+# 删除数组中第一个内容匹配的值
 print(sz)
 
 # 添加元素:(append,insert,extend)
