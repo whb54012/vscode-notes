@@ -10,7 +10,7 @@ print(zf1)#字符串用单引和多引都可以
 print(zf1[0])#从左到右
 print(zf1[-1])#从右到左
 
-字符串.replace()
+"""替换(replace)"""
 # 新字符串=字符串.replace('查找值'，'替换值','替换次数')
 new_a = zf.replace('hello','你好')
 print(new_a)
