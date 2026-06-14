@@ -8,8 +8,9 @@ print(sz[0])#输出数组左边第一个
 print(sz[-1])#输出数组右边第一个
 print(sz)
 #输出数组整个结构
-sz[3]='whb'
+
 #列表特点：可变可修改
+sz[3]='whb'
 # 修改元素可直接赋值
 print(sz)
 
@@ -17,15 +18,13 @@ print(sz)
 del sz[2]
 sz.pop(3)
 # 删除指定索引的值
-print(sz)
 sz.remove('whb')
 # 删除数组中内容匹配的值
 print(sz)
 
-# 添加元素:
+# 添加元素:(append,insert,extend)
 sz.append(4)#在末尾添加元素4
 #数组.append(末尾要添加的值)
-print(sz)
 sz.insert(1,5)#在索引1的位置添加元素5
 #选定位置添加方法：insert(添加的位置,要添加的值)
 sz.extend([6,7,8])
