@@ -12,18 +12,20 @@ print(sz)
 sz[3]='whb'
 # 修改元素可直接赋值
 print(sz)
-# 添加元素:
-sz.append(4)#添加元素4
-#末尾添加方法：数组.append(要添加的值)
-print(sz)
-#选定位置添加方法：insert(添加的位置,要添加的值)
-sz.insert(1,5)#在索引1的位置添加元素5
-#末尾添加元素列表两种方法
-sz.extend([6,7,8])
-sz=sz+[9,10]
-print(sz)
+
 # 删除元素:
 del sz[2]
+print(sz)
+
+# 添加元素:
+sz.append(4)#添加元素4
+print(sz)
+#末尾添加方法：数组.append(要添加的值)
+#选定位置添加方法：insert(添加的位置,要添加的值)
+sz.insert(1,5)
+#在索引1的位置添加元素5
+sz.extend([6,7,8])
+sz=sz+[9,10]#末尾添加元素列表两种方法
 print(sz)
 
 # 切片
