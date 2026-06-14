@@ -23,6 +23,11 @@ new_b = zf.replace('l','i',1)
 print(new_b)#只会替换一次
 print(new_a+new_b+"ni")#字符串可以直接拼接
 
+"""查找统计(find,count)"""
+zf.find('he')
+# 返回字符串中查找字串第一次出现的索引位置,找不到旧返回-1
+
+
 # 切片
 zf[0:5:2]
 print(zf[0:5:2])
