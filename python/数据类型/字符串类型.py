@@ -33,6 +33,10 @@ zf.count('he')
 zf.upper()#将字串的字母转换为大写写
 zf.lower()#将字串的字母转换为小写
 
+"""分割与去除(split,strip)"""
+zf.split(分割符)# 
+# 
+
 
 # 切片
 zf[0:5:2]
