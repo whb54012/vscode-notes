@@ -1,8 +1,0 @@
-@import"less文件地址名";
-用于将之前多个less文件导入当前less文件导出的css文件
-//out: ./文件名.css
-创造一个空文件出来
-//out: ./文件夹名/文件名.css
-创造一个文件夹出来
-//out:false
-在less文件第一行写上述指令将会禁止此less导出

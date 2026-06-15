@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            box-sizing: border-box;/*内减模式，盒子自动减去内边距大小*/
+            padding-top: 20px;/*内边距，出现在内容与盒子边缘*/
+            padding-left: 10px;
+            padding-bottom: 50px;
+            padding-right: 30px;/*不同方向盒子内边距大小不同*/
+            /* padding: ;复合写法，一个值为四周相同，两个为上下，左右，三个值为上，左右，下，四个值为上，右，下，左顺时针 */
+            border-bottom: 10px solid #0e19e6f0;/*边框，属性为粗细，线条类型（实虚点线） 颜色 */
+            border-top: 2px dashed violet;
+            border-right: 3px dotted green;
+            border-left: 4px solid yellow;/*不同方向边框线属性不同*/
+            margin: 5px;/*外边距*/
+            margin: 0 auto;/*复合用法和padding一样,也可和padding一样用padding-方向的写法，auto为自动自适应，效果为版心居中*/
+        }
+        .box1{
+            width: 100px;
+            background-color: green;
+            height: 100px;
+            overflow: hidden;/**溢出部分隐藏*/
+            overflow: scroll;/*添加滚动条，使溢出部分能随滚动查看。不管有没有溢出*/
+            overflow: auto;/*有溢出内容时才出现滚动条*/
+            border-radius: 50px;/*圆角设置*/
+            border-radius: 10px 10px 20px 20px;/*顺时针圆角*/
+            border-radius: 50%;/*超过百分之五十没有效果*/
+        }
+        .box2{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            box-shadow: 2px 5px 1px 1px red ;/*盒子阴影分别为x轴，y轴，模糊半径，扩散半径，内外阴影（默认外阴影，内阴影为inset）*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">盒子</div>div为块级,独占一整行
+    <div class="box1">哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡嗡</div>
+    <div class="box2"></div>
+</body>
+</html><!--外边距合并现象：当上下盒子垂直靠近，且都有margin时，上下margin会合并取最大值margin充当两者间的边界，而不是将两者边距合在一起充当-->
+<!--外边距塌陷问题：-->
