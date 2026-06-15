@@ -6,11 +6,11 @@ let user = {
     console.log("你好！");
   }
 };
-// 1.普通函数
+// 1.普通函数直接调用
 function per(name){
   return "hello"+name;
 }
-var x=per;
+var x=per('whb');
 print(x);
 //2.构造函数加new
 function Person(name, age) {
