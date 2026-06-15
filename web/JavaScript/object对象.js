@@ -10,6 +10,7 @@ let user = {
 console.log(user.name);
 console.log(user['name']);
 
+// 函数调用
 // 1.普通函数直接调用
 function per(name){
   return "hello"+name;
