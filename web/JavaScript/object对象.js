@@ -6,6 +6,10 @@ let user = {
     console.log("你好！");
   }
 };
+// 对象调用两种方式
+console.log(user.name);
+console.log(user['name']);
+
 // 1.普通函数直接调用
 function per(name){
   return "hello"+name;
