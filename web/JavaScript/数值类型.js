@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
+
         let arr1=[1,2,3];
         let arr2=Array(1,2,3);
         let arr3=new Array(1,2,3);
@@ -14,6 +6,3 @@
 //如let arr1=Array[1]会将它理解为长度为一的数组;
 document.write(arr1);
 //当输出直接写数组本身时，他是直接输出所有元素
-    </script>
-</body>
-</html>
