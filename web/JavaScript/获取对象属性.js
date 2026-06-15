@@ -1,0 +1,1 @@
+let a=document.getElementsByClassName('class属性名')
