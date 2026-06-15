@@ -1,5 +1,7 @@
 var a=1;
 var b='abc';
+var x=a+b;
+// 数值与字符串之间可以直接拼接
 let arr1=[1,2,3];
 let arr2=Array(1,2,3);
 let arr3=new Array(1,2,3);
