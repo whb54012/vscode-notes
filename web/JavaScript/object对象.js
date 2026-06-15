@@ -7,6 +7,11 @@ let user = {
   }
 };
 // 1.普通函数
+function per(name){
+  return "hello"+name;
+}
+var x=per;
+print(x);
 //2.构造函数加new
 function Person(name, age) {
   this.name = name;//前一个name是自己设置的属性，也可以设置为其他单词，后一个为接受对象不可修改
