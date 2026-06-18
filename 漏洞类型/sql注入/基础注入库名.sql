@@ -15,3 +15,5 @@ select group_concat(成员名) from 表名;
 将查出来的成员名用group_concat函数变成一行直接输出
 load_file('绝对路径');
 高频语句,读取路径内文件的内容并返回
+hex(load_file('绝对路径');)
+手动将内容转换成十六进制编码,以防出现不可控问题
