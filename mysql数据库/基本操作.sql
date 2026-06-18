@@ -6,10 +6,10 @@ select database();查看当前所在的数据库
 为数据库内创建表格
 use 数据库名;选择数据库
 create table 表格名(
-    ID int auto_increment,id自增长,删去后将每行不会有id显示
+    ID int auto_increment, id自增长,删去后将每行不会有id显示
     name varchar(20), 表字段名 类型,字符串varchar()内部添加数字来容纳相对应的字符
-    sex varchar(5),表字段名 类型
-    age int NOT NULL,添加限制，不能为空
+    sex varchar(5), 表字段名 类型
+    age int NOT NULL, 添加限制，不能为空
     primary key(ID)与第一排内容一体,两者可同时删去,也可直接在第一句后写primary key就不用另起一行
 )default charset=utf8mb4;可简写为charset=utf8mb4
 //在打开的数据库中创造新的表格
