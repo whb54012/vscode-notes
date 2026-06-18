@@ -17,3 +17,4 @@ load_file('绝对路径');
 高频语句,读取路径内文件的内容并返回
 hex(load_file('绝对路径');)
 手动将内容转换成十六进制编码,以防出现不可控问题
+select * from user where id='参数'
