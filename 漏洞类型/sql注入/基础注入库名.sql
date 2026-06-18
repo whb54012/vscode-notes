@@ -14,4 +14,4 @@ select * from information_schema.columns where table_schema = database() and tab
 select group_concat(成员名) from 表名;
 将查出来的成员名用group_concat函数变成一行直接输出
 load_file('绝对路径');
-高频语句
+高频语句,读取路径内文件的内容并返回
