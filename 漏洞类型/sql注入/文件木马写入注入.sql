@@ -1,7 +1,9 @@
 前提条件:
 select user()查找当前用户名
+load_file('绝对路径');读取文件内容返回
 select file_priv from mysql.user where user='当前用户名';查看是否有FILE权限
-SELECT @@secure_file_priv;查看mysql的secure_file_priv参数值,如果值为NULL则不限制全局导入,如果值为某个路径则只能导入到该路径下
+SELECT @@secure_file_priv;
+查看mysql的secure_file_priv参数值,如果值为NULL则不限制全局导入,如果值为某个路径则只能导入到该路径下
 1:mysql不限制全局导入
 2:知道目标绝对物理路径
 3:当前数据库用户有导入权限
