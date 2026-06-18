@@ -13,3 +13,4 @@ select * from information_schema.columns where table_schema = database() and tab
 查找指定数据库下指定表名的成员名
 select group_concat(成员名) from 表名;
 将查出来的成员名用group_concat函数变成一行直接输出
+load_file()
