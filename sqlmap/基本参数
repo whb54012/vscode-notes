@@ -43,7 +43,7 @@ python sqlmap.py
   --dump-all                   # 导出全部数据库
   --exclude-sysdbs             # 排除系统库
   --count               # 统计记录数
-  --start=1 --stop=10   # 指定 dump 的行范围
+  --start=1 --stop=10   # 指定dump查找的列范围
   --where="id>5"        # 条件过滤
   --sql-query="SELECT * FROM users"  # 执行自定义 SQL
   --sql-shell                  # 进入 SQL shell
