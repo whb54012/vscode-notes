@@ -13,9 +13,3 @@ select * from information_schema.columns where table_schema = database() and tab
 查找指定数据库下指定表名的成员名
 select group_concat(成员名) from 表名;
 将查出来的成员名用group_concat函数变成一行直接输出
-load_file('绝对路径');
-高频语句,读取路径内文件的内容并返回
-hex(load_file('绝对路径');)
-手动将内容转换成十六进制编码,以防出现不可控问题
-select * from user where id='参数';
-所有为参数的位置都可写十六进制由sql自动转义写入(参数位就是用字符串或数值类型写入的位置)

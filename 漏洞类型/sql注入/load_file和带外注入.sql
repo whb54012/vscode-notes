@@ -1,3 +1,5 @@
+root权限才可使用load_file等高危函数
+secure_file_priv权限为null时load_file才可读取任意路径
 load_file('绝对路径');
 高频语句,读取路径内文件的内容并返回
 hex(load_file('绝对路径');)
