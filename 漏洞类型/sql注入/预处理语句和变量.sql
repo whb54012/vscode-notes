@@ -1,5 +1,7 @@
 需要支持堆叠注入才能实现预处理语句注入
 set @变量名='sql语句';
 //将注入语句写入变量内部
-prepare code(自定义名称) from @变量名;
+prepare code(自定义标识) from @变量名;
+//预处理SQL语句赋值给自定义标识
 execute code;
+//输出预处理语句执行注入
