@@ -1,3 +1,4 @@
 python sqlmap.py
+1.目标设置
 -u "目标URL及其注入点"
   python sqlmap -u "http://xxx.com?id=1"
