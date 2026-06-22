@@ -17,6 +17,7 @@ python sqlmap.py
 3.注入点检测
   # 方法
   --method=POST                # 请求方法
+  --data "id=1"                #配置post注入点
   -p "id,name"                 # 指定测试参数（逗号分隔）
   --skip="id"                  # 跳过指定参数
   --skip-static                # 跳过非动态参数
