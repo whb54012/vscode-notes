@@ -2,6 +2,7 @@
 using namespace std;
 void quicksort(int arr[],int size,int i){
     int j=i;
+    if(j==size){return;}
     for(;j<size;j++){
         if(arr[j]<arr[size]){
             int tmp=arr[j];
@@ -21,5 +22,5 @@ int main(){
     int arr[]={1,9,1,2,1,0,1};
     int k;
     cout<<k<<endl;
-    quicksort(arr,sizeof(arr)/4);
+    quicksort(arr,sizeof(arr)/4,0);
 }
