@@ -1,5 +1,5 @@
 #include<iostream>
-// using namespace std;
+using namespace std;
 int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
