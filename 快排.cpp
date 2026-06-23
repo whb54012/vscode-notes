@@ -11,15 +11,17 @@ void quicksort(int arr[],int size,int i){
             i++;}}
             for(int m=0;m<=6;m++){
         cout<<arr[m]<<endl;
-    }
+    }j=j--;
+    cout<<arr[j-1];
     for(int m=j-1;m>=i;m--){
         int tmp=arr[m];
         arr[m]=arr[j];
         arr[j]=tmp;
         j--;
     }
+    cout<<arr[j]<<endl;
     for(int m=0;m<=6;m++){
-        cout<<arr[m]<<endl;
+        cout<<arr[m];
     }
     // quicksort(arr,j-1,0);
     // quicksort(arr,size,j);
