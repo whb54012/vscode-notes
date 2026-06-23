@@ -29,6 +29,7 @@ auto-push.log
 
 # Excluded folders
 网页/
+最大子串求和
 
 # Large media files
 *.mp4
