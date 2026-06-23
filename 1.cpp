@@ -29,13 +29,12 @@ void max(int l,int r,int m,int arr[]){
     }
 }
 void summax(int arr[],int l,int r){
-    if(l==r)//{
+    if(l==r){
         if(arr[l]>MIN){
             MIN=arr[l];
             start=l;
-            End=r;
-            return;}
-        // return arr[l];}
+            End=r;}
+        return;}
     int m=(l+r)/2;
     summax(arr,l,m);
     summax(arr,m+1,r);
@@ -44,10 +43,10 @@ void summax(int arr[],int l,int r){
 }
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
-    int l=0,right=9;
+    int l=0,r=9;
     MIN=-1000000;
     int total=0;
-    summax(arr,l,right);
+    summax(arr,l,r);
     // int max=
     for(int i=start;i<=End;i++){
         total+=arr[i];
