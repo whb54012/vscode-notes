@@ -5,7 +5,7 @@ int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
 }
-int max(int l,int r,int m,int arr[]){
+void max(int l,int r,int m,int arr[]){
     int suml=0,sumr=0,maxl=arr[m],maxr=arr[m+1];
     int tmpl=m,tmpr=m+1;
     for(int i=m;i>=l;i--){
@@ -27,25 +27,28 @@ int max(int l,int r,int m,int arr[]){
         End=tmpr;
         MIN=maxr+maxl;
     }
-    return maxr+maxl;
 }
-int summax(int arr[],int l,int r){
-    if(l==r){
+void summax(int arr[],int l,int r){
+    if(l==r)//{
         if(arr[l]>MIN){
             MIN=arr[l];
             start=l;
             End=r;}
-        return arr[l];}
+        // return arr[l];}
     int m=(l+r)/2;
-    int L=summax(arr,l,m);
-    int R=summax(arr,m+1,r);
-    int LR=max(l,r,m,arr);
-    return MAX(LR,MAX(L,R));
+    summax(arr,l,m);
+    summax(arr,m+1,r);
+    max(l,r,m,arr);
+    // return MAX(LR,MAX(L,R));
 }
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
     int l=0,r=9;
     MIN=-1000000;
-    int max=summax(arr,l,r);
+    int max;
+    // int max=summax(arr,l,r);
+    for(int i=start;i<=End;i++){
+        max+=arr[i];
+    }
     cout<<max<<endl;
 }
