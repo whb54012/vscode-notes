@@ -29,29 +29,29 @@ void max(int l,int r,int m,int arr[]){
     }
 }
 void summax(int arr[],int l,int r){
-    if(l==r)//{
+    if(l==r){
         if(arr[l]>MIN){
             MIN=arr[l];
             start=l;
-            End=r;}
-        // return arr[l];}
+            End=r;
+        }
+        return;
+    }
     int m=(l+r)/2;
     summax(arr,l,m);
     summax(arr,m+1,r);
     max(l,r,m,arr);
-    // return MAX(LR,MAX(L,R));
 }
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
-    int l=0,r=9;
+    int left=0,right=9;
     MIN=-1000000;
-    int max=0;
-    summax(arr,l,r);
-    // int max=
+    int total=0;
+    summax(arr,left,right);
     for(int i=start;i<=End;i++){
-        max+=arr[i];
+        total+=arr[i];
     }
     cout<<start<<endl;
     cout<<End<<endl;
-    cout<<max<<endl;
+    cout<<total<<endl;
 }
