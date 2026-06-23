@@ -11,6 +11,8 @@ strstr($tmp,'.');//找字符串里第一个匹配内容并返回后面的内容
 $tmp1=strrchr($tmp,'.');//找字符串里最后一个匹配内容并返回后面的内容
 //截取文件名后缀用strrchr,过滤特殊字符后面的内容就用strstr
 
+strtolower($name);//将字符串转换为小写
+strtoupper($name);//将字符串转换为大写
 $arr=array('jpg','png','gif');//设置白名单
 in_array($tmp1,$arr)//白名单检验字符串是否存在于数组
 ?>
