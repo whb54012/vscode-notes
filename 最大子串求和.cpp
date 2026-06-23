@@ -54,6 +54,6 @@ int main(){
             cout<<',';
     }
     cout<<']'<<endl;
-    cout<<total<<endl;
+    cout<<total;
     return 0;
 }
