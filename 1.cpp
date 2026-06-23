@@ -12,7 +12,7 @@ int max(int l,int r,int m,int arr[]){
     }
     for(int i=m+1;i<=r;i++){
         sumr+=arr[i];
-        maxr=MAX(maxl,suml);
+        maxr=MAX(maxr,sumr);
     }
     return maxr+maxl;
 }
