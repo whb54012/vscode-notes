@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int satrt,end,min,tmpl,tmpr;
+int satrt,End,MIN,tmpl,tmpr;
 int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
@@ -18,7 +18,12 @@ int max(int l,int r,int m,int arr[]){
     return maxr+maxl;
 }
 int summax(int arr[],int l,int r){
-    if(l==r) return arr[l];
+    if(l==r){
+        if(arr[l]>MIN){
+            MIN=arr[l];
+            satrt=l;
+            End=r;}
+        return arr[l];}
     int m=(l+r)/2;
     int L=summax(arr,l,m);
     int R=summax(arr,m+1,r);
@@ -28,7 +33,7 @@ int summax(int arr[],int l,int r){
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
     int l=0,r=9;
-    min=-1000000;
+    MIN=-1000000;
     int max=summax(arr,l,r);
     cout<<max<<endl;
 }
