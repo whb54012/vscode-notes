@@ -45,7 +45,7 @@ int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
     int l=0,r=9;
     MIN=-1000000;
-    int max;
+    int max=0;
     // int max=summax(arr,l,r);
     for(int i=start;i<=End;i++){
         max+=arr[i];
