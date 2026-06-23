@@ -33,7 +33,8 @@ void summax(int arr[],int l,int r){
         if(arr[l]>MIN){
             MIN=arr[l];
             start=l;
-            End=r;}
+            End=r;
+            return;}
         // return arr[l];}
     int m=(l+r)/2;
     summax(arr,l,m);
