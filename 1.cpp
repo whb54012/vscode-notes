@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int satrt,End,MIN;
+int start,End,MIN;
 int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
@@ -22,13 +22,18 @@ int max(int l,int r,int m,int arr[]){
             maxr=sumr;
         }
     }
+    if((maxr+maxl)>MIN){
+        start=tmpl;
+        End=tmpr;
+        MIN=maxr+maxl;
+    }
     return maxr+maxl;
 }
 int summax(int arr[],int l,int r){
     if(l==r){
         if(arr[l]>MIN){
             MIN=arr[l];
-            satrt=l;
+            start=l;
             End=r;}
         return arr[l];}
     int m=(l+r)/2;
