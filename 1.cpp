@@ -1,19 +1,26 @@
 #include<iostream>
 using namespace std;
-int satrt,End,MIN,tmpl,tmpr;
+int satrt,End,MIN;
 int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
 }
 int max(int l,int r,int m,int arr[]){
     int suml=0,sumr=0,maxl=arr[m],maxr=arr[m+1];
+    int tmpl=m,tmpr=m+1;
     for(int i=m;i>=l;i--){
         suml+=arr[i];
-        maxl=MAX(maxl,suml);
+        if(maxl<suml){
+            tmpl=i;
+            maxl=suml;
+        }
     }
     for(int i=m+1;i<=r;i++){
         sumr+=arr[i];
-        maxr=MAX(maxr,sumr);
+        if(maxr<sumr){
+            tmpr=i;
+            maxr=sumr;
+        }
     }
     return maxr+maxl;
 }
