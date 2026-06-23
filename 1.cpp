@@ -47,9 +47,9 @@ int main(){
     int l=0,r=9;
     MIN=-1000000;
     int total=summax(arr,l,r);
-    for(int i=start;i<=End;i++){
-        total+=arr[i];
-    }
+    // for(int i=start;i<=End;i++){
+    //     total+=arr[i];
+    // }
     cout<<total<<endl;
     return 0;
 }
