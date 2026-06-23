@@ -26,7 +26,7 @@ int summax(int arr[],int l,int r){
 }
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
-    int l=0,r=9;
+    int l=0,r=3;
     int max=summax(arr,l,r);
     cout<<max<<endl;
 }
