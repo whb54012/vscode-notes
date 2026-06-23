@@ -55,4 +55,5 @@ int main(){
     cout<<start<<endl;
     cout<<End<<endl;
     cout<<total<<endl;
+    return 0;
 }
