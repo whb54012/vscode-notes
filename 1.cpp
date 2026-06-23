@@ -3,7 +3,7 @@ using namespace std;
 int start,End,MIN;
 int MAX(int max,int sum){
     if(max<sum) return sum;
-    else return max;
+    return max;
 }
 int max(int l,int r,int m,int arr[]){
     int suml=0,sumr=0,maxl=arr[m],maxr=arr[m+1];
@@ -49,9 +49,11 @@ int main(){
     int total=summax(arr,l,r);
     cout<<'[';
     for(int i=start;i<=End;i++){
-        cout<<arr[i]<<',';
+        cout<<arr[i];
+        if(i<End)
+            cout<<',';
     }
-    cout<<']';
+    cout<<']'<<endl;
     cout<<total<<endl;
     return 0;
 }
