@@ -43,10 +43,10 @@ void summax(int arr[],int l,int r){
 }
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
-    int l=0,r=9;
+    int l=0, right=9;
     MIN=-1000000;
     int max=0;
-    summax(arr,l,r);
+    summax(arr,l,right);
     // int max=
     for(int i=start;i<=End;i++){
         max+=arr[i];
