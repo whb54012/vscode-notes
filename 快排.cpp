@@ -18,7 +18,7 @@ void quicksort(int arr[],int size,int i){
         arr[j]=tmp;
         j--;
     }
-    cout<<endl;
+    cout<<j<<endl;
     for(int m=0;m<=6;m++){
         cout<<arr[m];
     }
