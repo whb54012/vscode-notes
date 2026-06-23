@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int start,End,MIN;
+int start=0,End=0,MIN;
 int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
@@ -50,5 +50,7 @@ int main(){
     for(int i=start;i<=End;i++){
         max+=arr[i];
     }
+    cout<<start<<endl;
+    cout<<End<<endl;
     cout<<max<<endl;
 }
