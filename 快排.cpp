@@ -8,12 +8,13 @@ void quicksort(int arr[],int size){
             arr[j]=arr[i];
             arr[i]=tmp;
             i++;}}
-    for(m=j-1;m>=i;m--){
+    for(int m=j-1;m>=i;m--){
         int tmp=arr[j];
         int arr[m]=arr[j];
-        int arr[j]=arr[m];
+        int arr[j]=tmp;
         j--;
     }
+    quickasort();
 }
 int main(){
     int arr[]={1,9,1,2,1,0,1};
