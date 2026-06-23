@@ -2,8 +2,9 @@
 using namespace std;
 void quicksort(int arr[],int size,int i){
     int j=i;
-    if(j==size-1){return;}
-    for(;j<size;j++){
+    cout<<size;
+    if(j==size){return;}
+    for(;j<=size;j++){
         if(arr[j]<arr[size-1]){
             int tmp=arr[j];
             arr[j]=arr[i];
@@ -23,13 +24,13 @@ void quicksort(int arr[],int size,int i){
     for(int m=0;m<=6;m++){
         cout<<arr[m];
     }
-    quicksort(arr,j-1,0);
-    quicksort(arr,size,j);
+    // quicksort(arr,j-1,0);
+    // quicksort(arr,size,j);
 }
 int main(){
     int arr[]={1,9,1,2,1,0,1};
     int k;
-    quicksort(arr,sizeof(arr)/4,0);
+    quicksort(arr,sizeof(arr)/4-1,0);
     // for(int m=0;m<=6;m++){
     //     cout<<arr[m]<<endl;
     // }
