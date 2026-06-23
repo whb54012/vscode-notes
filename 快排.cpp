@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
-void quicksort(int arr[],int size){
-    int i=0,j=0;
+void quicksort(int arr[],int size,int i){
+    int j=i;
     for(;j<size;j++){
         if(arr[j]<arr[size]){
             int tmp=arr[j];
