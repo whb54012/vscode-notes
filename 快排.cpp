@@ -15,6 +15,7 @@ void quicksort(int arr[],int size,int i){
         j--;
     }
     quicksort(arr,j-1,0);
+    quicksort(arr,size,j);
 }
 int main(){
     int arr[]={1,9,1,2,1,0,1};
