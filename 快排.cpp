@@ -2,14 +2,17 @@
 using namespace std;
 void quicksort(int arr[],int size){
     int i=0,j=0;
-    for{;j<=size;j++}{
+    for(;j<=size;j++){
         if(arr[j]<arr[size]){
             int tmp=arr[j];
             arr[j]=arr[i];
             arr[i]=tmp;
-            i++;
-        }
-
+            i++;}}
+    for(m=j-1;m>=i;m--){
+        int tmp=arr[j];
+        int arr[m]=arr[j];
+        int arr[j]=arr[m];
+        j--;
     }
 }
 int main(){
