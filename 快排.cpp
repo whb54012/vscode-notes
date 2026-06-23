@@ -19,7 +19,7 @@ void quicksort(int arr[],int size,int i){
         arr[j]=tmp;
         j--;
     }
-    cout<<arr[j]<<endl;
+    cout<<endl;
     for(int m=0;m<=6;m++){
         cout<<arr[m];
     }
