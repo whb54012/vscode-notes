@@ -10,8 +10,8 @@ void quicksort(int arr[],int size){
             i++;}}
     for(int m=j-1;m>=i;m--){
         int tmp=arr[j];
-        int arr[m]=arr[j];
-        int arr[j]=tmp;
+        arr[m]=arr[j];
+        arr[j]=tmp;
         j--;
     }
     quickasort();
