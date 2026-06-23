@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+int satrt,end,min,tmpl,tmpr;
 int MAX(int max,int sum){
     if(max<sum) return sum;
     else return max;
@@ -27,6 +28,7 @@ int summax(int arr[],int l,int r){
 int main(){
     int arr[]={1,-3,2,3,4,-1,-3,6,8,10};
     int l=0,r=9;
+    min=-1000000;
     int max=summax(arr,l,r);
     cout<<max<<endl;
 }
