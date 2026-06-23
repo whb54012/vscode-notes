@@ -24,7 +24,7 @@ void quicksort(int arr[],int size,int i){
         cout<<arr[m];
     }
     quicksort(arr,j-1,0);
-    quicksort(arr,size,j);
+    // quicksort(arr,size,j);
 }
 int main(){
     int arr[]={1,9,1,2,1,0,1};
