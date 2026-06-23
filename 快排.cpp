@@ -5,7 +5,7 @@ void quicksort(int arr[],int size,int i){
     cout<<size;
     if(j==size){return;}
     for(;j<=size;j++){
-        if(arr[j]<arr[size-1]){
+        if(arr[j]<arr[size]){
             int tmp=arr[j];
             arr[j]=arr[i];
             arr[i]=tmp;
