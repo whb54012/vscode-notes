@@ -13,12 +13,9 @@ void quicksort(int arr[],int r,int l){
     //     cout<<arr[m];
     // }
     j--;
-    for(int m=j-1;m>=i;m--){
-        int tmp=arr[m];
-        arr[m]=arr[j];
-        arr[j]=tmp;
-        j--;
-    }
+    int tmp=arr[j];
+    arr[j]=arr[i];
+    arr[i]=tmp;
     // cout<<j<<endl;
     // for(int m=0;m<=6;m++){
     //     cout<<arr[m];
