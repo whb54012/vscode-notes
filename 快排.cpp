@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-void quicksort(int arr[],int r,int l){
+void quicksort(int arr[],int l,int r){
     int j=l,i=l;
     if(l>=r){return;}
     for(;j<=r;j++){
@@ -20,8 +20,8 @@ void quicksort(int arr[],int r,int l){
     // for(int m=0;m<=6;m++){
     //     cout<<arr[m];
     // }
-    quicksort(arr,i-1,l);
-    quicksort(arr,r,i+1);
+    quicksort(arr,l,i-1);
+    quicksort(arr,i+1,r);
 }
 int main(){
     int arr[]={5,3,4,1,2};
