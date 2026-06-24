@@ -27,10 +27,10 @@ void quicksort(int arr[],int r,int l){
     quicksort(arr,r,j+1);
 }
 int main(){
-    int arr[]={1,9,2,2,8,1,1};
+    int arr[]={3,1,2};
     int k;
     quicksort(arr,sizeof(arr)/4-1,0);
-    for(int m=0;m<=6;m++){
+    for(int m=0;m<=2;m++){
         cout<<arr[m];
     }
 }
