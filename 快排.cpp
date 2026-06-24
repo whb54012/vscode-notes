@@ -20,8 +20,8 @@ void quicksort(int arr[],int r,int l){
     // for(int m=0;m<=6;m++){
     //     cout<<arr[m];
     // }
-    quicksort(arr,j-1,l);
-    quicksort(arr,r,j+1);
+    quicksort(arr,i-1,l);
+    quicksort(arr,r,i+1);
 }
 int main(){
     int arr[]={5,3,4,1,2};
