@@ -22,7 +22,7 @@ echo $code;
 `命令`:(反引号函数,linux系统独有)
 将变量当作系统命令去执行(它不会把数据打印出来,需要用到echo)
 $code = `ls`;
-echo = $code;
+echo $code;
 通过eval执行linux系统命令
 $code=echo `ifconfig`; eval($code);
 eval("echo `ifconfig`;");
