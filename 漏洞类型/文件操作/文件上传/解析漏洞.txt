@@ -20,8 +20,8 @@ nginx:
 
 
 添加.user.ini配置执行php(适用于PHP5.3.0以上版本):
-#####目录下面存在原始php文件时,通过上传.user.ini配置文件来绕过,.user.ini配置可以让你在当前及其子目录运行任意php文
-#####件时,将目录下与ini里面设置的文件也按照php格式运行
-#####ini配置文件里写着auto_prepend_file=shell.jpg时,访问这个目录里任意一个.php文件时,自动把shell.jpg里的代码当成PHP执行
-#####如果是子目录就得写auto_prepend_file = 子目录名/shell.jpg
+    目录下面存在原始php文件时,通过上传.user.ini配置文件来绕过,.user.ini配置可以让你在当前及其子目录运行任意php文
+件时,将目录下与ini里面设置的文件也按照php格式运行
+    ini配置文件里写着auto_prepend_file=shell.jpg时,访问这个目录里任意一个.php文件时,自动把shell.jpg里的代码当成PHP执行
+如果是子目录就得写auto_prepend_file = 子目录名/shell.jpg
 
