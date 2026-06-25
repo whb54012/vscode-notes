@@ -7,6 +7,11 @@ apache:
 2.通配漏洞:对多后缀存在时不再需要从后往前匹配到第一个认识的后缀,只要包含.php的后缀字符串就默认按php执行
 
 3.修改htaccess配置文件来强制指定文件执行php
+AddType application/x-httpd-php .jpg .png .gif//当前目录生效
+SetHandler application/x-httpd-php //当前目录任意后缀都按php执行
+<FileMatch "文件名">
+SetHandler application/x-httpd-php
+</FileMatch>//指定文件按照php执行
 
 nginx:
 1.路径解析漏洞:在读取文件时加上/.php就会将文件以php格式运行
