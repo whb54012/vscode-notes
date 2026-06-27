@@ -10,3 +10,4 @@ print(d)
 
 d,*e,f=mytuple
 print(e)
+# *会将剩余的元素根据位置整合成列表
