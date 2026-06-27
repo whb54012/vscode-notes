@@ -28,7 +28,7 @@ file:///:本地文件读取,无需开启任何配置
 
 php伪协议:
 php://filter:读取文件源码(无要求)
-php://filter/read=过滤器1/read=过滤器2/.../resource=文件目录(格式要求read=默认可以不加)
+php://filter/read=过滤器1/read=过滤器2/.../resource=文件相对路径(格式要求read=默认可以不加)
 php://filter/(read=)convert.base64-encode/resource=index.php(将index的源代码转义成base64后
 导入网页,中间可以用多个转义,路径可以用file:///)
 
