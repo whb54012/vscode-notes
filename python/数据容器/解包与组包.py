@@ -3,6 +3,10 @@ zfc='1346'
 mytuple=(1,3,4,6)
 List=[1,2,3,5]
 a1={1,3,4}
+num1=1
+num2=2
+num=num1,num2
+print(num)
 # 定义数据容器的过程也可称为组包
 
 a,b,c,d=zfc
