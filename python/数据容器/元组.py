@@ -6,3 +6,6 @@ my_tuple1 = (1)
 print(my_tuple)
 print(my_tuple1)#当元组为一个元素时会被识别为算术的括号，打印结构将不会出现括号
 print(my_tuple[2])#标识为()但索引值用[]不变
+
+# 切片
+print(my_tuple[0:5:1])
