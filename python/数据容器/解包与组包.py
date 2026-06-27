@@ -2,13 +2,13 @@
 zfc='1346'
 mytuple=(1,3,4,6)
 List=[1,2,3,5]
-a={1:2,2:3,3:4}
+a1={1,3,4}
 # 定义数据容器的过程可称为组包
 
 a,b,c,d=zfc
 print(d)
-a,*b,c=a
-print(d)
+a,b,c=a1
+print(c)
 # 基础解包,将每个元素平均解开,元素与变量数量必须对应
 
 g,*e,f=mytuple
