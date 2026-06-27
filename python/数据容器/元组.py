@@ -9,3 +9,9 @@ print(my_tuple[2])#标识为()但索引值用[]不变
 
 # 切片
 print(my_tuple[0:5:1])
+
+# count()统计相同元素个数
+print(my_tuple.count(3))
+
+# index()获取元素第一次出现的索引
+print(my_tuple.index(3))
