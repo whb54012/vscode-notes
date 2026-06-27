@@ -32,7 +32,7 @@ php://filter/read=过滤器1/read=过滤器2/.../resource=文件相对路径(格
 php://filter/(read=)convert.base64-encode/resource=index.php(将index的源代码转义成base64后
 导入网页,中间可以用多个转义,路径可以用file:///)
 
-php://input:读取post请求体,使include能够导入解析请求体中的代码(请求不能是multipart/form-data,两项配置全开)
+php://input:读取post请求体,使include能够导入解析请求体中的代码(请求不能是multipart/form-data,allow_url_include开)
 ?file=php://input post请求体=<?php phpinfo()?>
 
 data://:数据流封装,能将代码直接用include导入执行(两项配置全开)
