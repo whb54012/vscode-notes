@@ -15,3 +15,9 @@ print(my_tuple.count(3))
 
 # index()获取元素第一次出现的索引
 print(my_tuple.index(3))
+
+# 注意点,如果元组里只有一个元素就会被当成变量
+tup=(1)
+print(type(tup))
+tup=(1,)#通过添加逗号来告诉编译出是元组而非单个元素
+print(type(tup))
