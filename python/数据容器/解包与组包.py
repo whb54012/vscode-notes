@@ -5,9 +5,8 @@ List=[1,2,3,5]
 # 定义数据容器的过程可称为组包
 
 a,b,c,d=zfc
+print(d)
 # 基础解包,将每个元素平均解开
 
-d,e,f=mytuple
-print(d)
+d,*e,f=mytuple
 print(e)
-print(f)
