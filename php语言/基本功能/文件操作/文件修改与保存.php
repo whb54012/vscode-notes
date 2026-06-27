@@ -22,4 +22,6 @@ $f=fopen($file,'w');
 fgetc($f);//读取打开的文件,只适用于有读取功能的
 fwrite($f,$content);
 //fwrite(打开的文件,写入内容)
+fclose($f);
+// 关闭文件
 ?>
