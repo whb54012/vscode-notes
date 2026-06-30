@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
     int function(int arr[],int i,int len,int se){
-    if(arr[i]==0) return 0;
+    if(arr[i]==0&&i!=se) return 0;
     if(len>=se) return 1;
     int m=0;
     int j=i;
