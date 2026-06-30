@@ -1,15 +1,16 @@
 #include<iostream>
 using namespace std;
     int function(int arr[],int i,int len,int se){
-    if(len==0) return 0;
+    if(i+len==i) return 0;
     int Max=0,m=1;
-    for(int j=0;j<len;j++){
+    int j=i;
+    for(;j<len;j++){
     if(i+len>=se) return 1;
-    int k=Max+arr[j+i]+m;
+    int k=Max+arr[j]+m;
     m++;
-    if(k>=Max){Max=k;i=j+i;}
+    if(k>=Max){Max=k;i=j;}
     }
-    return function(arr,i,arr[i],se);
+    return function(arr,i,arr[i]+i,se);
 }      
    int main(){
         int arr[]={1,2,3,4,5,6};
