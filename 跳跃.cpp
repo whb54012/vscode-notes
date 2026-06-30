@@ -1,14 +1,16 @@
 #include<iostream>
-    int function(int arr,int i,int len,int se){
-    if(i+len==i) return 1;
-    int Max=0;
+    int function(int arr[],int i,int len,int se){
+    if(i+len==i) return 0;
+    int Max=0,k=0;
     int j=i;
     for(;j<len;j++){
+    if(i+len>=se) return 1;
 	if(len+i>=se) return 1;
-    int j=Max+i+arr[i];
-	Max=max(Max,j);
-                  }
-    return function(int arr,int len,int i);
+    k=Max+i+arr[i];
+	k++;
+    if(k>Max){Max=k;i=j;}
+    }
+    return function(arr,i,arr[i],se);
 }
       
    int main(){
