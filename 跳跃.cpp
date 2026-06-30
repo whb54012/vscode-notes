@@ -2,10 +2,10 @@
 using namespace std;
     int function(int arr[],int i,int len,int se){
     if(arr[i]==0) return 0;
-    int Max=0,m=1;
+    if(len>=se) return 1;
+    int Max=0,m=0;
     int j=i;
     for(;j<=len;j++){
-    if(len>=se) return 1;
     int k=Max+arr[j]+m;
     m++;
     if(k>=Max){Max=k;i=j;}
