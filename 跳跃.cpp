@@ -5,7 +5,7 @@ using namespace std;
     int Max=0,m=1;
     int j=i;
     for(;j<=len;j++){
-    if(i+len>=se) return 1;
+    if(len>=se) return 1;
     int k=Max+arr[j]+m;
     m++;
     if(k>=Max){Max=k;i=j;}
@@ -16,7 +16,7 @@ using namespace std;
         int arr[]={2,1,0,4,5,6};
         int se = sizeof(arr) / sizeof(arr[0]);
         int result = function(arr, 0, arr[0], se - 1);
-        if(result==1) cout<<"ture"<<endl;
+        if(result==1) cout<<"true"<<endl;
         else cout<<"False";
         return 0;
 }
