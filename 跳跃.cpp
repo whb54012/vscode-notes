@@ -4,7 +4,7 @@ using namespace std;
     if(i+len==i) return 0;
     int Max=0,m=1;
     int j=i;
-    for(;j<len;j++){
+    for(;j<=len;j++){
     if(i+len>=se) return 1;
     int k=Max+arr[j]+m;
     m++;
@@ -19,4 +19,4 @@ using namespace std;
         if(result==1) cout<<"ture"<<endl;
         else cout<<"False";
         return 0;
-   }
+}
