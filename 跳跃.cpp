@@ -6,9 +6,8 @@ using namespace std;
     int Max=0,m=0;
     int j=i;
     for(;j<=len;j++){
-    int k=Max+arr[j]+m;
-    m++;
-    if(k>=Max){Max=k;i=j;}
+    Max=j+arr[j];
+    if(Max>=m){m=Max;i=j;}
     }
     return function(arr,i,arr[i]+i,se);
 }      
