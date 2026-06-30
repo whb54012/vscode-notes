@@ -18,6 +18,12 @@
 
 %20:在url可以写空格,不用担心像#一样还没发出去就被浏览器解析把后面的参数隔断
 
+无文件上传:
+1.包含日志利用
+
+2.包含session文件利用
+
+3.伪协议利用
 协议流操作:http/https://,file:///,php://,data://
 两大因素allow_url_fopen,allow_url_include
 allow_url_fopen(近乎所有网络协议都需要开启此配置)
