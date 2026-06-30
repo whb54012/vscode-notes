@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
     int function(int arr[],int i,int len,int se){
-    if(arr[len]==0) return 0;
+    if(arr[i]==0) return 0;
     int Max=0,m=1;
     int j=i;
     for(;j<=len;j++){
@@ -13,7 +13,7 @@ using namespace std;
     return function(arr,i,arr[i]+i,se);
 }      
    int main(){
-        int arr[]={2,1,1,4,5,6};
+        int arr[]={2,1,0,4,5,6};
         int se = sizeof(arr) / sizeof(arr[0]);
         int result = function(arr, 0, arr[0], se - 1);
         if(result==1) cout<<"ture"<<endl;
