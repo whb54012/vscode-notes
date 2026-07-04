@@ -23,6 +23,9 @@
 file:///var/log/nginx/access.log
 
 2.包含session文件利用
+LFI 漏洞；
+Session 存储目录可访问；
+用户输入直接存入 Session 无过滤。
 
 3.伪协议利用
 协议流操作:http/https://,file:///,php://,data://
