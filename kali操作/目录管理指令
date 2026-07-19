@@ -58,3 +58,5 @@ gunzip/bunzip2 压缩文件 == bzip2/gzip -d 压缩文件;
 #rar
 rar a 文件名+.rar 目录;将文件压缩成rar并放进目录
 rar x 压缩文件;解压文件
+#find
+find 目录范围 -name '文件名'
