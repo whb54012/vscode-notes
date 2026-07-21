@@ -16,3 +16,5 @@ usermod -aG 用户名 用户组 将用户转移到新用户组里面
 passwd 用户名 给新用户设置密码
 #id
 id 用户名 查看指定用户所属组,不写就默认当前使用用户
+#chmod
+chmod -R u=rwx,g=r--,o=r--，
