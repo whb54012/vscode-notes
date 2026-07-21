@@ -1,5 +1,13 @@
 sudo 命令 将当前命令以管理员模式运行
 visudo/vim etc/sudoers 修改使用sudo用户权限
 su - 用户名 切换到指定用户,直接用su默认切换到root权限
+#group
 groupadd 组名 创建一个用户组
 groupdel 组名 删除指定用户组
+#user
+useradd -g whb -d /home/whb -m 用户名
+-g(指定放进的用户组)
+-d(指定的/home路径)
+-m(指定路径不存在时自动创建创建,后面没有参数)
+不使用-g的情况下会自动创建和用户名同名用户组,如果已存在同名组,必须用-g,否则无法创建
+userdel 用户名 删除指定用户
