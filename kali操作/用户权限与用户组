@@ -13,7 +13,7 @@ useradd -g whb -d /home/whb -m 用户名
 userdel -r(加上后将用户目录也一并删除) 用户名 删除指定用户
 usermod -aG 用户名 用户组 将用户追加到新用户组里面
 gpasswd -d 用户组 用户名 将指定的一个用户组移除
-usermod -G 用户组 用户名 将用户之前的用户组给移除并给与新用户组
+usermod -g 用户组 用户名 修改主组
 #passwd
 passwd 用户名 给新用户设置密码
 #id
