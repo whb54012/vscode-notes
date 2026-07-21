@@ -16,4 +16,6 @@ for num1 in range(1,8):
             print(word)
             break
         else:
+            num+=1
+            print(num)
             pass
