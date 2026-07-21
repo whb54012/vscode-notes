@@ -1,2 +1,3 @@
 sudo 命令 将当前命令以管理员模式运行
 visudo/vim etc/sudoers 修改使用sudo用户权限
+su - 用户名 切换到指定用户,直接用su默认切换到root权限
