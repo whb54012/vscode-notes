@@ -14,4 +14,3 @@ for num1 in range(1,8):
             break
         else:
             pass
-
