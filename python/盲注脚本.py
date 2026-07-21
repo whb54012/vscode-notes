@@ -10,6 +10,7 @@ for num1 in range(1,8):
         result = requests.get(url + data,verify=False,timeout=2)
         if "If" in result.text:
             word+=chr(num2)
+            print(num2)
             print(word)
             break
         else:
