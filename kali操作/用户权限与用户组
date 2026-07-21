@@ -17,4 +17,8 @@ passwd 用户名 给新用户设置密码
 #id
 id 用户名 查看指定用户所属组,不写就默认当前使用用户
 #chmod
-chmod -R u=rwx,g=r--,o=r--，
+chmod -R u=rwx,g=r--,o=r-- 文件或文件夹
+-R表示对文件或文件夹及其内部设置同样的权限
+u=user所属用户权限
+g=group组用户权限
+o=other其他用户权限
