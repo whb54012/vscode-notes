@@ -1,0 +1,4 @@
+systemctl start/status/stop/enable/disable 服务名
+status:显示服务状态详情
+enable:自启动
+disable:关闭自启动
