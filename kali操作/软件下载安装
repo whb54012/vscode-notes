@@ -1,4 +1,5 @@
 yum/apt update 更新软件源
+apt upgrade 将更新的软件源安装
 yum/apt install/remove/search [-y] 软件名
 -y:跳过是否确认的询问,默认yes
 install:安装 remove:卸载 search:查找
