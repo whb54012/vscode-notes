@@ -1,4 +1,5 @@
-yum/apt update 更新软件源
+yum/apt update [-y] 更新软件源
+#yum更新软件源后会自动安装,无需像apt一样手动安装更新
 apt upgrade 将更新的软件源安装
 yum/apt install/remove/search [-y] 软件名
 -y:跳过是否确认的询问,默认yes
