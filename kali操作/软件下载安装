@@ -1,2 +1,3 @@
 yum [-y] install/remove/search 软件名
+-y:跳过是否确认的询问
 install:安装 remove:卸载 search:查找
