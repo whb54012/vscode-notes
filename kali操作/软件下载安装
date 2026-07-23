@@ -5,4 +5,5 @@ yum/apt install/remove/search [-y] 软件名
 -y:跳过是否确认的询问,默认yes
 install:安装 remove:卸载 search:查找
 wget url:获取网站信息并放进文件或者下载软件
+下载文件多用wget,获取信息多用curl
 curl -o(将获得的网站源码或信息写进文件) 文件 url
