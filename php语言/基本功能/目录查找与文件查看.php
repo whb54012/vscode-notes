@@ -9,4 +9,5 @@ show_source("相对/绝对文件名路径"); 同上
 readfile("相对/绝对文件名路径"); 输出文件原始内容
 echo file_get_contents("相对/绝对文件名路径"); 打开文件,需手动echo打印
 file("相对/绝对文件名路径"); 返回数组
-$f=fopen("相对/绝对文件名路径")
+$f=fopen("相对/绝对文件名路径");
+echo fread($f,读取字节数)
