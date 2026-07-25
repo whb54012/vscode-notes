@@ -16,6 +16,7 @@ SetHandler application/x-httpd-php
 nginx:
 1.路径解析漏洞:在读取文件时加上/.php就会将文件以php格式运行
 2.CVE-2013-4547(url解析漏洞get类型):读取文件时在url路径hex构造空格和\0(%20%00)和任意后缀,让服务器默认执行后面的后缀
+版本限制:0.8.41 ~ 1.4.3 及 1.5.0 ~ 1.5.7 
 #localhost://upload/1.jpg /0.php让nignx认为文件1.jpg以php格式执行(空格和结束符必须手动注入编码)
 
 
