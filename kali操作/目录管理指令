@@ -44,7 +44,8 @@ vim 文件;直接对文件进行编辑,比echo更简便
 tar -cvf 新文件包.tar 文件/文件夹;将文件/文件夹打包进一个文件夹;
 tar -xvf 文件包.tar; 将文件从打包文件中提取出来
 tar -z/j/Jcvf 文件包.tar.gz/bz2/xz 文件/文件夹;将文件夹打包后进行压缩
-z → gzip 压缩(最常用)=gz
+-x → 解压模式
+-z → gzip 压缩(最常用)=gz
 -j → bzip2 压缩=bz2
 -J → xz 压缩(压得更小，但慢)=xz
 #bzip2+gzip+xz(对于压缩工具都可通过加 -k保留原文件)
