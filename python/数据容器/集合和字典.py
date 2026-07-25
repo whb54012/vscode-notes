@@ -14,4 +14,5 @@ dict = {'姓名':'whb',
 print(dict['姓名'])
 print(dict["年龄"])
 print(dict[18])
-a1={}#定义空集合
+a1={}#定义空字典
+a2=set()#定义空集合
