@@ -10,7 +10,8 @@ a.remove('t')#移除指定元素,移除一个
 a.pop()#随意移除一个
 a.clear()#清空集合
 a.difference(s)#求取两个集合的不同值
-#
+a.union(s)#求取并集
+a.intersection()#求取交集
 #打印整体不会打印括号
 
 #                           4.字典
