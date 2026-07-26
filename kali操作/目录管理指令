@@ -61,7 +61,7 @@ tar -z/j/Jxvf 文件包.tar.gz/bz2/xz;将tar打包的压缩文件解压
 bzip2/gzip/xz -d 压缩文件;解压压缩包不保留压缩包
 bzip2/gzip/xz -dk(-d -k) 压缩文件;解压后保留压缩包
 gunzip == gzip -d,bunzip2 == bzip2 -d;
-gunzip/bunzip2 压缩文件 == bzip2/gzip -d 压缩文件;
+gunzip/bunzip2 压缩文件==bzip2/gzip -d 压缩文件; 解压压缩包
 #rar
 rar a 文件名+.rar 目录;将文件压缩成rar并放进目录
 rar x 压缩文件;解压文件
