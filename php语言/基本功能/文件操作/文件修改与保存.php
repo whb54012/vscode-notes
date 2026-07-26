@@ -9,7 +9,7 @@ echo "<form method='post'>
 $txt=$_POST['txt'];
 file_put_contents($file,$txt);
 //file_put_contents(文件路径,修改内容);将旧内容覆盖到新内容里面完成修改文件
-
+//file_put_contents(文件路径,修改内容,FILE_APPEND)加上标志变成追加写入
 // 直接写入
 $content='内容';
 $f=fopen($file,'w');
