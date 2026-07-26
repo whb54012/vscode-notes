@@ -56,6 +56,7 @@ tar -z/j/Jcvf 文件包.tar.gz/bz2/xz 文件/文件夹;将文件夹打包后进�
 bzip2 文件;将单个文件进行压缩,不会保存原文件
 gzip 文件;对单个文件进行压缩,会保存原文件
 xz 文件;和bzip2类似,但速度更快
+zip 文件夹;压缩文件夹
 解压:
 tar -z/j/Jxvf 文件包.tar.gz/bz2/xz;将tar打包的压缩文件解压
 bzip2/gzip/xz -d 压缩文件;解压压缩包不保留压缩包
