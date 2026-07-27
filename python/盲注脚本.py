@@ -3,8 +3,7 @@ import queue
 import threading
 import warnings
 warnings.filterwarnings("ignore")
-result=int(input())
-end=int(input())
+result=int(input("输入查找长度"))
 url = input()
 data=input()
 def fun(url,result,result2):
@@ -13,6 +12,6 @@ def fun(url,result,result2):
         if '' in reponse.text:
             print(result,url+format(result,result2),chr(result2))
             break
-for  i in range(1,end+1):
+for  i in range(1,150):
     t=threading.Thread(target=fun,args=(url,i,result))
     t.start()
