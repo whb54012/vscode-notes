@@ -10,6 +10,17 @@ def one():
 def two():
     print(2,"你好")#用逗号隔开
 two()#调用后才有值
+
+#传参方式
+# 1.顺序传参
+
+
+# 2# 关键值传参
+def zhi(c,d):
+    print(c+d)
+
+zhi(d=1,c=2)
+
 #设置默认参数
 def jia(a,b=300):#为b设置默认值，当b没有参数传进时，默认为300,注意带默认值的参数
 #必须放在无默认值参数的右边,否则会报错
@@ -22,11 +33,8 @@ def zfc(c,d="nihao"):
 zfc('whb')
 #有返回值记得加return
 
-# 关键值传参
-def zhi(c,d):
-    print(c+d)
 
-zhi(d=1,c=2)
+
 # 绑定形参关键字,此时不依赖顺序
 def a():
     pass
