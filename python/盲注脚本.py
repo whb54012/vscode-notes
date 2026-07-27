@@ -16,6 +16,6 @@ def fun(url,result,result2):
         #     print("error\n")
         #     continue
     return
-for  i in range(1,result):
-    t=threading.Thread(target=fun,args=(url,result,150))
+for  i in range(result):
+    t=threading.Thread(target=fun,args=(url,i,150))
     t.start()
