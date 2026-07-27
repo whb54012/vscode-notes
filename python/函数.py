@@ -21,7 +21,7 @@ def zhi(c,d):
 zhi(d=1,c=2)
 
 # 不定长传参
-def three(*arg):#结合为元组
+def three(*arg):#将吸收的参数结合为元组
     print(sum(arg))
 three(1,2,3,4,5,6)
 
