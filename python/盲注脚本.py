@@ -8,7 +8,7 @@ data=input("输入注入语句")
 def fun(url,result,result2):
     for i in range(result2):
         # try:
-            reponse=requests.get(url+data.format(result,i),time=0.5)
+            reponse=requests.get(url+data.format(result,i),Timeout=0.5)
             if 'div' in reponse.text:
                 print(result,url+data.format(result,i),chr(i))
                 break
