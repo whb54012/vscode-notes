@@ -24,3 +24,5 @@ def fun(url,result,result2):
 for  i in range(result):
     t=threading.Thread(target=fun,args=(url,i,150))
     t.start()
+for i in range(result):      # 循环开始
+    i.join()
