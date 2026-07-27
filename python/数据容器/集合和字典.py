@@ -5,13 +5,21 @@ print(a)
 # 因为无序,所以没有索引
 s=set()
 #不可直接写成{},{}为空字典,不是空集合
-a.add('t')#末尾添加
-a.remove('t')#移除指定元素,移除一个
-a.pop()#随意移除一个
-a.clear()#清空集合
-a.difference(s)#求取在前面不在后面集合的元素
-a.union(s)#求取并集
-a.intersection(s) == a&s #求取交集,两种方法都行
+a.add('t')
+#末尾添加
+a.remove('t')
+#移除指定元素,移除一个
+a.pop()
+#随意移除一个
+a.clear()
+#清空集合
+a.difference(s)
+#求取在前面不在后面集合的元素
+a.union(s)
+#求取并集
+a.intersection(s)
+a&s#(可用于多个交集-->a&b&c...)
+#求取交集,两种方法都行
 #打印整体不会打印括号
 
 #                           4.字典
