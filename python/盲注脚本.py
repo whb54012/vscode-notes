@@ -1,6 +1,7 @@
 import requests
 import threading
 import warnings
+import time
 warnings.filterwarnings("ignore")
 # result=int(input("输入查找长度"))
 result=11
@@ -13,6 +14,7 @@ def fun(url,result,result2):
         # try:
             reponse=requests.get(url+data.format(result,i),timeout=0.5)
             if 'login.php' in reponse.text:
+                time.sleep(1)
                 print(result,url+data.format(result,i),chr(i)+"\n")
                 break
         # except:
