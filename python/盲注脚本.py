@@ -17,6 +17,6 @@ def fun(url,result,result2):
                 break
         except:continue
     return
-for  i in range(1,150):
-    t=threading.Thread(target=fun,args=(url,i,result2))
+for  i in range(1,result2):
+    t=threading.Thread(target=fun,args=(url,150,result2))
     t.start()
