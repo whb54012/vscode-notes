@@ -14,7 +14,8 @@ a,b,c,d=zfc
 print(d)
 a,b,c=a1
 print(c)
-print(*a1)
+Set={*a1}
+print(Set)
 # 基础解包,将每个元素平均解开,元素与变量数量必须对应
 
 g,*e,f=mytuple
