@@ -8,7 +8,7 @@ end=int(input())
 url = input()
 data=input()
 def fun(url,result1,result2):
-    reponse=requests.get(url+data %())
+    reponse=requests.get(url.format(result1.get())+data.format(result2.get()))
 
 
 
