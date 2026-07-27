@@ -21,6 +21,13 @@ def zfc(c,d="nihao"):
     print(f"{c}和{d}")
 zfc('whb')
 #有返回值记得加return
+
+# 关键值传参
+def zhi(c,d):
+    print(c+d)
+
+zhi(d=1,c=2)
+# 绑定形参关键字,此时不依赖顺序
 def a():
     pass
 #pass代表空的意思，表示此函数还未开始使用，只是占据了位置
