@@ -1,6 +1,9 @@
 import requests
 import threading
 import warnings
+import sys
+print("Python输出编码:", sys.stdout.encoding)
+input("按任意键继续...")
 warnings.filterwarnings("ignore")
 result=int(input("输入查找长度"))
 url = input("输入url及注入点")
