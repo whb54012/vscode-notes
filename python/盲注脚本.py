@@ -9,12 +9,13 @@ url = input()
 data=input()
 def fun(url,result1):
     for i in range(num):
+        if result1.empty():
+            break
         num1=result1.get()
         reponse=requests.get(url.format(num)+data.format(num1))
         if '' in reponse.text:
             print(num,url.format(num)+data.format(num1),chr(num1))
-        if result1.empty():
-            break
+        
 
 
 
