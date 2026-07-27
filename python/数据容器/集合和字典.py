@@ -17,6 +17,7 @@ a.difference(s)
 a-s
 #求取在前面不在后面集合的元素,差集
 a.union(s)
+a|s
 #求取并集
 a.intersection(s)
 a&s
