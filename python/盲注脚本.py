@@ -9,7 +9,7 @@ def fun(url,result,result2):
     for i in range(result2):
         # try:
             reponse=requests.get(url+data.format(result,i))
-            if '' in reponse.text:
+            if 'div' in reponse.text:
                 print(result,url+format(result,i),chr(i))
                 break
         # except:
