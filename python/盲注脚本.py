@@ -1,4 +1,5 @@
 import requests
+import threading
 import warnings
 warnings.filterwarnings("ignore")
 word=""
@@ -13,6 +14,7 @@ for num1 in range(1,57):
         if "If" in result.text:
             word+=chr(num2)
             print(num2)
+
             print(word)
             break
         else:
