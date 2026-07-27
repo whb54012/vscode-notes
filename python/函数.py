@@ -22,7 +22,7 @@ zhi(d=1,c=2)
 
 # 不定长传参
 def three(*arg):#将吸收的参数结合为元组
-    print(sum(arg))
+    print(arg[2])
 three(1,2,3,4,5,6)
 
 #设置默认参数
