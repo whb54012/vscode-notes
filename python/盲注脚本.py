@@ -4,8 +4,8 @@ import threading
 import warnings
 warnings.filterwarnings("ignore")
 result=int(input("输入查找长度"))
-url = input()
-data=input()
+url = input("输入url及注入点")
+data=input("输入注入语句")
 def fun(url,result,result2):
     for i in result2:
         reponse=requests.get(url+data.format(result,result2))
