@@ -32,4 +32,5 @@ dict = {'姓名':'whb',
 print(dict['姓名'])
 print(dict["年龄"])
 print(dict[18])
+dict[18]=19# 字典值可修改,键不可修改
 a1={}#定义空字典
