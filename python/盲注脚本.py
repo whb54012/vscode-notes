@@ -1,5 +1,4 @@
 import requests
-import queue
 import threading
 import warnings
 warnings.filterwarnings("ignore")
