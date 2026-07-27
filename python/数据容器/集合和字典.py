@@ -11,7 +11,7 @@ a.pop()#随意移除一个
 a.clear()#清空集合
 a.difference(s)#求取在前面不在后面集合的元素
 a.union(s)#求取并集
-a.intersection()#求取交集
+a.intersection(s) == a&s #求取交集,两种方法都行
 #打印整体不会打印括号
 
 #                           4.字典
