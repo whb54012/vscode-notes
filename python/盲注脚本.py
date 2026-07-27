@@ -7,12 +7,13 @@ num=int(input())
 end=int(input())
 url = input()
 data=input()
-def fun(url,result2):
+def fun(url,result1):
     for i in range(num):
         num1=result1.get()
         reponse=requests.get(url.format(num)+data.format(num1))
         if '' in reponse.text:
-            print(num,chr(num1))
+            print(num,url.format(num)+data.format(num1),chr(num1))
+        if result1.em:
 
 
 
