@@ -13,17 +13,21 @@ two()
 # 1.顺序传参
 def one(a,b):
     print(a+b)
-one()
+one(1,2)
 
-# 2# 关键值传参
+# 2.# 关键值传参
 def zhi(c,d):
     print(c+d)
 zhi(d=1,c=2)
 
-# 不定长传参
+# 3.不定长传参
 def three(*arg):#将吸收的参数结合为元组
     print(arg[2])
 three(1,2,3,4,5,6)
+# 3.1不定长关键字传参
+def three(*arg,**dict):#将吸收的关键字参数结合为字典
+    print(dict.values())
+three(1,2,3,name="whb",age=18)
 
 #设置默认参数
 def jia(a,b=300):#为b设置默认值，当b没有参数传进时，默认为300,注意带默认值的参数
