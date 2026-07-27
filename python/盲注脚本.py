@@ -10,7 +10,7 @@ def fun(url,result,result2):
         # try:
             reponse=requests.get(url+data.format(result,i))
             if 'div' in reponse.text:
-                print(result,data.format(result,i),chr(i))
+                print(result,url+data.format(result,i),chr(i))
                 break
         # except:
         #     print("error\n")
