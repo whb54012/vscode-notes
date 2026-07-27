@@ -1,6 +1,6 @@
 num=10
 def one(a,b):
-    global num#变量声明,全局变量
+    global num#变量声明,与外部全局变量指向同一个,如果外部不存在就以当前未全局变量
     num=a+b
     return
 one(1,2)
