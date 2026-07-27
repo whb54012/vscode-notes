@@ -42,3 +42,13 @@ socre=dict['爱好']
 # 删除对应键值对并返回值
 dict['姓名']='lsy'
 # 存在的键值对直接修改就可
+
+# 查询
+dict.get("姓名")
+# 获得对应的值
+dict.keys()
+# 获得所有key
+dict.values()
+# 获得所有值
+dict.items()
+# 获得所有键值对
