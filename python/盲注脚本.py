@@ -12,10 +12,10 @@ data='?c=11{}{}123'
 def fun(url,result,result2):
     for i in range(result2):
         # try:
-            reponse=requests.get(url+data.format(result,i),timeout=0.5)
-            if 'login.php' in reponse.text:
-                print(result,"          ")
-                break
+        reponse=requests.get(url+data.format(result,i),timeout=0.5)
+        if 'login.php' in reponse.text:
+            print(result,"          ")
+            break
         # except:
         #     print("error\n")
         #     continue
