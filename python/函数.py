@@ -9,6 +9,11 @@ def two():
 two()
 #函数生效必须调用后才有值
 
+"""隐形函数"""
+#函数关键字lambda
+add=lambda x,y:print(x+y)
+add(1,2)
+
 #传参方式
 # 1.顺序传参
 def one(a,b):
