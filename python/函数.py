@@ -13,6 +13,7 @@ two()
 #函数关键字lambda
 add=lambda x,y:print(x+y)
 add(1,2)
+# 隐形函数只能执行一个表达式
 
 #传参方式
 # 1.顺序传参
