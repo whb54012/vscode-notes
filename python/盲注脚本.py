@@ -5,6 +5,8 @@ warnings.filterwarnings("ignore")
 result=int(input("输入查找长度"))
 # result=100
 url = input("输入url及注入点")
+if not url.startswith(("http://", "https://")):
+    url = "http://" + url
 # url="http://localhost:3000/%E7%BD%91%E9%A1%B5/%E4%B8%BB%E9%A1%B5/%E9%9F%B3%E4%B9%90.php"
 data=input("输入注入语句")
 find=input("需要查找的字符串")
