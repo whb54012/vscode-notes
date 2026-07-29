@@ -1,3 +1,4 @@
+#                   模块
 import 模块名
 # 启动模块
 import 模块名 as 别名
@@ -27,3 +28,7 @@ a=1
 b=2#可被导入模板使用
 def _private_func():
     print("我是私有函数（下划线开头）")
+#                   包
+import 包名
+from 包名 import 模块名
+from 包名.模块名 import 功能名
