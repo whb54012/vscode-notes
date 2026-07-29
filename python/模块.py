@@ -34,3 +34,5 @@ def _private_func():
 # from 包名 import 模块名
 
 # from 包名.模块名 import 功能名
+
+# from 包名.模块名 import *
