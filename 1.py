@@ -7,8 +7,8 @@ for i in range(48):
     for j in range(0,len(str)):
         index=flag+str[j]
         data={
-            'username':'123',
-            'email':123,
+            'username':'whb',
+            'email':'123',
             'nickname':'123',
             'password':index
         }
