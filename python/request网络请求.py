@@ -8,7 +8,9 @@ params={'键':'值'}
 # 为url后面添加参数
 data={'键':'值'}
 # 为post请求添加请求体
-requests.get('url',headers=headers,cookies=cookies,params=params,timeout='超时时间')
+t=requests.get('url',headers=headers,cookies=cookies,params=params,timeout='超时时间')
 # get请求
-requests.post('url',headers=headers,data=data,cookies=cookies,params=params)
+t=requests.post('url',headers=headers,data=data,cookies=cookies,params=params)
 # post请求
+
+# 返回模式
