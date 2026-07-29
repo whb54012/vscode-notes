@@ -9,3 +9,7 @@ print(Car.price)
 print(Car.__dict__)
 # 对象的内置函数,将对象属性按照字典格式打印
 #                   类方法
+class Person:
+    def _int_(name):
+        name=name
+    # __int__初始化方法,创建对象自动调用
