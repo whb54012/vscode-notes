@@ -6,7 +6,7 @@ select * from user where id=(('('()')'));他只会以((''))当隔断,内部多�
 判断过滤词汇:
 waf绕过使用:
 --空格检测:
-用&09,%0a,/**/替换
+用%09,%0a,/**/替换
 --大小写绕过
 select username from user UNION select password from user
 --双写绕过,用于删除类绕开
