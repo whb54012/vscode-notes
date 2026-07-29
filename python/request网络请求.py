@@ -4,6 +4,7 @@ headers={'键':'值'}
 # 添加请求头
 cookies={'键':'值'}
 # 添加cookie,也可直接写在headers里面
+# headers和cookie几乎只能用字典传输
 params={'键':'值'}
 params="键=值"
 # 为url后面添加参数

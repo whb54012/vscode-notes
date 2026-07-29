@@ -2,4 +2,4 @@ import requests
 url=input()
 cookie=input()
 data=input()
-requests.post(url,data=data,cookies=cookie,)
+t=requests.post(url,data=data,cookies=cookie,timeout=1).text
