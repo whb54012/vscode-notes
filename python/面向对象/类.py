@@ -4,7 +4,7 @@ class Car:#类名首字母必须大写
 对象名=Car()
 对象名.name="bwm"#可动态添加属性
 对象名.color='red'
-#对象名.price=10#可动态修改属性
+对象名.price=10#可添加修改已有属性
 print(对象名.price)
 print(对象名.__dict__)
 # 对象的内置函数,将对象属性按照字典格式打印
