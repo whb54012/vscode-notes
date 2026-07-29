@@ -51,3 +51,7 @@ zfc('whb')
 def a():
     pass
 #pass代表空的意思，表示此函数还未开始使用，只是占据了位置
+
+# 类型注解
+def one(a:int,b:int):#类型注解，限制上传类型为指定类型
+    print(a+b)
