@@ -18,10 +18,10 @@ if __name__=='__main__':
 保留到主程序结束"""
 
 # 自定义导入功能,使用from 模块名 import *时可以用__all__来限制导入部分
-__all__ = ['public_func', 'PublicClass','b']  # 声明公开接口
+__all__ = ['public_func','b']  # 声明公开接口
 def public_func():
     print("我是公开函数")
-class PublicClass:
+def PublicClass():#不可被使用
     pass
 a=1
 b=2#可被导入模板使用
