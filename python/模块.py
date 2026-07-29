@@ -24,6 +24,6 @@ def public_func():
 class PublicClass:
     pass
 a=1
-b=2
+b=2#可被导入模板使用
 def _private_func():
     print("我是私有函数（下划线开头）")
