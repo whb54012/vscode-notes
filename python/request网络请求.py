@@ -5,7 +5,10 @@ headers={'键':'值'}
 cookies={'键':'值'}
 # 添加cookie,也可直接写在headers里面
 params={'键':'值'}
-# 为get请求添加参数
+# 为url后面添加参数
 data={'键':'值'}
 # 为post请求添加请求体
-requests.get('url',headers='请求头',timeout='超时时间')
+requests.get('url',headers=headers,cookies=cookies,params=params,timeout='超时时间')
+# get请求
+requests.post('url',headers=headers,data=data,cookies=cookies,params=params)
+# post请求
