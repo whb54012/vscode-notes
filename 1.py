@@ -1,5 +1,5 @@
 import requests
-url="https://d6de054a-781e-4910-976b-5b236140d353.challenge.ctf.show/user_main.php?order=3"
+url="http://d6de054a-781e-4910-976b-5b236140d353.challenge.ctf.show/user_main.php?order=3"
 cookie={'PHPSESSID':'b7fbe90eedaf98d734e1ad346d897c6e'}
 str='-0123456789abcdefghijklmnopqrstuvwxyz{|}'
 flag=""
