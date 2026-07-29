@@ -16,6 +16,9 @@ class 类名:
 对象=类名('参数')
 
 class Person:
-    def __init__(self,name):
-        pass
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+person=Person('whb',18)
+print(person.__dict__)
 
