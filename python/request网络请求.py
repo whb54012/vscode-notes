@@ -13,4 +13,3 @@ t=requests.get('url',headers=headers,cookies=cookies,params=params,timeout='超�
 t=requests.post('url',headers=headers,data=data,cookies=cookies,params=params)
 # post请求
 
-# 返回模式
