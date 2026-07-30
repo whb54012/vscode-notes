@@ -19,9 +19,11 @@ class Person:
     def __init__(self,name,age):
         self.name=name
         self.age=age
-    def fun(name):
-        print(name)
+    def fun(self,name):
+        print(name)#打印传进来的参数
+        print(self.name)#打印本身的name
 person=Person('whb',18)
-print(person.fun('whb'))
+person.fun('w')
+# 使用类方法时，对象会中断传一个对象变量过去
 print(person.__dict__)
 
