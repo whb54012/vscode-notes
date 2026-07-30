@@ -19,6 +19,9 @@ class Person:
     def __init__(self,name,age):
         self.name=name
         self.age=age
+    def fun(name):
+        print(name)
 person=Person('whb',18)
+print(person.fun('whb'))
 print(person.__dict__)
 
