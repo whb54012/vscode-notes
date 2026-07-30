@@ -7,6 +7,6 @@ class Fun:
         self.name=name
     def __str__(self):
         return f"姓名：{self.name}，年龄：{self.age}"
-    # 返回字符串模式
+    # 将数据按照自己设定的格式返回字符串模式
 person=Fun('whb',18)
 print(person)#打印返回的字符串
