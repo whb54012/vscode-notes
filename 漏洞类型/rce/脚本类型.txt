@@ -27,7 +27,6 @@ echo $code;
 $code=echo `ifconfig`; eval($code);
 eval("echo `ifconfig`;");
 
-$():和反引号功能相同,linux命令执行替换符
 (linux单引号为字符串定界符,能够将包裹的参数当成单个参数,这样即使内部写了
 分割符也无法执行多条命令)
         ping '127.0.0.1'
