@@ -5,8 +5,9 @@
 (反斜杠会对字符转义,但普通字符不变)
     cat 1\23.txt-->cd 123.txt
     c\at flag-->cat flag
-''绕过:linux当中''被当作空字符串,放在字符串中间会被直接拼接
-    cat fl''ag.txt-->cat flag.txt
+''/$@绕过:linux当中''和$@都能被当作空字符串,放在字符串中间会被直接拼接
+    cat fl''/$@ag.txt-->cat flag.txt
+     ca''/$@t flag.txt-->cat flag.txt
 $''内部转义切割:将命令或参数拆解一部分放入绕过匹配
 ($''会对内部内容转义,但普通字符不变)
     cat 1$'2'3.txt-->cd 123.txt
