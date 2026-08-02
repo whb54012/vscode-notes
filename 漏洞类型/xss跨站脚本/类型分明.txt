@@ -11,7 +11,7 @@ httponly绕过:
 注释://
 通过直接写入xss来执行恶意代码
 
-通过添加onclick点击事件来触发script代码(遇到input类型不服没有点击的情况想办法添加,如添加type="text"类型)
+通过添加onclick/onmousemove事件来触发script代码(遇到input类型不服没有点击的情况想办法添加,如添加type="text"类型)
 
 通过img src/onerror="javascript:alert(1)"属性伪协议来触发xss代码
 
