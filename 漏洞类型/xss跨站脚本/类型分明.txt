@@ -13,7 +13,7 @@ httponly绕过:
 
 通过添加onclick/onmousemove事件来触发script代码(遇到input类型不服没有点击的情况想办法添加,如添加type="text"类型)
 
-通过img src/onerror="javascript:alert(1)"属性伪协议来触发xss代码
+通过img src/onerror(文件地址不存在)="javascript:alert(1)"属性伪协议来触发xss代码
 
 通过form的action="javascript:alert(1)"来触发伪协议
 
