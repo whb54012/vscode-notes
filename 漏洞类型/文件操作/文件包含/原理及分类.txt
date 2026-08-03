@@ -49,5 +49,7 @@ data://:数据流封装,能将代码直接用include导入执行(两项配置全
 明文模式:data://text/plain,<?php phpinfo()?>(明文代码)
 base64模式:data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8+(base64编码)
 
-zip://:解压指定路径文件,绕过后缀名白名单
+zip://:解压指定路径文件,绕过后缀名白名单检测
+file=zip://[压缩包绝对路径(任意后缀)]%23[压缩包解压后的文件格式]
+(%23不写#以免被服务器误识别)
 
