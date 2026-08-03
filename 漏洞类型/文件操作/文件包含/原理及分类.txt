@@ -28,7 +28,7 @@ Session 存储目录可访问；
 用户输入直接存入 Session 无过滤。
 
 3.伪协议利用
-协议流操作:http/https://,file:///,php://,data://
+协议流操作:http/https://,file:///,php://,data://,zip://,phar://
 两大因素allow_url_fopen,allow_url_include
 allow_url_fopen(近乎所有网络协议都需要开启此配置)
 allow_url_include(决定include是否能够使用网络协议)
@@ -48,3 +48,5 @@ php://input:读取post请求体,使include能够导入解析请求体中的代�
 data://:数据流封装,能将代码直接用include导入执行(两项配置全开)
 明文模式:data://text/plain,<?php phpinfo()?>(明文代码)
 base64模式:data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8+(base64编码)
+
+zip://
