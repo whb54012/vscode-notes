@@ -58,7 +58,7 @@ class person{
         echo "为isset传入了不可访问或不存在的值\n";
         return isset($this->$content);
         //$content为动态属性,指向传进来的age，而非$a->age的值,保证传进来
-        //的属性存在并能被读取,否则isset()又会调用__isset方法陷入死循环
+        //的属性存在并能被读取,否则isset/empty()又会调用__isset方法陷入死循环
     }
 }
 $a = new person('参数');
