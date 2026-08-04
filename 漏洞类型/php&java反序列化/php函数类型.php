@@ -69,11 +69,9 @@ $a = new person('参数');
 echo $a->name;//打印whb
 $serialized = serialize($a);
 //先将对象序列化为字符串
-echo $serialized;
 
 $b = unserialize($serialized);
-var_dump($b);
-//打印对象被反序列化了
+//对象被反序列化了
 
 $b();
 //对象被当成函数方法调用了
@@ -95,5 +93,4 @@ echo isset($a->age);//empty($a->age)
 unset($b);
 //php结束,变量销毁,打印对象销毁了
 ?>
-
 <!-- 序列化的对象将不是对象,而是一个字符串,所以接收序列化的对象在销毁时不会触发析构 -->
