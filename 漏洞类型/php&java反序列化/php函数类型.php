@@ -46,7 +46,7 @@ class person{
     }
     public function __unset($n)//写一个参数顶位
     {
-        echo "对象调用unset方法销毁了\n";
+        echo "对象调用unset方法销毁不存在或不可访问的属性了\n";
     }
     public function __call($a, $b){//必须写两个参数顶位,随意命名
         echo "对象使用了不可访问或不存在的函数方法\n";
@@ -92,7 +92,7 @@ echo isset($a->age);//empty($a->age)
 //对isset/empty传进了一个不存在的属性
 
 unset($b->c);
-//对象调用unset删除私有属性了
+//对象调用unset删除不存在或不可访问属性了
 
 //php结束,变量销毁,打印对象销毁了
 ?>
