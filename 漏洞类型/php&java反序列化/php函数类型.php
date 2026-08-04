@@ -85,8 +85,8 @@ $a->yes;
 $a->yes=1;
 //为不存在或不可访问的属性赋值了
 
-echo isset($a->age);
-//对isset传进了一个不存在的属性
+echo isset($a->age);//empty($a->age)
+//对isset/empty传进了一个不存在的属性
 
 //php结束,变量销毁,打印对象销毁了
 ?>
