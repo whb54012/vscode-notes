@@ -32,7 +32,7 @@ class person{
     public function __wakeup() {
         echo "对象被反序列化了";
     }
-    pubilic funtion __destruct() {
+    pubilic function __destruct() {
         echo "对象销毁了";
     }
 }
