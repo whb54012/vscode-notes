@@ -51,8 +51,9 @@ class person{
     }
     public function __isset($content)//创建变量接收传进的属性名,而非熟属性值
     {
-        echo "为isset传入了不可访问或不存在的值";
-        return
+        echo "为isset传入了不可访问或不存在的值\n";
+        return isset($this->$content);
+        //$content为变量,指向传进来的age
     }
 }
 $a = new person('参数');
@@ -76,7 +77,7 @@ $b->run();
 $a->yes;
 //对象使用了不存在的属性
 
-echo isset($a->yes);
+echo isset($a->age);
 //对isset传进了一个不存在的属性
 
 //php结束,变量销毁,打印对象销毁了
