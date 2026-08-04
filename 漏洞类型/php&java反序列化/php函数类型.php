@@ -33,16 +33,16 @@ class person{
 //$this->name:因为前面已经调用了$this,后面的类属性name就不需要$
     }
     public function __wakeup() {
-        echo "对象被反序列化了";
+        echo "对象被反序列化了\n";
     }
     public function __invoke(){
-        echo "对象被当函数调用了";
+        echo "对象被当函数调用了\n";
     }
     public function __destruct() {
-        echo "对象销毁了";
+        echo "对象销毁了\n";
     }
     public function __call($nae, $arguments){//两个参数必须写
-        echo "对象使用了不存在的函数方法";
+        echo "对象使用了不存在的函数方法\n";
     }
 }
 $a = new person('参数');
