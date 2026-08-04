@@ -1,5 +1,5 @@
 import lxml.html
-with open("./读取网页.html","r",encoding="UTF-8") as f:
+with open("python\\爬虫\\读取网页.html","r",encoding="UTF-8") as f:
     reponse=f.read()
 document=lxml.html.fromstring(reponse)
 # 将html格式转换成一类对象
