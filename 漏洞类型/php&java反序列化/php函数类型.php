@@ -41,8 +41,11 @@ class person{
     public function __destruct() {
         echo "对象销毁了\n";
     }
-    public function __call($a, $b){//必须写两个参数,随意命名
+    public function __call($a, $b){//必须写两个参数顶位,随意命名
         echo "对象使用了不存在的函数方法\n";
+    }
+    public function __get($a){//和invoke一样,必须写一个参数顶位
+        echo "对象使用了不存在属性";
     }
 }
 $a = new person('参数');
