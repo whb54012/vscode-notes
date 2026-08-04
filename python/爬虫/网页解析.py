@@ -10,7 +10,7 @@ print(td_list)
 th_list=document.xpath("//div[1]/tr/td/text()")
 print(th_list)
 # 相同子标签太多时可用列表方法指定读取哪行子标签
-t_list=document.xpath("//div/tr/text()")
+t_list=document.xpath("//div/tr")
 print(t_list)
 # 想将每行子标签单独打印不放在一起,就读取上级子标签,然后将每个上级子标签打印
 # 来进行分类
