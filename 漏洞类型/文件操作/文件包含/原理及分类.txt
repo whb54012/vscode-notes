@@ -21,6 +21,7 @@
 无文件上传:
 1.包含日志利用
 file:///var/log/nginx/access.log
+内容上传，短标签过滤<?= eval();?>
 
 2.包含session文件利用
 LFI 漏洞；
