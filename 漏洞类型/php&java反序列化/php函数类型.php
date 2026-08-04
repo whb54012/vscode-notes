@@ -44,10 +44,14 @@ class person{
         echo "对象销毁了\n";
     }
     public function __call($a, $b){//必须写两个参数顶位,随意命名
-        echo "对象使用了不存在的函数方法\n";
+        echo "对象使用了不可访问或不存在的函数方法\n";
     }
     public function __get($a){//和invoke一样,必须写一个参数顶位
-        echo "对象使用了不存在的属性\n";
+        echo "对象读取了不可访问或不存在的属性\n";
+    }
+    public function __set($name, $value)//必须写两个参数顶位
+    {
+        echo "对象为不可访问或不存在的属性赋值了";
     }
     public function __isset($content)//创建变量接收传进的属性名,而非熟属性值
     {
@@ -71,11 +75,14 @@ $b();
 //对象属性有invoke时对象才可当成方法调用,否则会报错
 
 $b->run();
-// 对象使用了不存在的方法了
+// 对象使用了不存在或不可访问的方法了
 //触发__call方法
 
 $a->yes;
-//对象使用了不存在的属性
+//对象读取了不存在或不可访问的属性
+
+$a->yes=1;
+//为不存在或不可访问的属性赋值了
 
 echo isset($a->age);
 //对isset传进了一个不存在的属性
