@@ -48,6 +48,10 @@ class person{
     public function __get($a){//和invoke一样,必须写一个参数顶位
         echo "对象使用了不存在的属性\n";
     }
+    public function __isset($name)//创建变量接收传进的属性名,而非熟属性值
+    {
+        
+    }
 }
 $a = new person('参数');
 echo $a->name;//打印whb
