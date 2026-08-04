@@ -91,7 +91,7 @@ $a->yes=1;
 echo isset($a->age);//empty($a->age)
 //对isset/empty传进了一个不存在的属性
 
-unset($b->a);
+unset($b->c);
 //对象调用unset删除私有属性了
 
 //php结束,变量销毁,打印对象销毁了
