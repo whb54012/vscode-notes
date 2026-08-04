@@ -1,5 +1,5 @@
 import requests
-import lxml
+import lxml.html
 url=input("url:")
 # 定义url
 reponse=requests.get(url=url).text
