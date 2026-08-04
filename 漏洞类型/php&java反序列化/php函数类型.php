@@ -45,7 +45,7 @@ class person{
     }
     public function __unset($n)//写一个参数顶位
     {
-        echo "对象调用unset方法销毁了";
+        echo "对象调用unset方法销毁了\n";
     }
     public function __call($a, $b){//必须写两个参数顶位,随意命名
         echo "对象使用了不可访问或不存在的函数方法\n";
@@ -55,7 +55,7 @@ class person{
     }
     public function __set($name, $value)//必须写两个参数顶位
     {
-        echo "对象为不可访问或不存在的属性赋值了";
+        echo "对象为不可访问或不存在的属性赋值了\n";
     }
     public function __isset($content)//创建变量接收传进的属性名,而非熟属性值
     {
