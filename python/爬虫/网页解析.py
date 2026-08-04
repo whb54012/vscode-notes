@@ -14,5 +14,5 @@ t_list=document.xpath("//div/tr")
 print(t_list)
 # 想将每行子标签单独打印不放在一起,就读取上级子标签,然后将每个上级子标签打印
 # 来进行分类
-# for i in t_list:
-#     pirnt(i/td)
+for i in t_list:
+    pirnt(i/td)
