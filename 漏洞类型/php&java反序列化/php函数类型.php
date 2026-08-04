@@ -50,7 +50,7 @@ class person{
     }
     public function __isset($name)//创建变量接收传进的属性名,而非熟属性值
     {
-        
+        echo "为isset传入了不可访问或不存在的值";
     }
 }
 $a = new person('参数');
