@@ -16,4 +16,6 @@ print(t_list)
 # 想将每行子标签单独打印不放在一起,就读取上级子标签,然后将每个上级子标签打印
 # 来进行分类
 for i in t_list:
-    td=i.xpath()
+    td=i.xpath("./td/text()")
+    print(td)
+# 通过循环读取每一个对象里的所有元素,依次读取
