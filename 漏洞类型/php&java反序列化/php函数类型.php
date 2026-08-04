@@ -46,7 +46,7 @@ echo $serialized;
 $b = unserialize($serialized);//打印对象被反序列化了
 var_dump($b);
 $b();
-// 对象属性有invoke时才可这样使用,否则=会报错
+// 对象属性有invoke时才对象才可使用函数方法调用,否则会报错
 //php结束,变量销毁,打印对象销毁了
 ?>
 
