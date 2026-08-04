@@ -1,6 +1,6 @@
 import lxml.html
-with open("./读取网页.html")
-document=lxml.html.fromstring(reponse)
+with open("./读取网页.html","r",encoding="UTF-8") as f:
+document=lxml.html.fromstring(f)
 # 将html格式转换成一类对象
 document.xpath("//标签/子标签/子标签/text()")
 # 子标签写得越多抓取的越准确,最后一个不写标签而是目标格式
