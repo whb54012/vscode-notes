@@ -43,12 +43,21 @@ class person{
 }
 $a = new person('参数');
 echo $a->name;//打印whb
-$serialized = serialize($a);//先将对象序列化为字符串
+$serialized = serialize($a);
+//先将对象序列化为字符串
 echo $serialized;
-$b = unserialize($serialized);//打印对象被反序列化了
+
+$b = unserialize($serialized);
 var_dump($b);
+//打印对象被反序列化了
+
 $b();
+//对象被当成函数方法调用了
 // 对象属性有invoke时才对象才可使用函数方法调用,否则会报错
+
+$b->run();
+// 对象使用了不存在的方法了
+
 //php结束,变量销毁,打印对象销毁了
 ?>
 
