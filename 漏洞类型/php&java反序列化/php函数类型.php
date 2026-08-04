@@ -41,7 +41,7 @@ class person{
     public function __destruct() {
         echo "对象销毁了";
     }
-    public function  __call(){
+    public function __call($name, $arguments){
         echo "对象使用了不存在的函数方法";
     }
 }
