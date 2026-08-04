@@ -29,6 +29,7 @@ $变量名 = new 对象名();
 <?php
 class person{
     public $name='whb';//类属性$name
+    private $age=18;
     public function __construct($name){//接收外界参数的变量,与类属性$name无关,可改名
         $this->name = $name;
 //$this->name:因为前面已经调用了$this,后面的类属性name就不需要$
@@ -48,9 +49,10 @@ class person{
     public function __get($a){//和invoke一样,必须写一个参数顶位
         echo "对象使用了不存在的属性\n";
     }
-    public function __isset($name)//创建变量接收传进的属性名,而非熟属性值
+    public function __isset($content)//创建变量接收传进的属性名,而非熟属性值
     {
         echo "为isset传入了不可访问或不存在的值";
+        return
     }
 }
 $a = new person('参数');
