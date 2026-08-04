@@ -30,6 +30,7 @@ $变量名 = new 对象名();
 class person{
     public $name='whb';//类属性$name
     private $age=18;
+    protected $a=1;
     public function __construct($name){//接收外界参数的变量,与类属性$name无关,可改名
         $this->name = $name;
 //$this->name:因为前面已经调用了$this,后面的类属性name就不需要$
@@ -90,7 +91,9 @@ $a->yes=1;
 echo isset($a->age);//empty($a->age)
 //对isset/empty传进了一个不存在的属性
 
-unset($b->age);
+unset($b->a);
+//对象调用unset删除私有属性了
+
 //php结束,变量销毁,打印对象销毁了
 ?>
 <!-- 序列化的对象将不是对象,而是一个字符串,所以接收序列化的对象在销毁时不会触发析构 -->
