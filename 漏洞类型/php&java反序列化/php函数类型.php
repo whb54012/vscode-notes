@@ -38,6 +38,7 @@ class person{
 }
 $a = new person('参数');
 echo $a->name;//打印whb
+echo $a;
 $serialized = serialize($a);//先将对象序列化为字符串
 $b = unserialize($serialized);//打印对象被反序列化了
 //php结束,变量销毁,打印对象销毁了
