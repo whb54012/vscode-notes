@@ -17,7 +17,8 @@ a.style.backgroundColor='red';
 // 把短横线后的首字母大写后去掉横线表示
 
 元素.classname='类名'
-替换属性
+// 替换属性,将另一个属性名添加进来,并把重复的属性替代
+
 function update(){
     let s=document.querySelector('img');
     console.log(s.src);
