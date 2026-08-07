@@ -21,8 +21,8 @@ a.style.backgroundColor='red';
 
 function update(){
     let s=document.querySelector('img');
-    s.className='box'
-    // 获取标签属性
+    s.className='box'//不用再在前面加点
+    //添加新属性,覆盖重复属性值
 }
 
 对象.innerText=文本内容;
