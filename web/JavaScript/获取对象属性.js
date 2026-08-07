@@ -1,6 +1,5 @@
 let b=document.getElementById('id属性名');
 //获取id属性
-
 let c=document.querySelector('标签/.属性/#id名');
 // 获取任意属性和标签
 
@@ -11,6 +10,7 @@ let a=document.getElementsByClassName('.box');
 a[0].style.color='red';
 // 对页面抓取的所有.box属性的第一个进行颜色更换
 
+元素为-类型的属性值
 const a=querySelector('.box')
 a.style.backgroundColor='red';
 // 对于属性元素有像background-color这样有短横线连接的一律用小驼峰
@@ -24,13 +24,20 @@ function update(){
     //替换新属性,丢掉旧属性
 }
 
-元素.classList
+元素.classList.功能='类名'
+function update(){
+    let s=document.querySelector('img');
+    s.classList.add='box'
+    //追加新属性
+    s.classList.remove='box'
+
+    //替换新属性,丢掉旧属性
+}
 
 对象.innerText=文本内容;
 // 当成文字执行,不会被渲染
 对象.innerHTML=HTML内容;
 //当成前端元素执行,标签代码会被执行
-
 function update1(){
     let s=document.querySelector('h1');
     const a=s.id;
