@@ -10,7 +10,7 @@ let a=document.getElementsByClassName('.box');
 a[0].style.color='red';
 // 对页面抓取的所有.box属性的第一个进行颜色更换
 
-元素为-类型的属性值
+元素为background-color类型的属性值特殊用法
 const a=querySelector('.box')
 a.style.backgroundColor='red';
 // 对于属性元素有像background-color这样有短横线连接的一律用小驼峰
