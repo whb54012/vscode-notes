@@ -17,7 +17,6 @@
       width: 400%; /* 4张图 → 宽度400% */
       height: 100%;
       /* 核心动画：20秒完成一轮，匀速、无限循环 */
-      animation: carousel 10s linear infinite;
     }
     /* 单张图片：占1/4宽度（400% ÷ 4 = 100%） */
     .carousel-item {
@@ -28,6 +27,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      animation: carousel 10s linear infinite;
     }
     /* 动画关键帧：控制平移距离 */
     @keyframes carousel {
