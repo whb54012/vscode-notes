@@ -1,11 +1,12 @@
-let a=document.getElementsByClassName('class属性名');
-// 获取的是页面的伪数组类型,如果要获取对象就必须在后面加[0],索引值代表当前页面的的几个class属性
-
 let b=document.getElementById('id属性名');
 //获取id属性
 
 let c=document.querySelector('标签/.属性/#id名');
 // 获取任意属性和标签
+
+document.getElementsByClassName('class属性名');
+document.getElementsByTagName('标签');
+// 这两特殊类,返回的是所有属性名或标签名的列表,使用时要加上索引
 
 function update(){
     let s=document.querySelector('img');
