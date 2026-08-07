@@ -11,6 +11,11 @@ let a=document.getElementsByClassName('.box');
 a[0].style.color='red';
 // 对页面抓取的所有.box属性的第一个进行颜色更换
 
+const a=querySelector('.box')
+a.style.backgroundColor='red';
+// 对于属性元素有像background-color这样有短横线连接的一律用小驼峰
+// 把短横线后的首字母大写后去掉横线表示
+
 function update(){
     let s=document.querySelector('img');
     console.log(s.src);
@@ -30,7 +35,4 @@ function update1(){
 对象.innerHTML=HTML内容;
 //当成前端元素执行,标签代码会被执行
 
-const a=querySelector('.box')
-a.style.backgroundColor='red';
-// 对于属性元素有像background-color这样有短横线连接的一律用小驼峰
-// 把短横线后的首字母大写后去掉横线表示
+
