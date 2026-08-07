@@ -24,6 +24,8 @@ file:///var/log/nginx/access.log
 内容上传，短标签过滤<?= eval();?>
 
 2.包含session文件利用
+Session请求头参数：
+Content-Disposition: form-data; name="PHP_SESSION_UPLOAD_PROGRESS"
 LFI 漏洞；
 Session 存储目录可访问；
 用户输入直接存入 Session 无过滤。
