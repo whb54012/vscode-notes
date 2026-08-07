@@ -16,6 +16,8 @@ a.style.backgroundColor='red';
 // 对于属性元素有像background-color这样有短横线连接的一律用小驼峰
 // 把短横线后的首字母大写后去掉横线表示
 
+元素.classname='类名'
+替换属性
 function update(){
     let s=document.querySelector('img');
     console.log(s.src);
