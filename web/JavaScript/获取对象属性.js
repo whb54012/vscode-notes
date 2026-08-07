@@ -22,3 +22,5 @@ function update1(){
     console.log(s.innerHTML);
     // 获取内部文字 + 内嵌 HTML 标签
 }
+对象.innerText=文本内容;
+对象.innerHTML=HTML内容;
