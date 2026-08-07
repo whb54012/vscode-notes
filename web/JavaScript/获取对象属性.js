@@ -6,7 +6,7 @@ let c=document.querySelector('标签/.属性/#id名');
 
 document.getElementsByClassName('class属性名');
 document.getElementsByTagName('标签');
-// 这两特殊类,返回的是所有属性名或标签名的列表,使用时要加上索引
+// 这两特殊类,返回的是所有属性名或标签名的列表,使用时要加上索引,就算新增元素也会自动加进去
 let a=document.getElementsByClassName('.box');
 a[0].style.color='red';
 // 对页面抓取的所有.box属性的第一个进行颜色更换
