@@ -22,12 +22,11 @@ function update1(){
   // 获取截取对象的指定属性
     const a=s.innerText//获取文本内容
     const a=s.innerHTML//获取内部文本和标签
-// innerhtml和innertext区别在于会不会被html渲染
     console.log(s.innerHTML);
     // 获取内部文字 + 内嵌 HTML 标签
 }
 对象.innerText=文本内容;
 // 当成文字执行,不会被渲染
-
 对象.innerHTML=HTML内容;
 //当成前端元素执行,标签代码会被执行
+
