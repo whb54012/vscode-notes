@@ -1,11 +1,11 @@
 //自定义对象
 let user = {
-  name: "张三",
+  name: "张三",//属性
   age: 20,
   20:18,//键默认会被转换成字符串
   sayHello: function() {
     console.log("你好！");
-  }
+  }//方法
 };
 // 对象调用两种方式
 console.log(user.name);
