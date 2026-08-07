@@ -8,7 +8,8 @@ document.getElementsByClassName('class属性名');
 document.getElementsByTagName('标签');
 // 这两特殊类,返回的是所有属性名或标签名的列表,使用时要加上索引
 let a=document.getElementsByClassName('.box');
-a[0]
+a[0].style.color='red';
+// 对页面抓取的所有.box属性的第一个进行颜色更换
 
 function update(){
     let s=document.querySelector('img');
