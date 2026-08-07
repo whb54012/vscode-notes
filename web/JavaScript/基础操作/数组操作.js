@@ -8,4 +8,4 @@ let a=arr.pop()
 // 删除最后一个元素并返回
 let b=arr.shift()
 // 删除第一个元素并返回
-arr.splice()
+arr.splice(起始位置,删除个数)
