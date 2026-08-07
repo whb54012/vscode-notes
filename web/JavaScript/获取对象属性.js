@@ -17,12 +17,11 @@ a.style.backgroundColor='red';
 // 把短横线后的首字母大写后去掉横线表示
 
 元素.className='类名'
-// 替换属性,将另一个属性名添加进来,并把重复的属性替代
-
+// 替换属性,将另一个属性名添加进来取代原来的属性
 function update(){
     let s=document.querySelector('img');
     s.className='box'//不用再在前面加点
-    //添加新属性,覆盖重复属性值
+    //替换新属性,丢掉旧属性
 }
 
 对象.innerText=文本内容;
