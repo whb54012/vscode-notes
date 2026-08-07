@@ -16,6 +16,9 @@ function Person(name, age=25) {
   this.name = name;//前一个name是自己设置的属性，也可以设置为其他单词，后一个为接受对象不可修改
   this.age = age;
   this.love="篮球";
+  this.fun=function say(){
+    alert("my name is"+this.name)
+  }//方法
 }
 let p1 = new Person("李四", 25);
 let p2 = new Person("张三", 25);
