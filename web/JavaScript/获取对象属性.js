@@ -30,3 +30,7 @@ function update1(){
 对象.innerHTML=HTML内容;
 //当成前端元素执行,标签代码会被执行
 
+const a=querySelector('.box')
+a.style.backgroundColor='red';
+// 对于属性元素有像background-color这样有短横线连接的一律用小驼峰
+// 把短横线后的首字母大写后去掉横线表示
