@@ -27,11 +27,12 @@ function update(){
 元素.classList.功能='类名'
 function update(){
     let s=document.querySelector('img');
-    s.classList.add='box'
+    s.classList.add
     //追加新属性
-    s.classList.remove='box'
-
-    //替换新属性,丢掉旧属性
+    s.classList.remove('box')
+    // 删除指定属性
+    s.classList.toggle('box')
+    // 切换属性,没有就添加,有就删除
 }
 
 对象.innerText=文本内容;
