@@ -11,9 +11,10 @@ let user = {
 console.log(user.name);
 console.log(user['20']);
 
-//2.构造函数加new
+//2.构造函数加new,可复用
 function Person(name, age) {
   this.name = name;//前一个name是自己设置的属性，也可以设置为其他单词，后一个为接受对象不可修改
   this.age = age;
 }
 let p1 = new Person("李四", 25);
+let p2 = new Person("张三", 25);
