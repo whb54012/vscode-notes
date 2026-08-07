@@ -24,6 +24,8 @@ function update(){
     //替换新属性,丢掉旧属性
 }
 
+元素.classList
+
 对象.innerText=文本内容;
 // 当成文字执行,不会被渲染
 对象.innerHTML=HTML内容;
