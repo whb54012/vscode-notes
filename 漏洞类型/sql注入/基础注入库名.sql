@@ -40,3 +40,5 @@ select object_schema,object_name from performance_schema.table_objects
 
 -- sys.schema.tables
 table_schema,table_name,column_name,index_name
+select * from sys.schema.tables where table_schema=database();
+和information使用类似
