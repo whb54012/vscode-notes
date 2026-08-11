@@ -15,4 +15,4 @@ set @code=concat('SELECT group_concat(table_name) FROM ', 'information_schema', 
 查询语句必须用()包裹才能执行后赋值,或者直接引号包裹赋值字符串
 prepare code from @code
 except code
--- concat()只能接在where条件后面,不能放在from后面,报错
+-- concat()只能接在where条件后面,不能放在from后面报错
