@@ -26,12 +26,14 @@ show columns from 表名 from 库名(如果没有use库名就需要在后面在�
 -- mysql.innodb_table_stats innodb查找引擎使用(MySQL5.6 及以上版本)
 select (table_name,database_name)\* from innodb_table_stats(where 条件)
 -- 查找所有用innodb引擎查找的数据库和数据表,不能查字段
+-- 搭配show查找字段名
 
 -- mysql.innodb_index_stats innodb查找引擎使用(MySQL5.6 及以上版本)
 select table_name,database_name,index_name from mysql.innodb_index_stats
--- 查找表名与库名以及索引名
+-- 查找表名与库名以及索引名,搭配show查找字段名
 
--- performance_schema
+-- performance_schema(适用 MySQL8.0)
 核心表:performance_schema.table_objects
 object_schema=库名,object_name=表名;
-select object_schema,object_name from performance_schema.table_objects'
+select object_schema,object_name from performance_schema.table_objects
+-- 搭配show查找字段名
