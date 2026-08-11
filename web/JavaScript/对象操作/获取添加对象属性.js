@@ -27,7 +27,7 @@ function update(){
 元素.classList.功能='类名'
 function update(){
     let s=document.querySelector('img');
-    s.classList.add
+    s.classList.add('box')
     //追加新属性
     s.classList.remove('box')
     // 删除指定属性

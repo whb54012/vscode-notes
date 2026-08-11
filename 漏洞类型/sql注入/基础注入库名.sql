@@ -13,3 +13,18 @@ select * from information_schema.columns where table_schema = database() and tab
 查找指定数据库下指定表名的成员名
 select group_concat(成员名) from 表名;
 将查出来的成员名用group_concat函数变成一行直接输出
+
+-- show查找 后面加关键字而不是自定义的表名和列名
+show schemas; = show databases;
+展示所有数据库
+show tables from 库名;
+-- 展示数据库所有表名
+show columns from 表名
+show columns from 表名 from 库名(如果没有use库名就需要在后面在指定一个库名)
+-- 展示指定某个表中的字段名
+
+-- mysql.innodb_table_stats innodb查找引擎使用(MySQL5.6 及以上版本)
+select (table_name,database_name)\* from innodb_table_stats(where 条件)
+-- 查找所有用innodb引擎查找的数据库和数据表,不能查字段
+
+-- mysql.innodb_index_stats innodb查找引擎使用(MySQL5.6 及以上版本)

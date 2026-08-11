@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div data-id="111" data-whb="nihao"></div>
+    <div data-id="222" data-whb="nihao"></div>
+    <div data-id="333" data-whb="nihao"></div>
+    <div data-id="444" data-whb="nihao"></div>
+<!-- data-后面跟自定义标签变成自定义属性 -->
+<script>
+const one=document.querySelector('div')
+// 抓取页面第一个div标签
+console.log(one.dataset);
+// dataset代表抓取标签中的data属性集合用字典表示出来
+// DOMStringMap {id: '111', whb: 'nihao'}
+document.write(one.dataset.whb)
+// 将抓取的dataset的whb标签值拿出来
+</script>
+</body>
+</html>
