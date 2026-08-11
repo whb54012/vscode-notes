@@ -30,3 +30,8 @@ select (table_name,database_name)\* from innodb_table_stats(where 条件)
 -- mysql.innodb_index_stats innodb查找引擎使用(MySQL5.6 及以上版本)
 select table_name,database_name,index_name from mysql.innodb_index_stats
 -- 查找表名与库名以及索引名
+
+-- performance_schema
+核心表:performance_schema.table_objects
+object_schema=库名,object_name=表名;
+select object_schema,object_name
