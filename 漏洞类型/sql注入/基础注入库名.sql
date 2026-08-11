@@ -38,7 +38,7 @@ object_schema=库名,object_name=表名;
 select object_schema,object_name from performance_schema.table_objects
 -- 搭配show查找字段名
 
--- sys.schema.tables
+-- sys.schema_tables
 table_schema,table_name,column_name,index_name
-select * from sys.schema.tables where table_schema=database();
+select * from schema_table_statistics where table_schema=database();
 -- 和information使用类似语法
