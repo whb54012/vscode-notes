@@ -2,7 +2,7 @@
 查找数据时如果表单参数为数字时必须加上反引号,否则会被当成
 数字参量而不是表列名
 select 1 from `123890834`;从123890834的表格中查找常数1
-select `1` from `123890834`
+select `1` from `123890834`从123890834的表格中查找字段1的值
 show databases; 展示数据库
 create database 数据库名; 添加数据库
 drop database 库名; 删除数据库
