@@ -7,3 +7,9 @@ username = CONCAT(0x61, 0x64, 0x6D, 0x69, 0x6E) == CHAR(97, 100, 109, 105, 110)
 concat()条件拼接
 SELECT * FROM users WHERE CONCAT(user,name) = 'admin'
 筛选出user列和name列的值拼接在一起,符合'admin'的打印出来
+
+concat()加预处理语句
+set @code=concat('info','rmation_schema','.tables')
+-- code=information_schema.tables
+预处理语句赋值时右边如果是函数之类的表达式会自动执行一遍,如果是
+查询语句必须用()包裹才能执行后赋值,或者直接引号包裹赋值字符串
