@@ -37,3 +37,6 @@ select table_name,database_name,index_name from mysql.innodb_index_stats
 object_schema=库名,object_name=表名;
 select object_schema,object_name from performance_schema.table_objects
 -- 搭配show查找字段名
+
+-- sys.schema.tables
+table_schema,table_name,column_name,index_name
