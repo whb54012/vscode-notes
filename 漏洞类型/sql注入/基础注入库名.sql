@@ -33,9 +33,10 @@ select table_name,database_name,index_name from mysql.innodb_index_stats
 -- 查找表名与库名以及索引名,搭配show查找字段名
 
 -- performance_schema(适用 MySQL8.0)
-核心表:performance_schema.table_objects
+核心表:table_lock_waits_summary_by_table
+table_io_waits_summary_by_table
 object_schema=库名,object_name=表名;
-select object_schema,object_name from performance_schema.table_objects
+select object_schema,object_name from performance_schema.table_io_waits_summary_by_table
 -- 搭配show查找字段名
 
 -- sys.schema_tables
