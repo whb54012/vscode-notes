@@ -34,4 +34,4 @@ select table_name,database_name,index_name from mysql.innodb_index_stats
 -- performance_schema
 核心表:performance_schema.table_objects
 object_schema=库名,object_name=表名;
-select object_schema,object_name
+select object_schema,object_name from performance_schema.table_objects'
