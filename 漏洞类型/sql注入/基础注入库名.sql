@@ -28,3 +28,5 @@ select (table_name,database_name)\* from innodb_table_stats(where 条件)
 -- 查找所有用innodb引擎查找的数据库和数据表,不能查字段
 
 -- mysql.innodb_index_stats innodb查找引擎使用(MySQL5.6 及以上版本)
+select table_name,database_name,index_name from mysql.innodb_index_stats
+-- 查找有索引的表名与库名以及索引名
