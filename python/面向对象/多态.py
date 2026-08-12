@@ -13,8 +13,8 @@ class c(father):
         print(f"{self.name}为{self.age}岁了")
 
 def func(animal):
-    animal.se()
-# 通过函数调用属性里的方法
+    animal.se()# 通过函数调用属性里的方法
+# 多态:只用一个入口就能表示多个输出
 
 func(p("pig",1))
 func(d("dog",2))
