@@ -15,6 +15,8 @@ class c(father):
 def func(animal):
     animal.se()
 # 通过函数调用属性里的方法
+
 func(p("pig",1))
 func(d("dog",2))
 func(c("cat",3))
+# 使用外置函数创建对象属性并调用对象各自的方法
