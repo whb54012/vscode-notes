@@ -14,3 +14,6 @@ class cat(father):
 
 def func(animal):
     animal.se()
+func(pig(pig,1))
+func(dog(dog,2))
+func(cat(cat,3))
