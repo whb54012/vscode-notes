@@ -12,6 +12,7 @@ btn.addEventListener('click',function(){})
 
 事件类型:
 点击:click
+鼠标移动:mousemove
 鼠标经过:mouseenter
 鼠标离开:mouseleave
 键盘抬起触发:keyup
