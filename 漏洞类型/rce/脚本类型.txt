@@ -1,6 +1,6 @@
 可控变量，漏洞函数两大原理
 php类型:
-eval()/assert():
+eval()/assert()[assert用于7.0以前且需要权限]:
 将字符串或者变量当作php代码去执行,字符串内容必须是有分号结尾的完整php代码
 $code=phpinfo(); eval($code);
 eval("$phpinfo();")eval接受的必须是字符串
