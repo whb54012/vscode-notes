@@ -8,8 +8,8 @@ def func(data):
     reponse=requests.post(url=url,data=data,verify=False)
     with lock:
         print(reponse.text+"\n")
+thred=[]
 for i in range(1000):
-    thred=[]
     thred.append(threading.Thread(target=func,args=(data1,)))
     thred.append(threading.Thread(target=func,args=(data2,)))
 lock=threading.Lock()
