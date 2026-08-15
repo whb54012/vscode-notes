@@ -10,8 +10,8 @@ def func(data):
         print(reponse.text()+"\n")
 for i in range(1000):
     thred=[]
-    therd=threading.Thread(target=func,args=(data1,))
-    therd=threading.Thread(target=func,args=(data2,))
+    thred.append()=threading.Thread(target=func,args=(data1,))
+    thred=threading.Thread(target=func,args=(data2,))
 lock=threading.Lock()
-for i in range(2000): therd[i].start()
+for i in range(2000): thred[i].start()
     
