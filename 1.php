@@ -62,7 +62,7 @@ class User
     public $nickname=null;
 }
 $sql=new user();
-$nickname=new info();
+$nickname=new info("select 1,1 from user=?",1);
 $CtrlCase=new dbCtrl();
 $nickname->CtrlCase=$CtrlCase;
 $sql->nickname=$nickname;
