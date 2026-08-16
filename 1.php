@@ -3,10 +3,10 @@ class Info{
     public $age;
     public $nickname;
     public $CtrlCase;
-    public function __construct($age,$nickname){
-        $this->age=$age;
-        $this->nickname=$nickname;
-    }   
+    public function __construct($age = 0, $nickname = 'guest'){
+        $this->age = $age;
+        $this->nickname = $nickname;
+    }
 }
 Class UpdateHelper{
     public $id;
