@@ -61,5 +61,6 @@ class User
     public $age=null;
     public $nickname=null;
 }
-$sql=new user()
+$user=new info();
+$sql=new user();
 ?>
