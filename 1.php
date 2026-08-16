@@ -61,8 +61,10 @@ class User
     public $age=null;
     public $nickname=null;
 }
-$nickname=new info();
-$nickname->CtrlCase=new dbCtrl("select 1,1 from user where username=?");
 $sql=new user();
+$nickname=new info();
 $sql->nickname=$nickname;
+$nickname->CtrlCase=new dbCtrl("select 1,1 from user where username=?");
+
+
 ?>
