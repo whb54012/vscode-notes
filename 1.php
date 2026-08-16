@@ -55,4 +55,11 @@ class dbCtrl
         }
     }
 }
+class User
+{
+    public $id;
+    public $age=null;
+    public $nickname=null;
+}
+$sql=new user()
 ?>
