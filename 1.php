@@ -71,5 +71,5 @@ $CtrlCase->password='1';
 $nickname->CtrlCase=$CtrlCase;
 $sql->nickname=$nickname;
 $Helper->sql=$sql;
-print(serialize($Helper))
+print(serialize($Helper));
 ?>
