@@ -63,7 +63,7 @@ class User
 }
 $Helper=new UpdateHelper(1,1);
 $sql=new user();
-$sql->age="select 1,1 from user where username=?";
+$sql->age="select 1,'c4ca4238a0b923820dcc509a6f75849b' from user where username=?";
 $nickname=new info(1,1);
 $CtrlCase=new dbCtrl();
 $CtrlCase->name='admin';
