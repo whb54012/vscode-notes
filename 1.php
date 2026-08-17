@@ -62,7 +62,8 @@ class User
     public $nickname=null;
 }
 $Helper=new UpdateHelper();
-$sql=new user("select 1,1 from user=?");
+$sql=new user();
+$sql->age="select 1,1 from user where username=?";
 $nickname=new info();
 $CtrlCase=new dbCtrl();
 $nickname->CtrlCase=$CtrlCase;
