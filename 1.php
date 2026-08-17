@@ -69,4 +69,5 @@ $CtrlCase=new dbCtrl();
 $nickname->CtrlCase=$CtrlCase;
 $sql->nickname=$nickname;
 $Helper->sql=$sql;
+print(serialize($Helper))
 ?>
