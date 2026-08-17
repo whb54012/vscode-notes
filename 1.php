@@ -66,6 +66,8 @@ $sql=new user();
 $sql->age="select 1,1 from user where username=?";
 $nickname=new info(1,1);
 $CtrlCase=new dbCtrl();
+$CtrlCase->name='admin';
+$CtrlCase->password='1';
 $nickname->CtrlCase=$CtrlCase;
 $sql->nickname=$nickname;
 $Helper->sql=$sql;
