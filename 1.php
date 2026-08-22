@@ -39,5 +39,5 @@ class Name{
     }
 }
 $a=new Name('admin',100);
-echo serialize($a)
+echo urlencode(serialize($a));
 ?>
