@@ -6,6 +6,8 @@ handler 表名 read first limit 行数;
 
 handler 表名 read next;
 handler指针指向下一行,且无法回到上一行,如果下一行为空就不会显示
+handler 表名 read next limit 行数;
+一次性读取几行,从上次读取行数的下一行开始;
 
 handler 表名 close;
 关闭handler指针
