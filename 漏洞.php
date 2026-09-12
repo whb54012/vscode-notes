@@ -1,20 +1,15 @@
 <?php
-session_start();//连接session会话
-include "dp.php";//导入框架
 header("Content-Type: text/html; charset=utf-8");
 if($_SERVER["REQUEST_METHOD"]==="POST"){
     $user = $_POST["user"];
     $password = $_POST["password"];
     if($user!=null&&$password!=null){
-        $result = check($user,$password);//调用函数连接
-        if($result && mysqli_num_rows($result)){//判断条件，防止$result没找到数据却返回true的意外
-        $_SESSION['username'] = 'admin';
-        $_SESSION['password'] = 'admin123';
+        if($user=='admin'&&password=='admin123'){
             echo "<script>
             alert('欢迎进入网页{$user}');
             window.location.href = '音乐.php';
-            </script>";
-        }else{
+            </script>";}
+        else{
             echo "<script>
             document.addEventListener('DOMContentLoaded', function() {
             const error = document.getElementById('error');
@@ -28,10 +23,11 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             });
             </script>";
         };
-    }else{
+    else{
         echo "<script>
         alert('请不要留空！');
         </script>";
+        }
     }
 }
 ?>
