@@ -15,7 +15,7 @@ select username from user ununionion select password from user--通过ununionion
 
 --普通注释穿插绕过,会将注释转换成空格,用于正则匹配
 select username from user union/**/select password from user
-select username from user union select database/**/()--注释穿插绕过union关键字,仅限于过滤完整组合词和函数名与括号之间，如果过滤单独如union之类的子串就用内联注释
+select username from user union select database/**/()--注释穿插绕过union关键字,仅限于.前和函数名与括号之间，如果过滤单独如union之类的子串就用内联注释
 
 ``反引号注释,将包裹的内容当作sql的内置表单参数类型执行,用于绕过正则匹配
 select table_name from information_schema.`table_name`
