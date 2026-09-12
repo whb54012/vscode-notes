@@ -20,6 +20,8 @@ while($f=readdir($变量)){echo $f;}
 
 scandir(".");scandir(chr(46));scandir(current(localeconv()));scandir(getcwd());
 // 接收目录或.来打印当前目录文件，和上述一样,返回数组
-scandir("内容")['数组位次'];
+
+scandir("内容")['下标'];
+glob("内容")['下标'];
 // 直接取出数组元素也可用
 ?>
