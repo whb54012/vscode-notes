@@ -1,10 +1,13 @@
 <?php
+session_start();
+session['id']=0;
 header("Content-Type: text/html; charset=utf-8");
 if($_SERVER["REQUEST_METHOD"]==="POST"){
     $user = $_POST["user"];
     $password = $_POST["password"];
     if($user!=null&&$password!=null){
-        if($user=='admin'&&password=='admin123'){
+        if($user=='admin'&&$password=='admin123'){
+            session['id']=1;
             echo "<script>
             alert('欢迎进入网页{$user}');
             window.location.href = '音乐.php';
@@ -23,11 +26,11 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             });
             </script>";
         };
+    }
     else{
         echo "<script>
         alert('请不要留空！');
         </script>";
-        }
     }
 }
 ?>
