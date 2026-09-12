@@ -6,6 +6,7 @@ localeconv();//返回一个数组,第一个数组值为.
 current(localeconv());//取出数组第一个元素，搭配localeconv()取出点
 
 print_r(getcwd());
+echo __DIR__;
 // 返回文件当前目录
 
 glob("*");glob(chr(42));
