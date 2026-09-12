@@ -14,16 +14,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             </script>";}
         else{
             echo "<script>
-            document.addEventListener('DOMContentLoaded', function() {
-            const error = document.getElementById('error');
-            error.classList.add('fade');
-            setTimeout(() =>{
-            error.classList.add('fade1');
-            setTimeout(() =>{
-                error.classList.remove('fade','fade1');
-                },500)
-            },3000);
-            });
+            alert('密码错误');
             </script>";
         };
     }
