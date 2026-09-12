@@ -1,7 +1,7 @@
 <?php
 getcwd();//显示当前目录
-glob("字符串类型/可用chr()变化或其他函数组合返回");//*显示所有当前目录所有文件名
-scandir("字符串类型/可用chr()变化或其他函数组合返回");//.显示当前目录所有文件名
+glob("路径或者字符串.");//*显示所有当前目录所有文件名
+scandir("路径或者字符串.");//.显示当前目录所有文件名
 localeconv();//返回一个数组,第一个数组值为.
 current(localeconv());//取出数组第一个元素，搭配localeconv()取出点
 
@@ -9,7 +9,7 @@ print_r(getcwd());
 echo __DIR__;
 // 返回文件当前目录
 
-glob("*");glob(chr(42));
+glob("*");glob(chr(42));glob(getcwd());
 // 正则匹配返回数组,通过通配符来查找当前目录符合条件的文件,可通过../来逃逸
 
 $变量=opendir(".");$变量=opendir(chr(46));$变量=opendir(current(localeconv()));
