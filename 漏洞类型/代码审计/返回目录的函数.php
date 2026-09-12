@@ -1,6 +1,6 @@
 <?php
 getcwd();//显示当前目录
-glob("字符串类型/可用chr()变化或其他函数组合返回");//*显示所有当前目录所有文件名
+glob("通配符*");//*显示所有当前目录所有文件名
 scandir("字符串.或者当前目录路径");//.显示当前目录所有文件名
 localeconv();//返回一个数组,第一个数组值为.
 current(localeconv());//取出数组第一个元素，搭配localeconv()取出点
@@ -19,5 +19,5 @@ while($f=readdir($变量)){echo $f;}
 // 循环接收每行数据并打印
 
 scandir(".");scandir(chr(46));scandir(current(localeconv()));scandir(getcwd());
-// 和上述一样,返回数组
+// 接收目录或.来打印当前目录文件，和上述一样,返回数组
 ?>
