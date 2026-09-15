@@ -17,7 +17,8 @@ def fun(url,result,result2):
             # reponse=requests.get(url+data.format(result,i),verify=False,headers=headers)
             reponse=requests.post(url=url,data=data.format(result,i+1),verify=False,headers=headers)
             # print(reponse.text)
-            if find in reponse.text:
+            # if find in reponse.text:#当返回条件代表正确的时候使用
+            if find not in reponse.text:
             # print(reponse.text)
             # if reponse.status_code==302:#匹配请求头返回代码
                 with lock:
