@@ -32,6 +32,9 @@ function check(string $username,string $password){
     if(preg_match('/[\s\'"]/',$username)||preg_match('/[\s\'"]/',$password)){
         $end=1;
     }
+    if($end==1){
+        die(echo "123");
+    }
     $result=mysqli_query($link,$sql);
     return $result;
 }
