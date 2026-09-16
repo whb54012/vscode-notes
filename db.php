@@ -16,6 +16,7 @@ function connect(){
 function check($username,$password){
     $link=connect();
     $sql="select * from user where username='{$username}' and password='{$password}'";
-    
+    $result=mysqli_query($link,$sql);
+    return $result;
 }
 ?>
