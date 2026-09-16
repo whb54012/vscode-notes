@@ -33,7 +33,7 @@ function check(string $username,string $password){
         $end=1;
     }
     if($end==1){
-        return false;
+        return 0;
     }
     $result=mysqli_query($link,$sql);
     return $result;
