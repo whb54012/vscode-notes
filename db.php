@@ -2,7 +2,9 @@
 $local='localhost';
 $user='root';
 $pass='root';
+$end=0;
 $t_name='user';
+
 $link='';
 function connect(){
     global $local,$user,$pass;
@@ -13,8 +15,8 @@ function connect(){
     }
     return $link;
 }
-function check($username,$password){
-    global $t_name;
+function check(string $username,string $password){
+    global $t_name,$end;
     $link=connect();
     $create="CREATE DATABASE IF NOT EXISTS {$t_name}
     DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_bin";
@@ -28,7 +30,7 @@ function check($username,$password){
     mysqli_query($link,$table);
     $sql="select * from user where username='{$username}' and password='{$password}'";
     if(preg_match('/[/s\'"]/',$sql)){
-
+        $end=1;
     }
     $result=mysqli_query($link,$sql);
     return $result;
