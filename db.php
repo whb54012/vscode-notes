@@ -27,6 +27,9 @@ function check($username,$password){
     )charset=utf8mb4;";
     mysqli_query($link,$table);
     $sql="select * from user where username='{$username}' and password='{$password}'";
+    if(preg_match('/[/s\'"]/',$sql)){
+
+    }
     $result=mysqli_query($link,$sql);
     return $result;
 }
