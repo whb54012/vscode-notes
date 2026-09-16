@@ -29,7 +29,7 @@ function check(string $username,string $password){
     )charset=utf8mb4;";
     mysqli_query($link,$table);
     $sql="select * from user where username='{$username}' and password='{$password}'";
-    if(preg_match('/[\s\'"]/',$sql)){
+    if(preg_match('/[\s\'"]/',$username)||preg_match('/[\s\'"]/',$password)){
         $end=1;
     }
     $result=mysqli_query($link,$sql);
