@@ -2,7 +2,6 @@
 $local='localhost';
 $user='root';
 $pass='root';
-$end=0;
 $t_name='user';
 function connect(){
     global $local,$user,$pass;
@@ -14,7 +13,8 @@ function connect(){
     return $link;
 }
 function check(string $username,string $password){
-    global $t_name,$end;
+    global $t_name;
+    $end=0;
     $link=connect();
     $create="CREATE DATABASE IF NOT EXISTS {$t_name}
     DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin";
