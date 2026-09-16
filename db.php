@@ -14,7 +14,10 @@ function connect(){
     return $link;
 }
 function check($username,$password){
+    global $t_name;
     $link=connect();
+    $create="CREATE DATABASE IF NOT EXISTS `$t_name`
+    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_bin";
     $sql="select * from user where username='{$username}' and password='{$password}'";
     $result=mysqli_query($link,$sql);
     return $result;
