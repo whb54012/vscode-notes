@@ -4,8 +4,6 @@ $user='root';
 $pass='root';
 $end=0;
 $t_name='user';
-
-$link='';
 function connect(){
     global $local,$user,$pass;
     $link=mysqli_connect($local,$user,$pass);
