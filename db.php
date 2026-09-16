@@ -16,8 +16,16 @@ function connect(){
 function check($username,$password){
     global $t_name;
     $link=connect();
-    $create="CREATE DATABASE IF NOT EXISTS `$t_name`
+    $create="CREATE DATABASE IF NOT EXISTS {$t_name}
     DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_bin";
+    mysqli_query($link,$create);
+    $use="use {$t_name}";
+    mysqli_query($link,$use);
+    $table="create table `user`(
+    username varchar(20),
+    password varchar(20)
+    )charset=utf8mb4;";
+    mysqli_query($link,$table);
     $sql="select * from user where username='{$username}' and password='{$password}'";
     $result=mysqli_query($link,$sql);
     return $result;
