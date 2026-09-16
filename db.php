@@ -9,17 +9,17 @@ $link='';
 function connect(){
     global $local,$user,$pass;
     $link=mysqli_connect($local,$user,$pass);
-    mysqli_query($link,"set name utf8mb4");
     if(!$link){
         die("数据库连接失败". mysqli_connect_error());
     }
+    mysqli_query($link,"set names utf8mb4");
     return $link;
 }
 function check(string $username,string $password){
     global $t_name,$end;
     $link=connect();
     $create="CREATE DATABASE IF NOT EXISTS {$t_name}
-    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_bin";
+    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin";
     mysqli_query($link,$create);
     $use="use {$t_name}";
     mysqli_query($link,$use);
@@ -29,7 +29,7 @@ function check(string $username,string $password){
     )charset=utf8mb4;";
     mysqli_query($link,$table);
     $sql="select * from user where username='{$username}' and password='{$password}'";
-    if(preg_match('/[/s\'"]/',$sql)){
+    if(preg_match('/[\s\'"]/',$sql)){
         $end=1;
     }
     $result=mysqli_query($link,$sql);
