@@ -22,7 +22,7 @@ if(!isset($_SESSION['id'])||$_SESSION['id']!==1){
 <body>
   <div class="box">
     <h1>管理后台</h1>
-    <p>系统运行正常</p>
+    <p>CquetCTF{}</p>
   </div>
 </body>
 </html>
