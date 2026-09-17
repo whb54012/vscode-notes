@@ -2,7 +2,7 @@
 $local='localhost';
 $user='root';
 $pass='root';
-$t_name='user';
+$t_name='sql';
 function connect(){
     global $local,$user,$pass;
     $link=mysqli_connect($local,$user,$pass);
@@ -14,23 +14,22 @@ function connect(){
 }
 function check(string $username,string $password){
     global $t_name;
-    $end=0;
     $link=connect();
-    $create="CREATE DATABASE IF NOT EXISTS {$t_name}
+    $create="CREATE DATABASE IF NOT EXISTS `{$t_name}`
     DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_bin";
     mysqli_query($link,$create);
-    $use="use {$t_name}";
+    $use="use `{$t_name}`";
     mysqli_query($link,$use);
-    $table="create table `user`(
+    $table="create table IF NOT EXISTS `user`(
     username varchar(20),
     password varchar(20)
     )charset=utf8mb4;";
     mysqli_query($link,$table);
+    mysqli_query($link, "INSERT IGNORE INTO `user` (username,password) VALUES
+    ('admin', 'admin123'),
+    ('test',  'test123')");
     $sql="select * from user where username='{$username}' and password='{$password}'";
-    if(preg_match('/[\s\'"]/',$username)||preg_match('/[\s\'"]/',$password)){
-        $end=1;
-    }
-    if($end==1){
+    if(preg_match('/[\s\'"\/]/',$username.$password)){
         return 0;
     }
     $result=mysqli_query($link,$sql);
