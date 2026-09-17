@@ -1,10 +1,11 @@
 <?php
-$local='localhost';
+$local='db';
 $user='root';
 $pass='root';
 $t_name='sql';
 function connect(){
     global $local,$user,$pass;
+    mysqli_report(MYSQLI_REPORT_OFF);
     $link=mysqli_connect($local,$user,$pass);
     if(!$link){
         die("数据库连接失败". mysqli_connect_error());
@@ -25,9 +26,12 @@ function check(string $username,string $password){
     password varchar(20)
     )charset=utf8mb4;";
     mysqli_query($link,$table);
+    if($_SESSION['one']===0){
     mysqli_query($link, "INSERT IGNORE INTO `user` (username,password) VALUES
     ('admin', 'admin123'),
     ('test',  'test123')");
+    $_SESSION['one']=1;
+    }
     $sql="select * from user where username='{$username}' and password='{$password}'";
     if(preg_match('/[\s\'"\/]/',$username.$password)){
         return 0;

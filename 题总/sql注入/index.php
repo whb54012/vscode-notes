@@ -1,33 +1,33 @@
 <?php
-include 'db.php';
 session_start();
+include 'db.php';
 if(!isset($_SESSION['id'])){
-    $_SESSION['id']=0;
+        $_SESSION['id']=0;
+        $_SESSION['one']=0;
 }
 if($_SERVER['REQUEST_METHOD']==='POST'){
     if(!isset($_POST['username'])||!isset($_POST['password'])){
     echo "<script>alert('请输入账号或密码');
-        window.location.href = 'login.php';</script>";
+        window.location.href = 'index.php';</script>";
         exit();
     }
     $result=check($_POST['username'],$_POST['password']);
     if($result===0||$result===false){
         echo "<script>alert('输入有误');
-        window.location.href = 'login.php';</script>";
+        window.location.href = 'index.php';</script>";
         exit();
     }
     elseif(mysqli_num_rows($result)>0){
     $row=mysqli_fetch_row($result);
     if($_POST['username']==='admin'){
         $_SESSION['id']=1;
-        echo "管理员'{$row[0]}',你的密码是'{$row[1]}'";
-        exit();
+        echo "<div class='name'>管理员'{$row[0]}',你的密码是'{$row[1]}'</div>";
     }else{
         echo "<div class='name'>用户'{$row[0]}',你的密码是'{$row[1]}'</div>";
     }
     }else{
         echo "<script>alert('登陆失败');
-        window.location.href = 'login.php';</script>";
+        window.location.href = 'index.php';</script>";
     }
 }
 ?>
