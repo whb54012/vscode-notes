@@ -1,138 +1,58 @@
 <?php
-session_start();
-$_SESSION['id']=0;
-header("Content-Type: text/html; charset=utf-8");
-if($_SERVER["REQUEST_METHOD"]==="POST"){
-    $user = $_POST["user"];
-    $password = $_POST["password"];
-    if($user!=null&&$password!=null){
-        if($user=='admin'&&$password=='admin123'){
-            $_SESSION['id']=1;
-            echo "<script>
-            alert('欢迎进入网页{$user}');
-            window.location.href = '音乐.php';
-            </script>";}
-        else{
-            echo "<script>
-            alert('密码错误');
-            </script>";
-        };
-    }
-    else{
-        echo "<script>
-        alert('请不要留空！');
-        </script>";
-    }
-}
-?>
+$dir = '/var/www/html/upload/';
+$result=0;?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<meta charset="utf-8">
+<title>文件上传</title>
 <style>
-body{
-    background-image: linear-gradient(
-        135deg,
-        #11b0e1ee,
-        #dc09dcfb
-    );
-    min-height: 100vh;
-}
-.box{
-    height: 500px;
-    width: 450px;
-    margin: auto;
-    background-image: linear-gradient(
-        #11b0e1,
-        blue
-    );
-    position: relative;
-    top: 150px;
-    border-radius: 15px;
-    transition: all 0.5s;
-    animation: donghua 0.5s linear;
-}
-.box:hover{
-    transform: translateY(-5px);
-}
-.logo{
-    height: 80px;
-    width: 80px;
-    background-image: url(../图片/preview.gif);
-    background-size: cover;
-    border-radius: 50%;
+  body {
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; margin: 0;
+    background: #0f172a; color: #e2e8f0;
+    font-family: system-ui, sans-serif;
+  }
+  .file{
     position: absolute;
-    left: 50%;
-    transform: translate(-40px,50%);
-}
-.shuru{
-    height: 40px;
-    width: 400px;
-    margin: 150px 0px 0px 20px;
-    border-radius: 15px;
-    border: 0px solid;
-    outline: none
-}
-.shuru1{
-    height: 40px;
-    width: 400px;
-    margin: 40px 0px 0px 20px;
-    border-radius: 15px;
-    border: 1px solid;
-    outline: none
-}
-.btn{
-    margin: 20px 0px 0px 22px;
-    width: 400px;
-    height: 40px;
-    border-radius: 10px;
-    border: 0px solid;
-    background-color: #11b0e1;
-    font-size: 18px;
-    cursor: pointer;
-}
-.zhuche{
-    position: absolute;
-    top: 80%;
-    height: 30px;
-    margin-left: 120px;
-}
-#error{
-    color: red;
-    position: absolute;
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.fade{
-    opacity: 1 !important;
-    transition:opacity 0.5s;
-}
-.fade1{
-    opacity: 0 !important;
-}
-@keyframes donghua{
-    0%{transform: translateY(-650px);}
-    100%{transform: translateY(0px);}
-}
+    top: 200px;
+  }
+  form {
+    background: #1e293b; padding: 30px 36px;
+    border-radius: 12px; width: 340px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  }
+  h2 { margin: 0 0 18px; font-size: 17px; }
+  input[type=file] { width: 100%; margin-bottom: 16px; color: #94a3b8; }
+  button {
+    width: 100%; padding: 10px; border: 0; border-radius: 8px;
+    background: #38bdf8; color: #0f172a;
+    font-weight: 600; cursor: pointer;
+  }
+  button:hover { background: #7dd3fc; }
 </style>
+</head>
 <body>
-    <div class="box">
-        <div class="logo"></div>
-        <form action="" method="post">
-            <input type="text" placeholder="请输入账户名称" class="shuru" name="user" value="">
-            <br>
-            <input type="password" placeholder="请输入密码" class="shuru1" name="password" value="">
-            <br>
-            <input type="radio" name="" value="" style="margin:20px 0 0 20px;"><a href="">请同意一下用户协议</a>
-            <br>
-            <input type="submit" value="登录" name="action" class="btn">
-            <div class="zhuche">如未有账号,请点击<a href="注册页.php">注册账号</a></div>
-            <div id="error">密码错误</div>
-        </form>
-    </div>
+  <form action="" method="post" enctype="multipart/form-data">
+    <h2>文件上传</h2>
+    <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
+    $result=1;
+    $tmp  = $_FILES['file']['tmp_name'];
+    $name =basename($_FILES['file']['name']);   
+    $target = $dir . $name;
+    //先落盘：文件先真实存在于服务器上
+    move_uploaded_file($tmp, $target);
+?>
+    <?php if (stripos($name, 'php') !== false) {
+        usleep(30000);
+        unlink($target);     // 删除
+        echo "<div>恶意文件，已删除</div>";
+    } else {
+        echo "<div>上传成功:{$name}</div>";
+    }}?>
+    <input type="file" name="file" required>
+    <button>上传</button>
+  </form>
 </body>
 </html>
