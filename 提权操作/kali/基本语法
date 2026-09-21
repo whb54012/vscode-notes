@@ -1,1 +1,2 @@
 hostnamectl: 系统信息
+cat /proc/version：打开版本信息
