@@ -1,0 +1,3 @@
+witch 命令;查看命令目录
+find . -name 文件名 -exec sh -p \;
+保留权限
