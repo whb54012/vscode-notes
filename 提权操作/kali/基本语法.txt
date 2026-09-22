@@ -10,7 +10,8 @@ find / -name 文件名 -exec '命令文件路径或者命令名(命令名走path
 exec结束符:
     \;找到一个文件开一个进程
     {} +:找到的文件追加到{},然后将文件名丢入命令中执行一遍(注意别忘了中间用空格)
-(/usr/bin/find . -exec /bin/sh -p \; -quit)
-    -p(属于 /bin/sh):让 sh 保持特权,不主动降权.-quit:find / -name 文件名 -exec sh -c 'cat 文件' \; -quit:找到一个文件后直接结束并
+/usr/bin/find . -exec /bin/sh -p \; -quit
+    -p(属于 /bin/sh):让 sh 保持特权,不主动降权.
+    -quit:find / -name 文件名 -exec sh -c 'cat 文件' \; -quit:找到一个文件后直接结束并
 执行命令,不会多次执行
 
