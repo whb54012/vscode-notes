@@ -3,4 +3,5 @@ ls -l 命令目录;查看命令目录是否为suid权限
 1.find . -name 文件名 -exec sh -p \;
     保留权限启动sh
 2.vim
+    :!ls -p
     进入vim后!+命令
