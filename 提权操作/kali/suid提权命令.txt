@@ -1,3 +1,4 @@
 witch 命令;查看命令目录
+ls -l 命令目录;查看命令目录是否为suid权限
 find . -name 文件名 -exec sh -p \;
 保留权限
