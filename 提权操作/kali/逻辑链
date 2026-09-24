@@ -1,0 +1,8 @@
+检查账户权限以及系统版本信息
+id && whoami          # 我是谁、在哪些组里
+uname -a              # 内核版本
+cat /etc/os-release   # 发行版
+hostname              # 主机名
+检查suid和sgid
+find / -perm -4000 -type f 2>/dev/null    # SUID
+find / -perm -2000 -type f 2>/dev/null    # SGID
