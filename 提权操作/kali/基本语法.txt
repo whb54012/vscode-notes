@@ -15,4 +15,5 @@ exec结束符:
     -quit:find / -name 文件名 -exec sh -c 'cat 文件' \; -quit:找到一个文件后直接结束并
 执行命令,不会多次执行
 crontab -l：查看当前用户定时任务
-
+cat /etc/crontab：定时任务表，查看定时任务
+ls /etc/cron.d/：定时任务目录，存放不同的独立任务
