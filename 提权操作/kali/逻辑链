@@ -6,3 +6,11 @@ hostname              # 主机名
 检查suid和sgid
 find / -perm -4000 -type f 2>/dev/null    # SUID
 find / -perm -2000 -type f 2>/dev/null    # SGID
+查看sudo权限
+sudo -l
+查看内核
+uname -r
+检查定时任务
+cat /etc/crontab
+ls -la /etc/cron.d/ /etc/cron.hourly/ /etc/cron.daily/
+ls -la /var/spool/cron/crontabs/ 2>/dev/null
