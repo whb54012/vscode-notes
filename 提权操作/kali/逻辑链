@@ -14,3 +14,9 @@ uname -r
 cat /etc/crontab
 ls -la /etc/cron.d/ /etc/cron.hourly/ /etc/cron.daily/
 ls -la /var/spool/cron/crontabs/ 2>/dev/null
+检查敏感文件
+ls -l /etc/passwd              # 可写？→ 加 UID=0 用户
+ls -l /etc/shadow              # 可读？→ 拿 hash 爆破
+ls -l /etc/sudoers             # 可写？→ 加自己进 sudoers
+ls -l /root/                   # 可进？→ 直接读
+ls -l /root/.ssh/              # 有私钥？→ 登别的地方
