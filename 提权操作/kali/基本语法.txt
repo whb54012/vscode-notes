@@ -14,4 +14,5 @@ exec结束符:
     -p(属于 /bin/sh):让 sh 保持特权,不主动降权.
     -quit:find / -name 文件名 -exec sh -c 'cat 文件' \; -quit:找到一个文件后直接结束并
 执行命令,不会多次执行
+crontab -l：查看当前用户定时任务
 
