@@ -1,4 +1,4 @@
-hostnamectl: 系统信息
+: 系统信息
 cat /proc/version:版本信息
 uname -a:系统信息,架构、OS等
 exec 命令：替换当前进程

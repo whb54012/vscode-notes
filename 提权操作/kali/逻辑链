@@ -15,6 +15,9 @@ cat /etc/crontab
 ls -la /etc/cron.d/ /etc/cron.hourly/ /etc/cron.daily/
 ls -la /var/spool/cron/crontabs/ 2>/dev/null
 检查敏感文件
+cat ~/.bash_history              # 管理员敲过的命令，常带明文密码
+cat /root/.bash_history 2>/dev/null
+find / -name "*.key" -o -name "id_rsa*" 2>/dev/null
 ls -l /etc/passwd              # 可写？→ 加 UID=0 用户
 ls -l /etc/shadow              # 可读？→ 拿 hash 爆破
 ls -l /etc/sudoers             # 可写？→ 加自己进 sudoers
