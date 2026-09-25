@@ -11,3 +11,22 @@ sudo -l 输出： (root) NOPASSWD: /usr/bin/vim
         │
         ▼
   root shell
+2
+3对可持久化的变量留下
+www-data要做的：
+        │
+        ├─ 写一个 evil.so   → 放哪？放 /tmp，/tmp 你可写 ✓
+        ├─ export LD_PRELOAD=/tmp/evil.so
+        └─ sudo -E /usr/bin/某程序
+        │
+        ▼
+   /usr/bin/某程序 本身没被动过（还是root属主、只读）
+        │
+        ▼
+   它启动时，动态链接器"额外"把 evil.so 塞进进程
+        │
+        ▼
+   于是这个进程里就多了你的代码
+        │
+        ▼
+    LD_PRELOAD表中库会被自动读取
