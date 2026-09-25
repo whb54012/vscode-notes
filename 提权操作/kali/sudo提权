@@ -20,7 +20,7 @@ www-data要做的:
         └─ sudo -E /usr/bin/某程序
         │
         ▼
-   sudo -E(保留之前的环境变量) /usr/bin/某程序 调用允许的动态链接自动加载.so环境变量
+   sudo -E(保留之前的环境变量) /usr/bin/某程序 保留环境调用动态链接自动加载LD_PRELOAD表中的环境变量
         │
         ▼
    它启动时，动态链接器"额外"把 evil.so 塞进进程
@@ -29,4 +29,4 @@ www-data要做的:
    于是这个进程里就多了你的代码
         │
         ▼
-    LD_PRELOAD表中库会被自动读取
+  执行evil.so,执行反射shell
