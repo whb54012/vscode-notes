@@ -4,6 +4,10 @@ find / -perm -4000 -type f 2>/dev/null
             |           |
       权限位为4000(suid) | 
                     只要文件,不要软链接
+find / -perm -2000 -type f 2>/dev/null
+            |           |
+      权限位为2000(guid) | 
+                    只要文件,不要软链接
 -p只对zsh,bash的shell类命令才有不降权的功能,其他命令不存在不降权的功能
 1.find . -name 文件名 -exec sh -p \;
     保留权限启动sh
