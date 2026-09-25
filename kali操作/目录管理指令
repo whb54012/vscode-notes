@@ -13,7 +13,9 @@ ls -a;列出当前所有文件和目录,包括隐藏文件
 #tree
 tree;将文件与目录以树形式展示出来
 #which
-which 文件/应用;将指定文件/应用的地址路径展示出来
+which 命令;将存在命令的path地址路径展示出来
+#whereis
+whereis 命令
 #mkdir+rmdir
 mkdir 目录名;创建新目录
 rmdir 目录名;删除目录
