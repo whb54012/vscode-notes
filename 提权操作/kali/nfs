@@ -28,6 +28,9 @@ ssh-keygen -t rsa
 # 2. 往共享里塞公钥
 mkdir -p ./nfs/.ssh
 cat ~/.ssh/id_rsa.pub >> ./nfs/.ssh/authorized_keys
+./nfs/.ssh/authorized_keys
+                ↓ 实际等于
+服务器上的:     /home/user/.ssh/authorized_keys
 chmod 700 ./nfs/.ssh
 chmod 600 ./nfs/.ssh/authorized_keys
 
