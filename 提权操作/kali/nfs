@@ -35,4 +35,4 @@ chmod 700 ./nfs/.ssh
 chmod 600 ./nfs/.ssh/authorized_keys
 
 # 3. SSH 上去
-ssh -i ~/.ssh/id_rsa user@192.168.1.6
+ssh -i ~/.ssh/id_rsa user@ip
