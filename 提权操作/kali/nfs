@@ -1,0 +1,6 @@
+showmount -e ip
+查看当前被挂载的目录
+showmount -a ip
+查看有哪些客户端正在读写挂载目录
+showmount -d ip
+查看哪些目录正在被读写,不列客户端
