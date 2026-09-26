@@ -35,10 +35,10 @@ www-data要做的:
         │
         ├─ 写一个 evil.so   → 放入可写目录
         ├─ export LD_PRELOAD=/可写目录/evil.so
-        └─ sudo -E /usr/bin/某程序
+        └─ sudo -E /usr/bin/非suid程序
         │
         ▼
-   sudo -E(保留之前的环境变量) /usr/bin/某程序 保留环境调用动态链接自动加载LD_PRELOAD表中的环境变量
+   sudo -E(保留之前的环境变量) /usr/bin/非suid程序 保留环境调用动态链接自动加载LD_PRELOAD表中的环境变量
         │
         ▼
    它启动时，动态链接器"额外"把 evil.so 塞进进程
