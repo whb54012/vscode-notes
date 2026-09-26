@@ -4,5 +4,7 @@ showmount -a ip
 查看有哪些客户端正在读写挂载目录
 showmount -d ip
 查看哪些目录正在被读写,不列客户端
-mount -nfs 服务器ip:挂载目录 本地任意文件
+mount -nfs 服务器ip:挂载目录 本地目录
 将对方的共享NFS挂载到自己电脑上的目录
+touch /本地目录/文件
+ls -l
