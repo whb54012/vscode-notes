@@ -1,6 +1,6 @@
 sudo -l:查找允许用sudo跑什么,需要免密或者当前用户密码
 
-sudo -l 输出: (root) NOPASSWD: /usr/bin/vim
+1.sudo -l 输出: (root) NOPASSWD: /usr/bin/vim
         │
         ▼
   借这个命令开子 shell:
