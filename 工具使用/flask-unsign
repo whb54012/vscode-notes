@@ -1,0 +1,8 @@
+
+flask-unsign --sign --cookie "未加密的json" --secret '加密用的key'
+--decode	只看内容
+--unsign	爆破密钥
+--sign	生成新 cookie
+--cookie '...'	传入的 cookie 值
+--secret 'xxx'	已知密钥（配 sign 用）
+--wordlist 文件	字典（配 unsign 用）
