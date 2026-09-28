@@ -1,4 +1,5 @@
-
+flask-unsign --decode --cookie 'eyJ1c2Vy...'
+对加密的session编码回去,不会解密
 flask-unsign --sign --cookie "未加密的json" --secret '加密用的key'
 --decode	只看内容
 --unsign	爆破密钥
