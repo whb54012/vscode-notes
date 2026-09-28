@@ -1,6 +1,9 @@
 flask-unsign --decode --cookie 'eyJ1c2Vy...'
 对加密的session编码回去,不会解密
+flask-unsign --unsign --cookie 'eyJ1c2Vy...' --wordlist 字典.txt
+对加密的session爆破猜出key
 flask-unsign --sign --cookie "未加密的json" --secret '加密用的key'
+将需要篡改的session用key加密回去
 --decode	只看内容
 --unsign	爆破密钥
 --sign	生成新 cookie
