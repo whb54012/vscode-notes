@@ -1,1 +1,1 @@
-print(().__init__.__base__)
+print(().__class__.__base__)
