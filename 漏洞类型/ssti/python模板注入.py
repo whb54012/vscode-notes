@@ -2,13 +2,11 @@
 变量/对象.__class__:元素的类型
 
 # 元素是带有函数的对象时:
-# __init__:拿出构造函数对象object,前面必须是带有构造函数的类
-class cat:
-    def __init__(self):
-        pass
-cat().__class__.__init__
+# 所有对象基本都有构造函数,"",(),[]字面量也属于对象
+# __init__:拿出构造函数对象object
+().__class__.__init__
 # __globals__:取出模块的全局字典,只有函数对象有
-cat().__class__.__init__.__globals__
+().__class__.__init__.__globals__
 
 
 
