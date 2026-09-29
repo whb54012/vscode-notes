@@ -57,9 +57,16 @@ os.environ                   # 读环境变量（常藏 flag）
 
 ##### "",(),[]以及一些字面量当作元素是不存在`__globals__`
 
-### 使用base找出他的上级object属性,大部分变量上级都是object
+### 2.1使用base找出他的上级object属性,大部分变量上级都是object
 
 ```
-变量.__class__.__base__
+变量.__class__.__base__			直接父类
+变量.__class__.__bases__			直接父类们（多继承）
+```
+
+### 2.2使用mro找出他的上级object属性
+
+```
+变量.__class__.__mro__		从自己到object的完整链
 ```
 
