@@ -6,8 +6,10 @@
 # config,"",(),[]字面量也属于对象
 # __init__:拿出构造函数对象object
 ().__class__.__init__
-# __globals__:取出模块的全局字典,包含os等主要模块
+# __globals__:对象模块的全局字典,包含os等主要模块
 ().__class__.__init__.__globals__
+# 掏出全局字典的os
+().__class__.__init__.__globals__['os']
 
 
 
