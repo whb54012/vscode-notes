@@ -2,6 +2,18 @@
 
 注意：os模板必须要使用对象方法源码内导入了os模板的,如果直接用()这种python内置的字面量他们的源码并未导入os模块,会使用失败,这时候要使用popen
 
+os模块仅使用flask定有的由os模块的对象或者导入os模块的自定义的函数方法,列如
+
+```
+import os
+class cat():
+​    def __init__(self):
+​        pass
+print(cat().__class__.__init__.__globals__['os'].popen('id').read())
+```
+
+
+
 #### `__class__`:获取元素的类型
 
 ##### 变量/对象.__class__:元素的类型
