@@ -18,4 +18,6 @@
 
 # 元素是不带有函数的字面量时:
 # __base__:显示元素的父类:用于非类元素而是字面量的类型
-"hi".__class__.__base__:
+"hi".__class__.__init__
+# __globals__:字面量模块的全局字典,包含import,eval等主要模块
+"hi".__class__.__init__.__globals__
