@@ -6,8 +6,9 @@
 class cat:
     def __init__(self):
         pass
-类.__class__.__init__
-# 类.__class__.__init__.__globals__:取出模块的全局字典
+cat().__class__.__init__
+# __globals__:取出模块的全局字典,只有函数对象有
+cat().__class__.__init__.__globals__
 
 
 
