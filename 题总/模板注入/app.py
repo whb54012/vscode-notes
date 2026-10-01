@@ -9,7 +9,7 @@ def index():
     pwd=Request.args.post("password","")
     if uname and pwd:
         session['username']=uname
-        return 
+        return render_template("self.html")
     else:
         return render_template("index.html")
 @app.route("/self.html")
