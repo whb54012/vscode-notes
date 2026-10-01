@@ -5,14 +5,16 @@ app.secret_key="whb54012"
 
 @app.route("/")
 def index():
-    uname=Request.args.get("username")
+    uname=Request.args.post("username")
     session['username']=uname
 @app.route("/self.html")
 def index():   
     if not session.get('username'):
          return render_template()
-    elif(session['username']=='admin'):
-        return render_template_string()
+    elif session['username']=='admin':
+        uname=session['username']
+        u=Request.args.get("username","")
+        return render_template_string("你好"+u)
     else:
         uname=session['username']
         return "登陆成功"+uname
