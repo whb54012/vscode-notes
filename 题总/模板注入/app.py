@@ -5,8 +5,8 @@ app.secret_key="whb54012"
 
 @app.route("/")
 def index():
-    uname=Request.args.post("username","")
-    pwd=Request.args.post("password","")
+    uname=Request.form.get("username","")
+    pwd=Request.form.get("password","")
     if uname and pwd:
         session['username']=uname
         return redirect(url_for("self.html"))
