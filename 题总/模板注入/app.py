@@ -1,2 +1,8 @@
-from flask import Flask,Request,render_template_string
-import requests
+from flask import Flask, Request, render_template
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return render_template()
