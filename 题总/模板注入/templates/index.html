@@ -102,3 +102,19 @@
 </div>
 </body>
 </html>
+<script>
+document.onkeydown = function(e) {
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        return false;
+    }
+}
+</script>
