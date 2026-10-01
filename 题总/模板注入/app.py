@@ -9,7 +9,7 @@ def index():
     session['username']=uname
 @app.route("/self.html")
 def index():   
-    if(session.get(username)):
+    if(session.get('username')):
          return render_template()
     elif(session['username']=='admin'):
         return render_template_string()
