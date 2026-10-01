@@ -18,7 +18,7 @@ def self():
         return redirect(url_for("index"))
     elif session['username']=='admin':
         uname=session['username']
-        u=Request.args.get("ssti","")
+        u=Request.args.get("param","")
         return render_template_string("你好"+uname+u)
     else:
         return "登陆成功"+uname
