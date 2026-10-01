@@ -3,7 +3,7 @@ from flask import Flask, Request, render_template,render_template_string,session
 app = Flask(__name__)
 app.secret_key="whb54012"
 
-@app.route("/")
+@app.route("/",methods=["GET","POST"])
 def index():
     uname=Request.form.get("username","")
     pwd=Request.form.get("password","")
@@ -21,6 +21,5 @@ def self():
         u=Request.args.get("username","")
         return render_template_string("你好"+u)
     else:
-        uname=session['username']
-        return "登陆成功"+uname
+        return "登陆成功"
     
