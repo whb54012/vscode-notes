@@ -19,7 +19,7 @@ def self():
     elif session['username']=='admin':
         uname=session['username']
         u=Request.args.get("username","")
-        return render_template_string("你好"+u)
+        return render_template_string("你好"+uname+u)
     else:
-        return "登陆成功"
+        return "登陆成功"+uname
     
