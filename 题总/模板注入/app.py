@@ -19,6 +19,9 @@ def self():
     elif session['username']=='admin':
         uname=session['username']
         u=request.args.get("param","")
+        list=['__class__','__init__']
+        if any(u in w for w in list):
+            return render_template_string("违规字符")
         return render_template_string("你好"+uname+u)
     else:
         return "登陆成功"
