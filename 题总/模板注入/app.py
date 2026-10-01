@@ -20,7 +20,7 @@ def self():
         uname=session['username']
         u=request.args.get("param","")
         list=['__class__','__init__']
-        if any(u in w for w in list):
+        if any(w in u for w in list):
             return render_template_string("违规字符")
         return render_template_string("你好"+uname+u)
     else:
