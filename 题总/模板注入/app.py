@@ -9,13 +9,13 @@ def index():
     pwd=Request.form.get("password","")
     if uname and pwd:
         session['username']=uname
-        return redirect(url_for("self.html"))
+        return redirect(url_for("self"))
     else:
         return render_template("index.html")
 @app.route("/self.html")
-def index():   
+def self():   
     if not session.get('username'):
-        return redirect(url_for("/"))
+        return redirect(url_for("index"))
     elif session['username']=='admin':
         uname=session['username']
         u=Request.args.get("username","")
