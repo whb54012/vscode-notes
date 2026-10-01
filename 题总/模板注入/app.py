@@ -7,8 +7,11 @@ app.secret_key="whb54012"
 def index():
     uname=Request.args.post("username","")
     pwd=Request.args.post("password","")
-    if 
-    session['username']=uname
+    if uname and pwd:
+        session['username']=uname
+        return 
+    else:
+        return render_template("index.html")
 @app.route("/self.html")
 def index():   
     if not session.get('username'):
