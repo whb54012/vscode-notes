@@ -9,10 +9,11 @@ def index():
     session['username']=uname
 @app.route("/self.html")
 def index():   
-    if():
+    if(session.get(username)):
          return render_template()
     elif(session['username']=='admin'):
         return render_template_string()
     else:
+        uname=session['username']
         return "登陆成功"+uname
     
