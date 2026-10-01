@@ -22,4 +22,6 @@ def self():
         return render_template_string("你好"+uname+u)
     else:
         return "登陆成功"
+if __name__ == '__main__':
+    app.run(debug=True)
     
