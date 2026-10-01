@@ -5,7 +5,9 @@ app.secret_key="whb54012"
 
 @app.route("/")
 def index():
-    uname=Request.args.post("username")
+    uname=Request.args.post("username","")
+    pwd=Request.args.post("password","")
+    if 
     session['username']=uname
 @app.route("/self.html")
 def index():   
