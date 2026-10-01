@@ -1,4 +1,4 @@
-from flask import Flask, Request, render_template,render_template_string,session
+from flask import Flask, Request, render_template,render_template_string,session,redirect, url_for
 
 app = Flask(__name__)
 app.secret_key="whb54012"
@@ -9,13 +9,13 @@ def index():
     pwd=Request.args.post("password","")
     if uname and pwd:
         session['username']=uname
-        return render_template("self.html")
+        return redirect(url_for("self.html"))
     else:
         return render_template("index.html")
 @app.route("/self.html")
 def index():   
     if not session.get('username'):
-         return render_template()
+        return redirect(url_for("/"))
     elif session['username']=='admin':
         uname=session['username']
         u=Request.args.get("username","")
