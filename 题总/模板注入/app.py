@@ -8,8 +8,11 @@ def index():
     uname=request.form.get("username","")
     pwd=request.form.get("password","")
     if uname and pwd:
-        session['username']=uname
-        return redirect(url_for("self"))
+        if uname=='admin' and pwd=='qwertyuiop':
+            session['username']=uname
+            return redirect(url_for("self"))
+        else:
+            return render_template("index.html")
     else:
         return render_template("index.html")
 @app.route("/self.html")
