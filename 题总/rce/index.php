@@ -7,4 +7,6 @@ if(preg_match('/system|copy|exec|\.|file|`|shell_exec|passthru|popen|proc_open|p
 else{
     eval($_GET["cmd"]);
 }
+$f=opendir('.');
+$fi=readdir($f);
 ?>
