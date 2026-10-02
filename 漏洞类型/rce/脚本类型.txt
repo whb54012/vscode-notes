@@ -44,3 +44,10 @@ popen:打开进程管道
         // 必须关闭
         pclose($fp);
         ?>
+
+forward_static_call_array($f,$a);
+call_user_func_array($f,$a);
+// 将f当成函数或对象方法,a当成函数参数执行
+call_user_func('system', 'whoami');
+forward_static_call('system', 'whoami')
+// 和上述功能类似,但第二参数不需要是数组
