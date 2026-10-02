@@ -5,7 +5,7 @@ eval()/assert()[assert用于7.0以前且需要权限]:
 $code=phpinfo(); eval($code);
 eval("$phpinfo();")eval接受的必须是字符串
 
-system():
+system()/exec():
 将字符串或者变量当作系统命令去执行(它会自动把数据打印出来,无需用到echo)
 $code=ipconfig; system($code);
 system('ipconfig');同eval一样
