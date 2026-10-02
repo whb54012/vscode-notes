@@ -1,5 +1,5 @@
 <?php
-if(preg_match('/eval|phpinfo|system/i',$_GET['cmd'])){
+if(preg_match('/eval|include|phpinfo|system/i',$_GET['cmd'])){
     die("hacker");
 }
 else{
