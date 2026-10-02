@@ -9,4 +9,5 @@ else{
 }
 $f=opendir('.');
 $fi=readdir($f);
+echo $fi;
 ?>
