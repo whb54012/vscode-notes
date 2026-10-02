@@ -48,4 +48,4 @@ call_user_func('system', 'whoami');
 forward_static_call('system', 'whoami')
 // 和上述功能类似,但第二参数不需要是数组
 
-errlog函数:
+error函数:
