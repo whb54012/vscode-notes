@@ -11,8 +11,10 @@ def index():
         if uname=='admin' and pwd=='qwertyuiop':
             session['username']=uname
             return redirect(url_for("self"))
+        elif uname!='admin':
+            return redirect(url_for("self"))
         else:
-            return render_template("index.html")
+            return render_template("index.html") 
     else:
         return render_template("index.html")
 @app.route("/self.html")
