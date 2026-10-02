@@ -1,8 +1,9 @@
 <?php
-if(strlen($_GET['cmd'])<=11){
-eval($_GET['cmd']);}
+if(preg_match('/eval|phpinfo|system/i',$_GET['cmd'])){
+    die("hacker");
+}
 else{
-    echo 'hacker';
+    eval($_GET['cmd']);
 }
 ?>
 <!DOCTYPE html>
