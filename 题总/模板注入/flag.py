@@ -1,0 +1,1 @@
+print('flag=')#CquetCTF{fkxq4vme50}
