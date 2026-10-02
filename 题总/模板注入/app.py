@@ -22,7 +22,7 @@ def self():
     elif session['username']=='admin':
         uname=session['username']
         u=request.args.get("param","")
-        list=['__class__','__init__']
+        list=['__class__','__init__','config']
         if any(w in u for w in list):
             return render_template_string("你好"+uname)
         return render_template_string("你好"+uname+u)
