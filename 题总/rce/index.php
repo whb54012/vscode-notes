@@ -1,5 +1,5 @@
 <?php
-if(strlen($_GET['cmd'])<=9){
+if(strlen($_GET['cmd'])<=11){
 eval($_GET['cmd']);}
 else{
     echo 'hacker';
