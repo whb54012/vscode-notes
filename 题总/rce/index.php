@@ -1,7 +1,7 @@
 <?php
 echo "";
-if(strlen($_GET['x'])<=8){
-eval($_GET['x']);}
+if(strlen($_GET['cmd'])<=8){
+eval($_GET['cmd']);}
 else{
     echo 'hacker';
 }
@@ -13,7 +13,7 @@ else{
     <title>发送GET ls请求</title>
 </head>
 <body>
-    <a href="/test.php?cmd=ls">
+    <a href="?cmd=ls">
   <button>执行ls</button>
 </a>
 </body>
