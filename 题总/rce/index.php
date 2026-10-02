@@ -1,6 +1,6 @@
 <?php
 echo 'eval($_GET["cmd"]);';
-if(!preg_match('/eval/i',$_GET['cmd'])){
+if(!preg_/**/match('/eval/i',$_GET['cmd'])){
     die("hacker");
 }
 else{
