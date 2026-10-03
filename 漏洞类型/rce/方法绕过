@@ -42,6 +42,9 @@ php<8.0版本参数传多个值会一个个往后推,于是可以这样做:
         $f=implode('',[chr(115),chr(121),chr(115),chr(116),chr(101),chr(109)])-->system
         $f();
         implode(分隔符,[拼接字符])将字符拼接在一起,用变量名执行函数
+        $f=str_replace('@','s','@ystem');-->system
+        $f();
+        str_replace('被替换字符','替换字符','所选中字符串')
 反转函数绕过:
         $a=strrev("metsys");反转字符串为system
         $a("type flag*");调用system函数执行
