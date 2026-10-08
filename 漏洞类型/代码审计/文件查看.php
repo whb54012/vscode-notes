@@ -4,7 +4,8 @@
 3.readfile("相对/绝对文件名路径"); 输出文件原始内容
 4.echo file_get_contents("相对/绝对文件名路径"); 打开文件,需手动echo打印
 5.file("相对/绝对文件名路径"); 返回数组
-6.$f=fopen("相对/绝对文件名路径","r");
+6.$f=fopen/gzopen("相对/绝对文件名路径","r");
+//gzopen是另类的fopen,自动代开gz压缩文件,也可读普通文件
 echo fread($f,读取字节数); 打开文件去读取文件原始内容,需手动echo打印
 $f=opendir('.');打开文件夹,.等于../也就是当前目录
 while($fi=readdir($f))读取$f指向的文件句柄
