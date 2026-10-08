@@ -2,7 +2,7 @@ import requests,threading,hashlib
 minute=hashlib.md5(input("输入时分").encode()).hexdigest()
 # MD5只会对字节类型进行加密,encode会把输入的字符串转换成字节类型
 url=input("输入网址")+"/check.php?token="+minute+"&php://input"
-with open("C:\\Users\\whb\\Downloads\\key (1).dat","rb")as f:
+with open("C:\\Users\\whb\\Downloads\\key.dat","rb")as f:
     data1=f.read()
     data2="mmmmmmm"
 def func(data):
