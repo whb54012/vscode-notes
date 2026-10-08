@@ -1,2 +1,2 @@
-legba 协议 --target 完整url --username 用户名或@用户名表 --password 密码或@密码表
+legba 协议 --target 完整url --username 用户名或用户名表 --password 密码或密码表
 --http-payload "username={USERNAME}&password={PASSWORD}"
