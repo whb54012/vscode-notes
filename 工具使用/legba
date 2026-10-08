@@ -1,2 +1,3 @@
 legba 协议 --target 完整url --username 用户名或用户名表 --password 密码或密码表
---http-payload "username={USERNAME}&password={PASSWORD}"
+--http-payload "username={USERNAME}&password={PASSWORD}"请求体参数
+--http-method POST定义请求模式
