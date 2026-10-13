@@ -32,6 +32,6 @@ delete from 表格名 where 表制段名=表制段值;删除符合内容的一�
 alter table 表格名 修改类型(modify:改变表字段名数据类型,add:添加新表字段名) 表字段名 数据(根据前面修改类型来填写相应数据);
 ////举例:alter table one add love int;为表格名添加新的字段名love,类型为int
 alter table 表格名 change 表字段名 新表字段名 类型;将原有成员表字段名改成新表字段名并改变类型
-update 表格名 set password=新内容;修改表格内的内容
-update 表格名 set password=新内容(不是字符串就不用加引号),age=新内容 where username='条件';修改符合条件的内容(多条件也可以)
+update 表格名 set 字段名=新内容;修改表格内的内容
+update 表格名 set 字段名d=新内容(不是字符串就不用加引号),age=新内容 where username='条件';修改符合条件的内容(多条件也可以)
 举例:update one set password=123 where username='whb';将表格one中username为whb的password修改成123
