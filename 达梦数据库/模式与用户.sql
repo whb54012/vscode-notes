@@ -1,6 +1,7 @@
 达梦的模式就接近于mysql的库,不同的表格中只有在不同的模式下才能被查看
 
 set schema 实例名;--选择不同的实列，类似于mysql的选择库
+create schema 模式;--创建模式
 create user 用户名 identified by "密码" default TABLESPACE 表格空间;
 --创建用户和对应的模式
 -- 密码如果不用引号包裹会自动转换成大写写进去
