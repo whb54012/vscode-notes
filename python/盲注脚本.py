@@ -14,6 +14,7 @@ find=input("需要查找的字符串")
 def fun(url,result,result2):
     # try:
         for i in range(result2):
+            global li
             # reponse=requests.get(url+data.format(result,i),verify=False,headers=headers)
             reponse=requests.post(url=url,data=data.format(result,i+1),verify=False,headers=headers)
             # print(reponse.text)
