@@ -22,7 +22,7 @@ def fun(url,result,result2):
             # print(reponse.text)
             # if reponse.status_code==302:#匹配请求头返回代码
                 with lock:
-                    li=li.chr(i+1)
+                    li=li+chr(i+1)
                     print(li+"\n")
                     print(f"第{result}是："+chr(i+1)+"\n")
                     break
