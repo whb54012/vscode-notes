@@ -2,6 +2,7 @@ import requests
 import threading
 import warnings
 warnings.filterwarnings("ignore")
+result=int(input("输入flag长度"))
 li=""
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 url = input("输入url")
