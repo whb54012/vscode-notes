@@ -2,6 +2,7 @@ import requests
 import threading
 import warnings
 warnings.filterwarnings("ignore")
+li=""
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 url = input("输入url")
 # cookie={"PHPSESSID":"a8vgr70gfctbap6sue4q9pntin"}
