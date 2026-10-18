@@ -2,8 +2,6 @@ import requests
 import threading
 import warnings
 warnings.filterwarnings("ignore")
-result=int(input("输入查找长度"))
-list=[0]*result
 headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 url = input("输入url")
 # cookie={"PHPSESSID":"a8vgr70gfctbap6sue4q9pntin"}
@@ -22,8 +20,8 @@ def fun(url,result,result2):
             # print(reponse.text)
             # if reponse.status_code==302:#匹配请求头返回代码
                 with lock:
-                    list[result-1]=chr(i+1)
-                    print(str(list)+"\n")
+                    li=li.chr(i+1)
+                    print(li+"\n")
                     print(f"第{result}是："+chr(i+1)+"\n")
                     break
         return
