@@ -8,6 +8,7 @@ class helloagent:
             api_key=api_key,
             base_uri=url,
             timeout=timeout)
+        # 大模型属性配置，创建openai对象
     def think(self,messages,temperature = 0):
         print(f"正在调用{self.model}大模型")
         response=self.client.chat.completions.create(
@@ -16,3 +17,4 @@ class helloagent:
             temperature=temperature,
             stream=True
         )
+        # 大模型内部openai的方法create函数配置
