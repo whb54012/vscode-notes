@@ -48,12 +48,18 @@ contents=""
 #     contents=contents+","+content+","+reponse#上下文拼接
 #     print(reponse)
 #直接上下文拼接，大模型无法区分哪句话是谁说的
+Messages = [
+        {"role": "system", "content": "你是擅长写Python代码的编程助手,回答简洁清晰"},
+    ]
 while(1>0):
     content=input("请输入问题")
-    Messages = [
-        {"role": "system", "content": "你是擅长写Python代码的编程助手,回答简洁清晰"},
+    Messages.append(
         {"role": "user", "content": f"{content}"}
-    ]
+    )
+    reponse=agent.think(Messages)
+    Messages.append(
+        {"role": "assistant", "content": f"{reponse}"},
+    )
 
 
 
