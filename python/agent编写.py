@@ -40,6 +40,7 @@ if __name__=='__main__':
 contents=""
 while(1>0):
     content=input("请输入问题")
+    contents=contents+","+content
     Messages = [
         {"role": "system", "content": "你是擅长写Python代码的编程助手,回答简洁清晰"},
         {"role": "user", "content": f"{content}"+','+f"{contents}"}
