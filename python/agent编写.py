@@ -15,6 +15,7 @@ class helloagent:
             model=self.model,
             messages=messages,
             temperature=temperature,
-            stream=True)
+            stream=True)#流式输出，大模型一个一个吐字符
         print("大语言模型响应成功:")
         # 大模型内部openai的方法create函数配置
+        li=[]
