@@ -16,4 +16,5 @@ class helloagent:
             messages=messages,
             temperature=temperature,
             stream=True)
+        print("大语言模型响应成功:")
         # 大模型内部openai的方法create函数配置
