@@ -10,19 +10,25 @@ class helloagent:
             timeout=timeout)#超时时间
         # 大模型属性配置，创建openai对象
     def think(self,messages,temperature = 0):
-        print(f"正在调用{self.model}大模型")
-        response=self.client.chat.completions.create(
-            model=self.model,
-            messages=messages,
-            temperature=temperature,
-            stream=True)#流式输出，大模型一个一个吐字符
-        print("大语言模型响应成功:")
-        # 大模型内部openai的方法create函数配置
-        li=[]
-        for check in response:
-            if not check.choices:
-                continue
-            content=check.choices[0].delta.content or ""
-            li.append(content)
-        return "".join(li)
+        try:
+            print(f"正在调用{self.model}大模型")
+            response=self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=temperature,
+                stream=True)#流式输出，大模型一个一个吐字符
+            print("大语言模型响应成功:")
+            # 大模型内部openai的方法create函数配置
+            li=[]
+            for check in response:
+                # 循环读取response的内容
+                if not check.choices:
+                    continue
+                content=check.choices[0].delta.content or ""
+                li.append(content)
+            return "".join(li)
+        except Exception as e:
+            print(f"❌ 调用LLM API时发生错误: {e}")
+            return 0;
+
 
