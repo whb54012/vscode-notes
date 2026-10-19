@@ -53,6 +53,8 @@ Messages = [
     ]
 while(1>0):
     content=input("请输入问题")
+    if content=="exit":
+        break
     Messages.append(
         {"role": "user", "content": f"{content}"}
     )
