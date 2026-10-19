@@ -8,3 +8,5 @@ class helloagent:
             api_key=api_key,
             base_uri=url,
             timeout=timeout)
+    def think(self,messages,temperature = 0):
+        
