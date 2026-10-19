@@ -11,5 +11,8 @@ class helloagent:
     def think(self,messages,temperature = 0):
         print(f"正在调用{self.model}大模型")
         response=self.client.chat.completions.create(
-            
+            model=self.model,
+            messages=messages,
+            temperature=temperature,
+            stream=True
         )
