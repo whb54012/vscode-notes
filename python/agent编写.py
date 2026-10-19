@@ -10,3 +10,6 @@ class helloagent:
             timeout=timeout)
     def think(self,messages,temperature = 0):
         print(f"正在调用{self.model}大模型")
+        response=self.client.chat.completions.create(
+            
+        )
