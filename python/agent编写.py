@@ -45,7 +45,7 @@ while(1>0):
         {"role": "user", "content": f"{content}"+','+f"{contents}"}
     ]
     reponse=agent.think(Messages)
-    contents=contents+","+content+","+reponse
+    contents=contents+","+content+","+reponse#上下文拼接
     print(reponse)
 
 
