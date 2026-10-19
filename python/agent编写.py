@@ -42,6 +42,8 @@ Messages = [
     {"role": "system", "content": "你是擅长写Python代码的编程助手,回答简洁清晰"},
     {"role": "user", "content": f"{content}"}
 ]
+reponse=agent.think(Messages)
+print(reponse)
 
 
 
