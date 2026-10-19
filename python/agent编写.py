@@ -30,5 +30,7 @@ class helloagent:
         except Exception as e:
             print(f"❌ 调用LLM API时发生错误: {e}")
             return 0;
+if __name__=='__main__':
+    
 
 
