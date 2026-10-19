@@ -19,3 +19,10 @@ class helloagent:
         print("大语言模型响应成功:")
         # 大模型内部openai的方法create函数配置
         li=[]
+        for check in response:
+            if not check.choices:
+                continue
+            content=check.choices[0].delta.content or ""
+            li.append(content)
+        return "".join(li)
+
