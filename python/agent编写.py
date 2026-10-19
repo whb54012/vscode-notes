@@ -31,6 +31,11 @@ class helloagent:
             print(f"❌ 调用LLM API时发生错误: {e}")
             return 0;
 if __name__=='__main__':
-    
+    agent=helloagent(
+        model="deepseek-chat",
+        api_key="",
+        url="https://api.deepseek.com/v1",
+        timeout=60
+    )
 
 
