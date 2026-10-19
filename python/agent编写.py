@@ -37,13 +37,14 @@ if __name__=='__main__':
         url="https://api.deepseek.com/v1",
         timeout=60
     )
+contents=""
 content=input("请输入问题")
-contents=
 Messages = [
     {"role": "system", "content": "你是擅长写Python代码的编程助手,回答简洁清晰"},
     {"role": "user", "content": f"{content}+','+{contents}"}
 ]
 reponse=agent.think(Messages)
+contents=reponse
 print(reponse)
 
 
