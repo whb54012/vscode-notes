@@ -5,9 +5,9 @@ class helloagent:
     def __init__(self,model:str,api_key:str,url:str,timeout:int):
         self.model=model
         self.client=OpenAI(
-            api_key=api_key,
-            base_uri=url,
-            timeout=timeout)
+            api_key=api_key,#密钥
+            base_uri=url,#api接口
+            timeout=timeout)#超时时间
         # 大模型属性配置，创建openai对象
     def think(self,messages,temperature = 0):
         print(f"正在调用{self.model}大模型")
@@ -15,6 +15,5 @@ class helloagent:
             model=self.model,
             messages=messages,
             temperature=temperature,
-            stream=True
-        )
+            stream=True)
         # 大模型内部openai的方法create函数配置
