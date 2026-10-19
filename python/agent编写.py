@@ -61,6 +61,7 @@ while(1>0):
         {"role": "assistant", "content": f"{reponse}"}
     )
     print(reponse)
+print(Messages)
 
 
 
