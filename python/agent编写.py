@@ -28,14 +28,15 @@ class helloagent:
                 li.append(content)
             return "".join(li)
         except Exception as e:
-            print(f"❌ 调用LLM API时发生错误: {e}")
+            print(f"调用LLM API时发生错误: {e}")
             return 0;
 if __name__=='__main__':
     agent=helloagent(
         model="deepseek-chat",
-        api_key="",
+        api_key="sk-f358a7dd29764a978d9f4da9d29eaf2c",
         url="https://api.deepseek.com/v1",
         timeout=60
     )
+
 
 
