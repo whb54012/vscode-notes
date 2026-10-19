@@ -9,4 +9,4 @@ class helloagent:
             base_uri=url,
             timeout=timeout)
     def think(self,messages,temperature = 0):
-        
+        print(f"正在调用{self.model}大模型")
