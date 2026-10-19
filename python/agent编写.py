@@ -2,6 +2,7 @@ import os
 from openai import OpenAI
 from typing import List,Dict
 class helloagent:
+    # 创建一个快捷调用ai的对象
     def __init__(self,model:str,api_key:str,url:str,timeout:int):
         self.model=model
         self.client=OpenAI(
