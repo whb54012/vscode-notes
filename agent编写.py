@@ -41,7 +41,7 @@ class helloagent:
 
                 li.append(content)
                 # 流式输出链条，输出回复文本
-
+            print("\n")#用于区分思考链和实际回复
             return "".join(li)
         except Exception as e:
             print(f"调用LLM API时发生错误: {e}")
