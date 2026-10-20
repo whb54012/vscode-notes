@@ -8,7 +8,7 @@ class tool:
             self.tools[name]={"note":note,"func":func}
             print(f"工具 '{name}' 已注册。")
     def toolwork(self,name):
-        fun=self.tools[name]["func"]
+        fun=self.tools.get(name,{}).get("func")
         fun()
         
 
