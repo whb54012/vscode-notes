@@ -8,7 +8,7 @@ class helloagent:
             api_key=api_key,#密钥
             base_url=url,#api接口
             timeout=timeout)#超时时间
-        # 大模型属性配置，创建openai对象
+    # 大模型接口和基础属性配置，创建模型对象
 
     def think(self,messages,temperature = 0):
         try:
