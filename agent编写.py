@@ -26,7 +26,7 @@ class helloagent:
                 if not check.choices:
                     continue
                 content=check.choices[0].delta.content or ""
-                print(content)
+                # print(content,end="",flush=True)
                 li.append(content)
             return "".join(li)
         except Exception as e:
