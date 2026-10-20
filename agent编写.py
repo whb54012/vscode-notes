@@ -26,6 +26,8 @@ class helloagent:
                 if not check.choices:
                     continue
                 content=check.choices[0].delta.content or ""
+                delta = check.choices[0].delta
+                print(delta,end="")
                 # print(content,end="",flush=True)
                 li.append(content)
             return "".join(li)
