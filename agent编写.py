@@ -10,7 +10,7 @@ class helloagent:
             base_url=url,#api接口
             timeout=timeout)#超时时间
         # 大模型属性配置，创建openai对象
-        
+
     def think(self,messages,temperature = 0):
         try:
             print(f"正在调用{self.model}大模型")
@@ -33,7 +33,8 @@ class helloagent:
                 # 循环读取response的内容
                 if not check.choices:
                     continue
-                content=check.choices[0].delta.content or ""
+                content=check.choices[0].delta.content or ""# 模型回答字符，拼接成最后回复
+
                 # print(content,end="",flush=True)
                 li.append(content)
                 # 流式输出链条，输出回复文本
