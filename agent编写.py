@@ -10,6 +10,7 @@ class helloagent:
             base_url=url,#api接口
             timeout=timeout)#超时时间
         # 大模型属性配置，创建openai对象
+        
     def think(self,messages,temperature = 0):
         try:
             print(f"正在调用{self.model}大模型")
@@ -17,19 +18,26 @@ class helloagent:
                 model=self.model,
                 messages=messages,
                 temperature=temperature,
-                stream=True)#流式输出，大模型一个一个吐字符
+                stream=True
+                #流式输出，大模型一个一个吐字符
+
+                extra_body={
+                    "thinking": {"type": "enabled"},
+                    "reasoning_effort": "high"}
+                    # 模型思考链，流式输出
+)# 大模型内部openai的方法create函数配置
+            
             print("大语言模型响应成功:")
-            # 大模型内部openai的方法create函数配置
             li=[]
             for check in response:
                 # 循环读取response的内容
                 if not check.choices:
                     continue
                 content=check.choices[0].delta.content or ""
-                delta = check.choices[0].delta
-                print(delta,end="")
                 # print(content,end="",flush=True)
                 li.append(content)
+                # 流式输出链条，输出回复文本
+
             return "".join(li)
         except Exception as e:
             print(f"调用LLM API时发生错误: {e}")
