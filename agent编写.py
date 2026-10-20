@@ -1,6 +1,5 @@
 import os
 from openai import OpenAI
-from typing import List,Dict
 class helloagent:
     # 创建一个快捷调用ai的对象
     def __init__(self,model:str,api_key:str,url:str,timeout:int):
@@ -18,7 +17,7 @@ class helloagent:
                 model=self.model,
                 messages=messages,
                 temperature=temperature,
-                stream=True
+                stream=True,
                 #流式输出，大模型一个一个吐字符
 
                 extra_body={
@@ -33,9 +32,13 @@ class helloagent:
                 # 循环读取response的内容
                 if not check.choices:
                     continue
-                content=check.choices[0].delta.content or ""# 模型回答字符，拼接成最后回复
+                content=check.choices[0].delta.content or ""
+                # 模型回答字符，拼接成最后回复
 
-                # print(content,end="",flush=True)
+                think=check.choices[0].delta.reasoning_content or ""
+                print(think,end="")
+                # 模型思考链，通过一个个打印回复
+
                 li.append(content)
                 # 流式输出链条，输出回复文本
 
