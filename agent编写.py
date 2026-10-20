@@ -36,7 +36,7 @@ class helloagent:
                 # 模型回答字符，拼接成最后回复
 
                 think=check.choices[0].delta.reasoning_content or ""
-                print(think,end="")
+                print(think,end="",flush=True)
                 # 模型思考链，通过一个个打印回复
 
                 li.append(content)
