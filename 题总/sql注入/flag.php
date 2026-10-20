@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['id'])||$_SESSION['id']!==1){
     echo "<script>
-        window.location.href = 'login.php';
+        window.location.href = 'index.php';
     </script>";
 }
 ?>
