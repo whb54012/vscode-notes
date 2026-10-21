@@ -10,5 +10,12 @@ class tool:
     def toolwork(self,name):
         fun=self.tools.get(name,{}).get("func")
         fun()
+    def toolnames(self):
+        return "\n".jion([
+            f"{self.name}:{self.note}"
+        ])
+def search():
+
+
         
 
