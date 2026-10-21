@@ -7,13 +7,17 @@ class tool:
         if name not in self.tools:
             self.tools[name]={"note":note,"func":func}
             print(f"工具 '{name}' 已注册。")
+            # 注册工具
+
     def toolwork(self,name):
         fun=self.tools.get(name,{}).get("func")
         fun()
+        # 运行工具
+
     def toolnames(self):
         return "\n".join([
             f"{name}:{info['note']}" for name,info in self.tools.items()
-        ])
+        ])#讲工具以及对应的介绍统计好
 
 
 
