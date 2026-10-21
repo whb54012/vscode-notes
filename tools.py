@@ -1,7 +1,7 @@
 class tool:
     # 一个工具执行器，负责管理和执行工具。
     def __init__(self):
-        self.tools={};
+        self.tools={}
 # 创建一个工具字典
     def register(self,name:str,note:str,func:str):
         if name not in self.tools:
@@ -12,9 +12,9 @@ class tool:
         fun()
     def toolnames(self):
         return "\n".jion([
-            f"{self.name}:{self.note}"
+            f"{name}:{info['note']}" from name,info in self.tools.items()
         ])
-def search():
+
 
 
         
