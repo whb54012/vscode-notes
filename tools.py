@@ -11,8 +11,8 @@ class tool:
         fun=self.tools.get(name,{}).get("func")
         fun()
     def toolnames(self):
-        return "\n".jion([
-            f"{name}:{info['note']}" from name,info in self.tools.items()
+        return "\n".join([
+            f"{name}:{info['note']}" for name,info in self.tools.items()
         ])
 
 

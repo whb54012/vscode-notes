@@ -47,7 +47,7 @@ class helloagent:
             print(f"调用LLM API时发生错误: {e}")
             return 0;
     # 大模型的思考与回复链
-    
+
 if __name__=='__main__':
     agent=helloagent(
         model="deepseek-chat",
