@@ -51,7 +51,7 @@ class helloagent:
 if __name__=='__main__':
     agent=helloagent(
         model="deepseek-chat",
-        api_key="sk-f358a7dd29764a978d9f4da9d29eaf2c",
+        api_key="sk-b7c2f0f329344200ab84d08b250f2c5e",
         url="https://api.deepseek.com/v1",
         timeout=60
     )
