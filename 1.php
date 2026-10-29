@@ -14,8 +14,8 @@ class Start{
     }
 }
 class Sec{
-    private $obj;
-    private $var;
+    public $obj;
+    public $var;
     public function __toString()
     {
         $this->obj->check($this->var);
@@ -54,4 +54,5 @@ $d->obj=$a;
 $b->obj=$c;
 $b->var=$d;
 $a->name=$b;
+echo serialize($a);
 ?>
