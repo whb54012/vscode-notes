@@ -1,7 +1,7 @@
 <?php
 class Start{
     public $name;
-    protected $func;
+    public $func;
 
     public function __destruct()
     {
@@ -49,5 +49,5 @@ $a=new Start();
 $b=new Sec();
 $c=new Easy();
 $d=new eeee();
-$a->func;
+$a->func=$b;
 ?>
