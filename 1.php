@@ -51,4 +51,6 @@ $c=new Easy();
 $d=new eeee();
 $a->func=$b;
 $d->obj=$a;
+$b->obj=$c;
+$b->var=$d;
 ?>
