@@ -1,7 +1,49 @@
 <?php
-// print_r(scandir(getcwd()));
-echo __DIR__;
-print(scandir(__DIR__))[2];
-print(current(get_included_files()));
-echo urlencode("CquetCTF{nc_pcap_hide_2026_ctf}");
+class Start{
+    public $name;
+    protected $func;
+
+    public function __destruct()
+    {
+        echo "Welcome to NewStarCTF, ".$this->name;
+    }
+
+    public function __isset($var)
+    {
+        ($this->func)();
+    }
+}
+class Sec{
+    private $obj;
+    private $var;
+    public function __toString()
+    {
+        $this->obj->check($this->var);
+        return "CTFers";
+    }
+
+    public function __invoke()
+    {
+        echo file_get_contents('/flag');
+    }
+}
+class Easy{
+    public $cla;
+
+    public function __call($fun, $var)
+    {
+        $this->cla = clone $var[0];
+    }
+}
+class eeee{
+    public $obj;
+
+    public function __clone()
+    {
+        if(isset($this->obj->cmd)){
+            echo "success";
+        }
+    }
+}
+$a=new Start();
 ?>
