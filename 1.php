@@ -50,4 +50,5 @@ $b=new Sec();
 $c=new Easy();
 $d=new eeee();
 $a->func=$b;
+$d->obj=$a;
 ?>
