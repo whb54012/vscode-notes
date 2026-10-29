@@ -53,4 +53,5 @@ $a->func=$b;
 $d->obj=$a;
 $b->obj=$c;
 $b->var=$d;
+$a->name=$b;
 ?>
