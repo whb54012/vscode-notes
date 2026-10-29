@@ -46,4 +46,8 @@ class eeee{
     }
 }
 $a=new Start();
+$b=new Sec();
+$c=new Easy();
+$d=new eeee();
+$a->func;
 ?>
