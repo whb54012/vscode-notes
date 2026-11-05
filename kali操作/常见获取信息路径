@@ -10,4 +10,5 @@ etc文件:
 nginx文件:
 /etc/nginx/nginx.conf 查看nginx全局配置
 /etc/nginx/conf.d/default.conf(cents/alpine) 查看单个网站的站点配置
+/etc/nginx/sites-enabled/default，sites-available/default(Debian/Ubuntu)查看单个网站的站点配置
 
