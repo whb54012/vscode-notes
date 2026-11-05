@@ -1,7 +1,7 @@
 proc虚拟文件:
-/proc/self/cmdline 查看当前启动进程
-/proc/self/environ 查看环境变量
-/proc/self/cwd 查看当前执行程序文件夹
+/proc/self/cmdline 查看当前启动的子进程
+/proc/self/environ 查看父进程变量
+/proc/self/cwd 查看当前执行程序父进程文件夹
 /proc/version 查看内核版本
 etc文件:
 /ect/passwd 用户列表与对应家目录
@@ -11,5 +11,5 @@ nginx文件:
 /etc/nginx/nginx.conf 查看nginx全局配置
 /etc/nginx/conf.d/default.conf(cents/alpine) 查看单个网站的站点配置
 /etc/nginx/sites-enabled/default，sites-available/default(Debian/Ubuntu)查看单个网站的站点配置
-/etc/log/nginx/access.log 查看访问日志
+/etc/log/nginx/access.log 查看访ron问日志
 /etc/log/nginx/error.log 查看错误日志
