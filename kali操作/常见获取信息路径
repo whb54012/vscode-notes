@@ -3,3 +3,7 @@ proc虚拟文件:
 /proc/self/environ 查看环境变量
 /proc/self/cwd 查看当前执行程序文件夹
 /proc/version 查看内核版本
+etc文件:
+/ect/passwd 用户列表与对应家目录
+/etc/hostname 查看是否为沙盒容器
+/etc/hosts 查看内网域名以及映射
