@@ -1,4 +1,4 @@
 proc虚拟文件:
 /proc/self/cmdline 查看当前启动进程
 /proc/self/environ 查看环境变量
-/proc/self/cwd
+/proc/self/cwd 查看当前执行程序文件夹
