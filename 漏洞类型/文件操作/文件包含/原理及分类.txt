@@ -34,7 +34,7 @@ Session 存储目录可访问；
 协议流操作:http/https://,file:///,php://,data://,zip://,phar://
 两大因素allow_url_fopen,allow_url_include
 allow_url_fopen(近乎所有网络协议都需要开启此配置)
-allow_url_include(决定include是否能够使用网络协议)
+allow_url_include(决定include是否能够使用伪协议)
 http/https://:远程包含RFI(allow_url_fopen和allow_url_include都需开启)
 
 file:///:本地文件读取,无需开启任何配置
@@ -44,6 +44,7 @@ php://filter:读取文件源码(无要求)
 php://filter/read=过滤器1/read=过滤器2/.../resource=文件相对路径(格式要求read=默认可以不加)
 php://filter/(read=)convert.base64-encode/resource=index.php(将index的源代码转义成base64后
 导入网页,中间可以用多个转义,路径可以用file:///)
+编码iconv.UTF-8.UCS-2BE,base64-encode,
 
 php://input(只适用于get请求):读取post请求体,使include能够导入解析请求体中的代码(请求不能是multipart/form-data,allow_url_include开)
 ?file=php://input post请求体=<?php phpinfo()?>
