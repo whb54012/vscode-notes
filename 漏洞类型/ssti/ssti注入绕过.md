@@ -13,7 +13,7 @@
 
 ```
 {{ url_for|attr( chr(0x5f)*2 + 'globals' + chr(0x5f)*2 ) }}
-
+chr编码
 {{ url_for|attr('\x5f\x5fglobals\x5f\x5f') }}
 {{ url_for|attr('\u005f\u005fglobals\u005f\u005f') }}
 十六进制和unicode
