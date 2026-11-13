@@ -22,6 +22,9 @@ for i in range(4):#()一个数表示从零开始到输入数之前(不包含本�
     print(i)
 for i in range(1,10,2):#为三个数时第三个数表示到下个数的步长
     print(i)
+result=[f"{name}" for name in a]
+# 推导式+for，python特殊用法，从后面的循环里拿出值给前面的推导式，注意根据
+# 得出的类型那确认外面加什么括号
 #                               while循环
 #根据条件循环
 """
