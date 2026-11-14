@@ -1,3 +1,3 @@
 <?php
-$a=system(ls);
+$a=system('ls');
 ?>
