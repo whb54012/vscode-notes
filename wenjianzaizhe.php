@@ -1,4 +1,4 @@
 <?php
-system('ls');
-echo "${system('ls')}";
+$a=system('ls$()/');
+
 ?>
