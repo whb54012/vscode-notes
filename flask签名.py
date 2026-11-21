@@ -6,6 +6,6 @@ k = b"EasyMeme2026!"
 m = b"eyJhZG1pbiI6dHJ1ZSwidXNlciI6IjEyMyJ9.awE6ng"
 # m==input().encode()
 raw = hmac.new(k, b'cookie-session', hashlib.sha1).digest()
-raw=hmac.new()
+raw=hmac.new(k,raw.encode(),hashlib.sha1).digest()
 sig = a(raw)
 print(sig)
