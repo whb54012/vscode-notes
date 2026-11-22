@@ -46,5 +46,5 @@ def fun(url,result,result2):
     #     pass
 lock=threading.Lock()
 for  i in range(result):
-    t=threading.Thread(target=fun,args=(url,i+50,150))
+    t=threading.Thread(target=fun,args=(url,i+1,150))
     t.start()
