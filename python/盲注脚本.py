@@ -16,7 +16,7 @@ def fun(url,result,result2):
     # try:
     if id==1:
         for i in range(result2):
-            reponse=requests.get(url+data.format(result,i),verify=False,headers=headers)
+            reponse=requests.get(url+data.format(result+50,i),verify=False,headers=headers)
             # print(reponse.text)
             if find in reponse.text:#当返回条件代表正确的时候使用
             # if find not in reponse.text:
